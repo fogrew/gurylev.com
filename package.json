@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-base-blog",
+  "name": "gurylev.com",
   "version": "5.0.0",
-  "description": "A starter repository for a blog web site using the Eleventy static site generator.",
+  "description": "Personal blog web site using the Eleventy static site generator.",
   "scripts": {
     "build": "npx eleventy",
     "watch": "npx eleventy --watch",
@@ -10,18 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/11ty/eleventy-base-blog.git"
+    "url": "git://github.com/fogrew/gurylev.com.git"
   },
   "author": {
-    "name": "Zach Leatherman",
-    "email": "zachleatherman@gmail.com",
-    "url": "https://zachleat.com/"
+    "name": "Andrew Gurylev",
+    "email": "andrew@gurylev.com",
+    "url": "https://gurylev.com/"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/11ty/eleventy-base-blog/issues"
+    "url": "https://github.com/fogrew/gurylev.com/issues"
   },
-  "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+  "homepage": "https://github.com/fogrew/gurylev.com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
     "@11ty/eleventy-navigation": "^0.1.1",
@@ -30,5 +30,8 @@
     "luxon": "^1.12.0",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2"
+  },
+  "dependencies": {
+    "eleventy-plugin-sass": "^1.0.0"
   }
 }
