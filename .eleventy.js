@@ -3,6 +3,7 @@ const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const pluginSass = require("eleventy-plugin-sass");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
@@ -10,6 +11,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginSass, {
+    sourcemaps: true
+  });
 
   eleventyConfig.setDataDeepMerge(true);
 
@@ -36,7 +40,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
