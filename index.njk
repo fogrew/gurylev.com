@@ -4,6 +4,9 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
+
+{% md path="home/index.md" %}
+
 <h2>Latest 3 Posts</h2>
 
 {% set postslist = collections.posts | head(-3) %}
