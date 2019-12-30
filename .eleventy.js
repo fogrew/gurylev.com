@@ -53,6 +53,13 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
+
+  eleventyConfig.addNunjucksShortcode("md", function(md) {
+    const content_md = fs.readFileSync(md.path, 'utf8');
+
+    return markdownLibrary.render(content_md);
+  });
+
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
