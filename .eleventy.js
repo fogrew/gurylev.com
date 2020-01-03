@@ -55,7 +55,13 @@ module.exports = function(eleventyConfig) {
 
 
   eleventyConfig.addNunjucksShortcode("md", function(md) {
-    const content_md = fs.readFileSync(md.path, 'utf8');
+    let content_md = '';
+
+    if(md.path) {
+      content_md = fs.readFileSync(md.path, 'utf8');
+    } else if(md.content) {
+      content_md = md.content
+    }
 
     return markdownLibrary.render(content_md);
   });
