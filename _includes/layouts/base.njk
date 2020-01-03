@@ -10,20 +10,25 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
   </head>
   <body>
-    <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-
-      {#- Read more about `eleventy-navigation` at https://github.com/11ty/eleventy-navigation #}
-      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
-        listClass: "nav",
-        listItemClass: "nav-item",
-        activeListItemClass: "nav-item-active",
-        activeKey: eleventyNavigation.key
-      }) | safe }}
+    <header class="header">
+      <div class="container header__wrap">
+        <div class="header__nav">
+          {#- Read more about `eleventy-navigation` at https://github.com/11ty/eleventy-navigation #}
+          {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+            listClass: "nav",
+            listItemClass: "nav__item",
+            activeListItemClass: "nav__item--active",
+            anchorClass: "nav__link",
+            activeAnchorClass: "nav__link--active",
+            activeKey: eleventyNavigation.key
+          }) | safe }}
+        </div>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
+      <div class="container">
+        {{ content | safe }}
+      </div>
     </main>
 
     <footer></footer>

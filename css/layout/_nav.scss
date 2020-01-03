@@ -1,18 +1,25 @@
-/* Nav */
 .nav {
   padding: 0;
   list-style: none;
-  float: left;
-  margin-left: 1em;
+  display: inline-flex;
+  margin: 0 0 0 -1rem;
 }
-.nav-item {
-  display: inline-block;
-  margin-right: 1em;
+.nav__item {
+  // hack to prevent double border
+  margin-left: -1px;
 }
-.nav-item a[href]:not(:hover) {
+.nav__link {
+  display: block;
+  padding: 1rem 1.5rem;
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: transparent;
   text-decoration: none;
-}
-.nav-item-active {
-  font-weight: 700;
-  text-decoration: underline;
+
+  &--active {
+    background-color: var(--theme-background-shadowed);
+  }
+  &:hover:not(&--active) {
+    background-color: var(--theme-background-shadowed);
+  }
 }

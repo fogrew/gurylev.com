@@ -9,17 +9,17 @@ body {
   color: var(--darkgray);
   background-color: var(--white);
 }
+
+.container {
+  max-width: var(--container-width);
+  width: 100%;
+  margin: auto;
+  padding: var(--container-padding);
+}
+
 main {
   padding: 1rem;
 }
 main :first-child {
   margin-top: 0;
-}
-header {
-  border-bottom: 1px dashed var(--lightgray);
-}
-header:after {
-  content: "";
-  display: table;
-  clear: both;
 }

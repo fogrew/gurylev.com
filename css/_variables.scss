@@ -1,3 +1,5 @@
+$vw-tablet: 788px;
+
 :root {
   --red: #C5004A;
   --darkred: #7F0036;
@@ -7,4 +9,7 @@
   --navy: #17050F;
   --blue: #082840;
   --white: #fff;
+
+  --container-width: 1280px;
+  --container-padding: 0 10px;
 }

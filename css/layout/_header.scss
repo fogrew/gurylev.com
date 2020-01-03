@@ -1,10 +1,11 @@
 /* Header */
-.home {
-  padding: 0 1rem;
-  float: left;
-  margin: 1rem 0; /* 16px /16 */
-  font-size: 1em; /* 16px /16 */
-}
-.home :link:not(:hover) {
-  text-decoration: none;
+.header {
+  width: 100%;
+  border-bottom: 1px solid var(--theme-border);
+  // background-image: linear-gradient(to bottom, var(--theme-background), var(--theme-background-shadowed));
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
 }
