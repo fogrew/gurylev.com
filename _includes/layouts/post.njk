@@ -2,8 +2,17 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<h1>{{ title }}</h1>
+<h1 class="p-name">{{ title }}</h1>
 
+<div class="e-content">
 {{ content | safe }}
+</div>
 
-<p><a href="{{ '/' | url }}">← Home</a></p>
+<footer>
+  <span class="u-author h-card">
+    <img class="u-photo avatar" src="/img/avatar.jpg">
+    <a class="u-author h-card" href="https://gurylev.com">Андрей</a>
+  </span>
+  написал <time class="post-date dt-published" datetime="{{ date }}">{{ date | readableDate }}</time>
+  <p><a href="{{ '/posts/' | url }}">← Ещё мысли</a></p>
+</footer>

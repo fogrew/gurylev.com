@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link href="https://fonts.googleapis.com/css?family=Lora:400..700|Source+Sans+Pro:400..700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
@@ -32,7 +32,11 @@
       </div>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="container">
+        <p>© 2014…, cайт Андрея Гурылева. <a href="https://github.com/fogrew/gurylev.com">Репозиторий сайта</a>. Написать можно на почту: <a href="mailto:andrew@gurylev.com">andrew@gurylev.com</a></p>
+      </div>
+    </footer>
 
     <!-- Current page: {{ page.url | url }} -->
   </body>
