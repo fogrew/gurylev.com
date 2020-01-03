@@ -11,6 +11,10 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
   </head>
   <body>
+  <script>
+  const theme = localStorage.getItem('theme')
+  if(theme) document.body.dataset.theme = theme
+  </script>
     <header class="header">
       <div class="container header__wrap">
         <div class="header__nav">
@@ -24,6 +28,12 @@
             activeKey: eleventyNavigation.key
           }) | safe }}
         </div>
+        <div class="header__tools">
+          <button aria-pressed="false" class="theme-switcher">
+            <span aria-hidden="true" class="theme-switcher__overlay">off</span>
+          </button>
+        </div>
+      </div>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
@@ -39,5 +49,6 @@
     </footer>
 
     <!-- Current page: {{ page.url | url }} -->
+    <script async defer type="module" src="/js/index.mjs"></script>
   </body>
 </html>
