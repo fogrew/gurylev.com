@@ -3,6 +3,7 @@ const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const pluginSass = require("eleventy-plugin-sass");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
@@ -10,6 +11,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginSass, {
+    sourcemaps: true
+  });
 
   eleventyConfig.setDataDeepMerge(true);
 
@@ -36,7 +40,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("js");
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
@@ -50,8 +54,26 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
+
+  eleventyConfig.addNunjucksShortcode("md", function(md) {
+    let content_md = '';
+
+    if(md.path) {
+      content_md = fs.readFileSync(md.path, 'utf8');
+    } else if(md.content) {
+      content_md = md.content
+    }
+
+    return markdownLibrary.render(content_md);
+  });
+
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({
+    files: [
+      'css',
+      'js',
+      'mjs'
+    ],
     callbacks: {
       ready: function(err, browserSync) {
         const content_404 = fs.readFileSync('_site/404.html');

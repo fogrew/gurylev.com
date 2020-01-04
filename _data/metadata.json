@@ -1,13 +1,13 @@
 {
-  "title": "f0gr3w",
-  "url": "https://fogrew.github.io/",
+  "title": "Андрей Гурылев @ fogrew",
+  "url": "https://gurylev.com/",
   "description": "I am writing about my experiences as a naval navel-gazer.",
   "feed": {
     "subtitle": "I am writing about my experiences as a naval navel-gazer.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "url": "https://fogrew.github.io/feed/feed.xml",
-    "id": "https://fogrew.github.io/"
+    "url": "https:///feed/feed.xml",
+    "id": "https://gurylev.com/"
   },
   "author": {
     "name": "Andrew Gurylev",

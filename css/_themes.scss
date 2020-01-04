@@ -1,0 +1,21 @@
+body[data-theme="light"] {
+  --theme-background: var(--alabaster);
+  --theme-background-shadowed: var(--lightgray);
+  --theme-border: var(--lightgray);
+  --theme-background-invert: var(--darkgray);
+  --theme-text: var(--orchid);
+  --theme-primary: var(--darkgray);
+  --theme-secondary: var(--darkgray);
+  --theme-accent: var(--lightred);
+}
+
+body[data-theme="dark"] {
+  --theme-background: var(--darkgray);
+  --theme-background-shadowed: #222;
+  --theme-border: var(--gray);
+  --theme-background-invert: var(--white);
+  --theme-text: var(--lightgray);
+  --theme-primary: var(--white);
+  --theme-secondary: var(--white);
+  --theme-accent: var(--yellow);
+}

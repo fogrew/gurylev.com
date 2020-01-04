@@ -1,0 +1,14 @@
+/* Header */
+.header {
+  width: 100%;
+  border-bottom: 1px solid var(--theme-border);
+  // background-image: linear-gradient(to bottom, var(--theme-background), var(--theme-background-shadowed));
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__tools {
+    display: flex;
+  }
+}

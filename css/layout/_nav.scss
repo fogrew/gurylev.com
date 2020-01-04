@@ -1,0 +1,25 @@
+.nav {
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  margin: 0 0 0 -1rem;
+}
+.nav__item {
+  // hack to prevent double border
+  margin-left: -1px;
+}
+.nav__link {
+  display: block;
+  padding: 1rem 1.5rem;
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: transparent;
+  text-decoration: none;
+
+  &--active {
+    background-color: var(--theme-background-shadowed);
+  }
+  &:hover:not(&--active) {
+    background-color: var(--theme-background-shadowed);
+  }
+}
