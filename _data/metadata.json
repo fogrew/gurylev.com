@@ -1,9 +1,9 @@
 {
   "title": "Андрей Гурылев @ fogrew",
   "url": "https://gurylev.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "Веб-разработчик и тимлид в Wrike, организатор PiterJS.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Веб-разработчик и тимлид в Wrike, организатор PiterJS.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "url": "https:///feed/feed.xml",
