@@ -13,8 +13,8 @@ export default class Theme {
 
     if(savedTheme) {
       this.name = savedTheme
-    } else {
-      this.name = nodeThemeTarget.dataset.theme
+    } else if (this.options.name) {
+      this.name = this.options.name
     }
   }
   _initSwitcher() {
