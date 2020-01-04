@@ -1,8 +1,8 @@
 .nav {
+  display: inline-flex;
+  margin: 0 -1rem;
   padding: 0;
   list-style: none;
-  display: inline-flex;
-  margin: 0 0 0 -1rem;
 }
 .nav__item {
   // hack to prevent double border
@@ -10,7 +10,7 @@
 }
 .nav__link {
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   border-width: 0 1px;
   border-style: solid;
   border-color: transparent;
