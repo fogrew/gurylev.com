@@ -13,6 +13,8 @@ export default class Theme {
 
     if(savedTheme) {
       this.name = savedTheme
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      this.name = 'dark'
     } else if (this.options.name) {
       this.name = this.options.name
     }
