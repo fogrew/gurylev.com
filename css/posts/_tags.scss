@@ -15,3 +15,6 @@ a[href].tag,
 a[href].tag:visited {
   color: #fff;
 }
+a[href].tag:after {
+  border: 0;
+}

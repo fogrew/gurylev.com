@@ -5,6 +5,9 @@
   font-style: normal;
   margin-left: .1em;
 }
+a[href].direct-link:after {
+  border: 0;
+}
 a[href].direct-link,
 a[href].direct-link:visited {
   color: transparent;

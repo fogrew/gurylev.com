@@ -5,8 +5,7 @@
   list-style: none;
 }
 .nav__item {
-  // hack to prevent double border
-  margin-left: -1px;
+  margin: 0 2px;
 }
 .nav__link {
   display: block;
@@ -15,11 +14,4 @@
   border-style: solid;
   border-color: transparent;
   text-decoration: none;
-
-  &--active {
-    background-color: var(--theme-background-shadowed);
-  }
-  &:hover:not(&--active) {
-    background-color: var(--theme-background-shadowed);
-  }
 }
