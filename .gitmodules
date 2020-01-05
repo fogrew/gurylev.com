@@ -1,0 +1,6 @@
+[submodule "css/fonts/Lora"]
+	path = css/fonts/Lora
+	url = git@github.com:cyrealtype/Lora-Cyrillic.git
+[submodule "css/fonts/Source-Sans-Pro"]
+	path = css/fonts/Source-Sans-Pro
+	url = git@github.com:adobe-fonts/source-sans-pro.git

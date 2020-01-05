@@ -39,10 +39,15 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("js");
-  eleventyConfig.addPassthroughCopy("favicon.png");
-  eleventyConfig.addPassthroughCopy("CNAME");
+  const copyPaths = [
+    "img",
+    "js",
+    "favicon.png",
+    "CNAME",
+  ]
+  copyPaths.forEach(path => eleventyConfig.addPassthroughCopy(path));
+  eleventyConfig.addPassthroughCopy({ "css/fonts/Lora/fonts/variable/Lora-VF.woff2": "css/fonts/Lora.woff2"})
+  eleventyConfig.addPassthroughCopy({ "css/fonts/Source-Sans-Pro/WOFF2/VAR/SourceSansVariable-Roman.ttf.woff2": "css/fonts/SourceSansPro.woff2"})
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
