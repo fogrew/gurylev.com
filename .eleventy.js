@@ -42,12 +42,11 @@ module.exports = function(eleventyConfig) {
   const copyPaths = [
     "img",
     "js",
+    "css/fonts",
     "favicon.png",
     "CNAME",
   ]
   copyPaths.forEach(path => eleventyConfig.addPassthroughCopy(path));
-  eleventyConfig.addPassthroughCopy({ "css/fonts/Lora/fonts/variable/Lora-VF.woff2": "css/fonts/Lora.woff2"})
-  eleventyConfig.addPassthroughCopy({ "css/fonts/Source-Sans-Pro/WOFF2/VAR/SourceSansVariable-Roman.ttf.woff2": "css/fonts/SourceSansPro.woff2"})
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
