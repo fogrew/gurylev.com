@@ -18,13 +18,18 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
-  eleventyConfig.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    return new Intl.DateTimeFormat('ru', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    }).format(new Date(dateObj))
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+    const date = new Date(dateObj)
+    return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
   });
 
   // Get the first `n` elements of a collection.
