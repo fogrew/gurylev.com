@@ -10,7 +10,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '8.x'
+          node-version: '13.5.0'
       - name: Install npm packages
         run: npm ci
       - name: Build
