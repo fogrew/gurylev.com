@@ -46,13 +46,14 @@ module.exports = function(eleventyConfig) {
   const copyPaths = [
     "img",
     "js",
+    "files",
     "css/fonts",
     "favicon.png",
     "CNAME",
   ]
   copyPaths.forEach(path => eleventyConfig.addPassthroughCopy(path));
 
-  /* Markdown Overrides */
+  // Markdown Overrides
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
@@ -63,19 +64,6 @@ module.exports = function(eleventyConfig) {
     permalinkSymbol: "#"
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
-
-
-  eleventyConfig.addNunjucksShortcode("md", function(md) {
-    let content_md = '';
-
-    if(md.path) {
-      content_md = fs.readFileSync(md.path, 'utf8');
-    } else if(md.content) {
-      content_md = md.content
-    }
-
-    return markdownLibrary.render(content_md);
-  });
 
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({
@@ -104,21 +92,9 @@ module.exports = function(eleventyConfig) {
       "html",
       "liquid"
     ],
-
-    // If your site lives in a different subdirectory, change this.
-    // Leading or trailing slashes are all normalized away, so don’t worry about those.
-
-    // If you don’t have a subdirectory, use "" or "/" (they do the same thing)
-    // This is only used for link URLs (it does not affect your file structure)
-    // You can also pass this in on the command line using `--pathprefix`
-
-    // pathPrefix: "/",
-
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
-
-    // These are all optional, defaults are shown:
     dir: {
       input: ".",
       includes: "_includes",
