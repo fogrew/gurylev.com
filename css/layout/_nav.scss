@@ -7,11 +7,48 @@
 .nav__item {
   margin: 0 2px;
 }
-.nav__link {
+.nav__link[href] {
+  position: relative;
   display: block;
   padding: 1rem;
   border-width: 0 1px;
   border-style: solid;
   border-color: transparent;
   text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  perspective: 600px;
+  perspective-origin: 50% 100%;
+
+  &:hover,
+  &:focus {
+    color: var(--theme-background);
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -4px;
+    z-index: -1;
+    padding: 0 4px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:before {
+    background-color: var(--theme-text);
+    transition: transform .2s;
+    transition-timing-function: cubic-bezier(.7,0,.3,1);
+    transform: rotateX(90deg);
+    transform-origin: 50% 100%
+  }
+  &:after {
+    border-bottom: 1px solid var(--theme-text)
+  }
+  &:focus:before,
+  &:hover:before {
+    transform: rotateX(0deg)
+  }
 }
