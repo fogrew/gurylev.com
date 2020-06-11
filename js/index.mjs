@@ -1,15 +1,10 @@
-import Theme from './theme.mjs'
+import { Theme } from './theme.mjs'
 
-class Site {
-  constructor(options) {
-    Object.assign(this, options)
+const nodeThemeTarget = document.documentElement
 
-    this.theme = new Theme({
-      name: 'light',
-      themes: ['light', 'dark'],
-      queryThemeSwitcher: '.theme-switcher',
-      nodeThemeTarget: document.body,
-    })
-  }
-}
-new Site()
+new Theme({
+  name: 'light',
+  themes: ['light', 'dark'],
+  queryThemeSwitcher: '.theme-switcher',
+  nodeThemeTarget,
+})

@@ -1,4 +1,4 @@
-export default class Theme {
+export class Theme {
   constructor(options) {
     this.options = options
 
