@@ -1,0 +1,56 @@
+---
+styles: ["/css/index.css"]
+scripts: ["/js/index.mjs"]
+---
+<!doctype html>
+<html lang="en" class="document" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
+    <link rel="preload" href="{{ '/fonts/Lora.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/fonts/SourceSansPro.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+    {%- for style in styles %}
+    <link rel="stylesheet" href="{{ style | url }}">
+    {%- endfor %}
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <script>
+    const theme = localStorage.getItem('theme')
+    if(theme) document.documentElement.dataset.theme = theme
+    </script>
+  </head>
+  <body class="layout">
+    <a href="#main" class="layout__skip-nav">Пропустить навигацию</a>
+    <header class="layout__header header">
+      {% include "nav.njk" %}
+    </header>
+
+    <main class="page page--template-{{ template }} e-content" id="main">
+      {{ content | safe }}
+    </main>
+
+    <footer class="layout__footer footer">
+      <p class="footer__copyright">Сайт Андрея Гурылева</p>
+      <p class="footer__help"><a class="footer__help" href="https://github.com/fogrew/gurylev.com/blob/master/{{ page.inputPath }}">Редактировать эту страницу</a>.</p>
+    </footer>
+
+    <aside class="layout__dev" id="dev">
+      {% block dev %}
+      <table>
+      {% for key, value in config %}
+        <tr>
+          <td>{{ key }}:</td>
+          <td>{{ value }}</td>
+        </tr>
+      {% endfor %}
+      </table>
+      {% endblock %}
+    </aside>
+
+    {%- for script in scripts %}
+    <script async defer type="module" src="{{ script | url }}"></script>
+    {%- endfor %}
+  </body>
+</html>

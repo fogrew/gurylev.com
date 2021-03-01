@@ -1,0 +1,27 @@
+.page--template-post {
+  --grid-ascii-page:
+  " . header . "
+  " . nav . "
+  " . content . "
+  " . footer . ";
+  --grid-columns-page: 1fr minmax(320px, var(--full-width)) 1fr;
+}
+
+@media (min-width: 60rem) {
+  .page--template-post {
+    --grid-ascii-page:
+    " . header  header . "
+    " . content nav    . "
+    " . footer  nav    . ";
+    --grid-columns-page: 1fr minmax(320px, var(--post-width)) var(--col-width) 1fr;
+  }
+  .page__nav {
+    position: sticky;
+    top: .67em;
+
+    grid-column: nav;
+    grid-row-end: span 7;
+
+    text-align: right;
+  }
+}

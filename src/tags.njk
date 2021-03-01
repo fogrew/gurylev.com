@@ -1,0 +1,25 @@
+---
+title: Страницы с тегом “{{ tag }}”
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: home
+renderData:
+  title: Страницы с тегом “{{ tag }}”
+permalink: /tags/{{ tag }}/
+---
+
+<div class="grid grid--2">
+{% set postslist = collections[ tag ] %}
+{% include "postslist.njk" %}
+</div>
+
+<p>Смотри <a href="{{ '/tags/' | url }}">все теги</a>.</p>

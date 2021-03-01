@@ -1,0 +1,77 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/posts/2011.09.04-native-social-buttons/",
+      "destination": "/code/native-social-buttons/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2014.05.25-social-buttons-naming/",
+      "destination": "/code/native-social-buttons/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2014.10.29-transparent-bootstrap-buttons/",
+      "destination": "/code/transparent-bootstrap-buttons/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2014.11.02-web-detective/",
+      "destination": "/blog/web-detective/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2017.05.04-psi-sorter/",
+      "destination": "/code/psi-sorter/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2017.08.31-svg-chrome-position-metrics/",
+      "destination": "/code/chrome-position-metrics/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2017.08.31-svg-chrome-position-metrics/",
+      "destination": "/code/chrome-position-metrics/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2017.09.29-stylus-svg-inline-url-encoded-icon/",
+      "destination": "/code/stylus-icon/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2017.11.27-plague/",
+      "destination": "/code/plague/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2017.12.05-draw-imagemagick/",
+      "destination": "/code/draw-imagemagick/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2018.01.29-tg/",
+      "destination": "/blog/tg/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/2020.01.26-2019/",
+      "destination": "/blog/2019/",
+      "permanent": true
+    }
+  ],
+  "routes": [
+    {
+      "src": "/posts/2017.09.04-evening_task/",
+      "status": 410,
+      "dest": "410.html"
+    },
+    {
+      "src": "/posts/2019.12.22-indieweb-offline-rsvp/",
+      "status": 410,
+      "dest": "410.html"
+    }
+  ]
+}

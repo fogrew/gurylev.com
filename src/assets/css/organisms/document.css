@@ -1,0 +1,13 @@
+.document {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: var(--font-size-base);
+  /* line-height: var(--line-height-base);
+  font-size: #{'min(max(22px, 4vw), 30px)'};
+  font-size: clamp(22px, 4vw, 30px); */
+  color: var(--theme-text);
+  background-color: var(--theme-background);
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,12 @@
+.toc h2 {
+  font-size: var(--font-size-2);
+}
+.toc ol {
+  padding: 0;
+}
+.toc li {
+  display: block;
+}
+.toc a {
+  text-decoration-style: dashed;
+}

@@ -1,0 +1,23 @@
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+  scroll-margin-top: 1em;
+}
+
+a.anchor {
+  position: absolute;
+  left: 0;
+  text-decoration: none;
+  transition: opacity .2s ease-out;
+  opacity: 0;
+}
+a.anchor:after {
+  content: '#';
+}
+a.anchor:is(:hover, :focus-within) {
+  opacity: 1;
+}
+
+:is(h1, h2, h3, h4, h5, h6):is(:hover, :target) a.anchor {
+  opacity: 1;
+}
+

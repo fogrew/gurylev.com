@@ -1,0 +1,24 @@
+---
+title: Код
+layout: home
+permalink: /code/
+eleventyNavigation:
+  key: Код
+  order: 30
+---
+
+<div class="grid grid--3">
+  <div class="grid__line">
+    <h2>Делюсь проектами</h2>
+    <p>Писал для фана, обычно не планирую развивать</p>
+  </div>
+  {% set postslist = collections.projects %}
+  {% include "postslist.njk" %}
+
+  <div class="grid__line">
+    <h2>Делюсь кодом</h2>
+    <p>Решениями, сниппетами, хаками, зови как хочешь 🤷</p>
+  </div>
+  {% set postslist = collections.snippets %}
+  {% include "postslist.njk" %}
+</div>

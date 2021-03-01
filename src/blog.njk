@@ -1,0 +1,13 @@
+---
+title: Блог
+layout: home
+eleventyNavigation:
+  key: Блог
+  order: 20
+---
+
+<p>Формулирую мысли</p>
+<div class="grid grid--3">
+  {% set postslist = collections.blog %}
+  {% include "postslist.njk" %}
+</div>

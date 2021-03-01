@@ -1,0 +1,30 @@
+.grid {
+  --cols: 1;
+  --home-gap: 1.25rem;
+
+  display: grid;
+  gap: var(--home-gap);
+  grid-template-columns: repeat(var(--cols), 1fr);
+
+  margin: 3rem 0;
+}
+
+.grid > * {
+  grid-template-rows: 1fr auto;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+
+@media (min-width: 768px) {
+  .grid--2 {
+    --cols: 2;
+  }
+  .grid--3 {
+    --cols: 3;
+  }
+}
+
+.grid__line {
+  grid-column: 1 / span var(--cols);
+  margin: 0;
+}

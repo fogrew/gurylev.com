@@ -1,0 +1,43 @@
+.page {
+  display: grid;
+  /* gap: 0 var(--gap); */
+  grid-template: var(--grid-ascii-page);
+  grid-template-columns: var(--grid-columns-page);
+  grid-template-rows: min-content;
+  grid-auto-rows: min-content;
+}
+
+.page > * {
+  grid-column: content;
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+}
+
+.page__title {
+  grid-area: header;
+  margin-bottom: 1rem;
+}
+
+.page__footer {
+  grid-column: footer;
+  align-self: end;
+}
+
+.page ul {
+  margin-top: 0;
+}
+.page {
+  word-break: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+p + ol,
+p + ul {
+  margin-top: -1em;
+  list-style: inside;
+}
+
+
+.page :is(img, svg) {
+  max-width: 100%;
+}

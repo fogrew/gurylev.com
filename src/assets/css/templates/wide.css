@@ -1,0 +1,7 @@
+.page--template-wide {
+  --grid-ascii-page:
+  " . header . "
+  " . content . "
+  " . footer . ";
+  --grid-columns-page: 1fr minmax(320px, var(--full-width)) 1fr;
+}

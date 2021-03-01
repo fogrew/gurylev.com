@@ -1,0 +1,21 @@
+{% for post in postslist | reverse %}
+  <article class="card">
+    <a class="card__link" href="{{ post.url | url }}">
+      <span class="card__body">
+        <h3 class="card__title">{{ post.data.title }}</h3>
+        <time class="card__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <p>{{ post.data.description }}</p>
+      </span>
+      {% if post.data.preview %}
+      <span class="card__preview">
+        {% if (post.data.preview | extname) == '.svg' %}
+        {{ post.data.preview | inline | safe }}
+        {% else %}
+        {% image post.data.preview, 'card__image', post.data.title, "(min-width: 768px) 60vw, 100vw" %}
+        {# <img class="card__image" src="{{ post.data.preview | url }}"> #}
+        {% endif %}
+      </span>
+      {% endif %}
+    </a>
+  </article>
+{% endfor %}

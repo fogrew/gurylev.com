@@ -1,0 +1,39 @@
+.document[data-theme] {
+  transition: color .2s ease-out, background-color .2s ease-out;
+}
+
+:root {
+  --red: #AF1D05;
+  --lightred: #d62e00;
+  --lightgray: #e0e0e0;
+  --gray: #C0C0C0;
+  --darkgray: #333;
+  --yellow: #ff7315;
+  --white: #f4f4f4;
+  --alabaster: #f7f6ee;
+  --orchid: #544;
+}
+
+.document {
+  --theme-background: var(--alabaster);
+  --theme-background-shadowed: var(--lightgray);
+  --theme-border: var(--lightgray);
+  --theme-background-invert: var(--darkgray);
+  --theme-text: var(--orchid);
+  --theme-primary: var(--darkgray);
+  --theme-secondary: var(--darkgray);
+  --theme-accent: var(--lightred);
+}
+
+@media(prefers-color-scheme: dark) {
+  .document {
+    --theme-background: var(--darkgray);
+    --theme-background-shadowed: #222;
+    --theme-border: var(--gray);
+    --theme-background-invert: var(--white);
+    --theme-text: var(--lightgray);
+    --theme-primary: var(--white);
+    --theme-secondary: var(--white);
+    --theme-accent: var(--yellow);
+  }
+}

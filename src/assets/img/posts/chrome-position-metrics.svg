@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 300 200" font-size="10">
+  <g id="position">
+    <rect x="1" y="1" width="298" height="198" fill="white" stroke="rgb(66%, 66%, 66%)" stroke-width="1" stroke-dasharray="1, 1" />
+    <text x="15" y="20">position</text>
+  </g>
+  <g id="margin">
+    <rect x="20" y="30" width="260" height="145" fill="rgba(246, 178, 107, 0.66)" stroke="rgb(44, 48, 46)" stroke-width="1" stroke-dasharray="3 1" />
+    <text x="30" y="46">margin</text>
+  </g>
+  <g id="border">
+    <rect x="35" y="55" width="225" height="100" fill="rgba(255, 229, 153, 0.66)" stroke="black" stroke-width="1" />
+    <text x="45" y="71">border</text>
+  </g>
+  <g id="padding">
+    <rect x="50" y="80" width="190" height="60" fill="rgba(147, 196, 125, 0.55)" stroke="#A8A8A8" stroke-width="1" stroke-dasharray="3 1" />
+    <text x="60" y="96">padding</text>
+  </g>
+  <g id="content">
+    <rect x="65" y="105" width="155" height="20" fill="rgba(111, 168, 220, 0.66)" stroke="gray" stroke-width="1" />
+  </g>
+</svg>

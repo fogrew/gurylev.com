@@ -1,0 +1,15 @@
+.nav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0.5rem calc(var(--gap) * -0.5) 0;
+  list-style: none;
+}
+.nav__link {
+  display: inline-block;
+  white-space: nowrap;
+  padding: .5rem calc(var(--gap) * 0.5);
+}
+
+.nav__link--active {
+  outline: 1px dashed var(--theme-accent);
+}
