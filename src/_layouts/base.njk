@@ -1,6 +1,6 @@
 ---
 styles: ["/css/index.css"]
-scripts: ["/js/index.mjs"]
+scripts: []
 ---
 <!doctype html>
 <html lang="en" class="document" data-theme="light">
@@ -16,10 +16,6 @@ scripts: ["/js/index.mjs"]
     {%- endfor %}
     <link rel="shortcut icon" href="/favicon.png">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-    <script>
-    const theme = localStorage.getItem('theme')
-    if(theme) document.documentElement.dataset.theme = theme
-    </script>
   </head>
   <body class="layout">
     <a href="#main" class="layout__skip-nav">Пропустить навигацию</a>
