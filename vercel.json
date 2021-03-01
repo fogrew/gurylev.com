@@ -61,17 +61,5 @@
       "destination": "/blog/2019/",
       "permanent": true
     }
-  ],
-  "routes": [
-    {
-      "src": "/posts/2017.09.04-evening_task/",
-      "status": 410,
-      "dest": "410.html"
-    },
-    {
-      "src": "/posts/2019.12.22-indieweb-offline-rsvp/",
-      "status": 410,
-      "dest": "410.html"
-    }
   ]
 }
