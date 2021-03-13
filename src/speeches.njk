@@ -1,0 +1,46 @@
+---
+title: Выступления
+layout: home
+permalink: /speeches/
+eleventyNavigation:
+  key: Выступления
+  order: 40
+---
+
+<p>Условно определяю этим названием все случаи, когда я вставал и рассказывал что-то на публику</p>
+
+<div class="grid grid--3">
+  <div class="grid__line">
+    <h2>Докладываю</h2>
+  </div>
+  {% set postslist = collections.lectures | head(-3) %}
+  {% include "postslist.njk" %}
+  {% if collections.lectures.length > 3 %}
+  <div class="grid__line">
+    <a href="{{ '/lectures/' | url }}">Больше докладов</a>
+  </div>
+  {% endif %}
+
+  <div class="grid__line">
+    <h2>Звучу в подкастах</h2>
+  </div>
+  {% set postslist = collections.podcasts %}
+  {% include "postslist.njk" %}
+
+  <div class="grid__line">
+    <h2>Даю интервью</h2>
+  </div>
+  {% set postslist = collections.interviews | head(-3) %}
+  {% include "postslist.njk" %}
+  {% if collections.interviews.length > 3 %}
+  <div class="grid__line">
+    <a href="{{ '/interviews/' | url }}">Больше интервью</a>
+  </div>
+  {% endif %}
+
+  <div class="grid__line">
+    <h2>Обучаю</h2>
+  </div>
+  {% set postslist = collections.courses %}
+  {% include "postslist.njk" %}
+</div>
