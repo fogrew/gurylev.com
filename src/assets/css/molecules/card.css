@@ -27,7 +27,7 @@
   position: relative;
   order: -1;
   border-radius: 9px 9px 0 0;
-  padding-top: 50%;
+  padding-top: calc( 1 / 2 * 100% );
 }
 .card__preview :is(img, svg) {
   position: absolute;
