@@ -1,7 +1,7 @@
 ---
 title: IT-сообщества на TechTrain
 description: Я и Миша общаемся с представителем JUG ru по итогам представления нашего стенда на конференции Tech Train
-date: 2011-09-04
+date: 2019-04-30
 tags:
   - interviews
 ---

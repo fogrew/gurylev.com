@@ -1,7 +1,7 @@
 ---
 title: Между докладами на HolyJS
 description: Про цели PiterJS в сравнении с IT-компаниями, вклад и цели организаторов, про культуру поведения на PiterJS
-date: 2011-09-04
+date: 2019-11-08
 tags:
   - interviews
 preview: '/img/posts/video-on-holyjs.jpg'
