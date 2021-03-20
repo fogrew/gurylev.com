@@ -1,0 +1,8 @@
+.form {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.form__control {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}

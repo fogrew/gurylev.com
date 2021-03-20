@@ -17,7 +17,9 @@
   }
   .page__nav {
     position: sticky;
-    top: .67em;
+    top: 0;
+    bottom: 0;
+    display: grid;
 
     grid-column: nav;
     grid-row-end: span 7;

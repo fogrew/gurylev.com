@@ -1,3 +1,10 @@
 .header {
-  padding: 0 var(--gap);
+  padding: 0.5em var(--gap);
+}
+.header__start,
+.header__end {
+  display: inline-flex;
+}
+.header__start {
+  padding-right: 2em;
 }

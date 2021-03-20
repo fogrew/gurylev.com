@@ -27,7 +27,12 @@ scripts: []
   <body class="layout">
     <a href="#main" class="layout__skip-nav">Пропустить навигацию</a>
     <header class="layout__header header">
-      {% include "nav.njk" %}
+      <div class="header__start">
+        {% include "nav.njk" %}
+      </div>
+      <div class="header__end">
+        {% include "search.njk" %}
+      </div>
     </header>
 
     <main class="page page--template-{{ template }} e-content" id="main">
