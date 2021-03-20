@@ -4,7 +4,7 @@
   border: 0;
   font-size: inherit;
   vertical-align: bottom;
-  outline-width: 2px;
+  outline-width: var(--outline-width);
   outline-style: solid;
   outline-color: var(--theme-border);
 }

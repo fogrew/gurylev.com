@@ -8,7 +8,6 @@
   margin-bottom: 0.25rem;
 }
 .card__date {
-  /* opacity: 0.75; */
   font-size: 0.75rem;
   word-spacing: -0.5px;
 }
@@ -17,13 +16,13 @@
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  border: 2px solid var(--theme-text);
-  border-radius: 8px;
+  outline-width: var(--outline-width);
+  outline-style: solid;
+  outline-color: var(--theme-text);
 }
 .card__preview {
   position: relative;
   order: -1;
-  border-radius: 9px 9px 0 0;
   padding-top: calc( 1 / 2 * 100% );
 }
 .card__preview :is(img, svg) {
@@ -36,7 +35,6 @@
   max-width: 100%;
   max-height: 100%;
   margin: auto;
-  border-radius: 9px 9px 0 0;
   object-fit: cover;
   text-align: center;
 }

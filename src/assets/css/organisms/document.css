@@ -13,7 +13,7 @@
 }
 
 :focus {
-  outline-width: 2px;
+  outline-width: var(--outline-width);
   outline-style: solid;
   outline-color: var(--theme-accent);
   outline-offset: 0;

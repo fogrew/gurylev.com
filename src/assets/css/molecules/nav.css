@@ -11,5 +11,7 @@
 }
 
 .nav__link--active {
-  outline: 2px dashed var(--theme-accent);
+  outline-width: var(--outline-width);
+  outline-style: dashed;
+  outline-color: var(--theme-accent);
 }

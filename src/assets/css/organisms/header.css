@@ -4,6 +4,7 @@
 .header__start,
 .header__end {
   display: inline-flex;
+  margin-bottom: calc(var(--outline-width) * 2);
 }
 .header__start {
   padding-right: 2em;
