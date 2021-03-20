@@ -8,9 +8,6 @@ a:hover,
 a:focus {
   color: var(--theme-secondary);
 }
-a:focus-within {
-  outline: 2px solid var(--theme-accent);
-}
 
 /* * external links * */
 a:not([href^="#"]):not([href^="/"])::after {
@@ -22,6 +19,6 @@ a:not([href^="#"]):not([href^="/"])::after {
   transition: transform .1s ease-out;
   will-change: transform;
 }
-a:not([href^="#"]):not([href^="/"]):hover::after {
+a:not([href^="#"]):not([href^="/"]):is(:hover,:focus)::after {
   transform: translate(2px, -1px);
 }

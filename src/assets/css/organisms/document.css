@@ -11,3 +11,10 @@
   background-color: var(--theme-background);
   scroll-behavior: smooth;
 }
+
+:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--theme-accent);
+  outline-offset: 0;
+}

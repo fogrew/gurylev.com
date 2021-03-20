@@ -1,0 +1,10 @@
+.button {
+  padding-left: .5em;
+  padding-right: .5em;
+  border: 0;
+  font-size: inherit;
+  vertical-align: bottom;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--theme-border);
+}
