@@ -75,8 +75,6 @@ module.exports = function(eleventyConfig) {
       }
     });
 
-    console.log(metadata)
-
     let imageAttributes = {
       loading: "lazy",
       decoding: "async",
