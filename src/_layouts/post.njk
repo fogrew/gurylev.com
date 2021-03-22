@@ -2,17 +2,23 @@
 layout: base
 template: post
 ---
-<header class="page__title">
-<h1 class="p-name">{{ title }}</h1>
-<p>Опубликовано <time class="post-date dt-published" datetime="{{ date }}">{{ date | readableDate }}</time></p>
-</header>
-<aside class="page__nav">
-  <div class="toc">
-    {{ content | toc | safe }}
-  </div>
-</aside>
-{{ content | safe }}
+<article class="h-entry page page--template-{{ template }} e-content" id="main">
+  <header class="page__title">
+    <h1 class="p-name">{{ title }}</h1>
+    <p>Опубликовано <a class="p-author h-card" href="/">мной</a> <time class="post-date dt-published" datetime="{{ date }}">{{ date | readableDate }}</time></p>
+  </header>
+  <aside class="page__nav">
+    <div class="toc">
+      {{ content | toc | safe }}
+    </div>
+    <a href="#main" class="to-top">
+      <span class="to-top__text" aria-label="Проскроллить наверх">↑</span>
+    </a>
+  </aside>
+  <p class="p-summary" style="display:none">{{ description }}</p>
+  {{ content | safe }}
 
-<footer class="page__footer">
-  {# <p><a href="{{ '/blog/' | url }}">← Вернуться</a></p> #}
-</footer>
+  <footer class="page__footer">
+    {# <p><a href="{{ '/blog/' | url }}">← Вернуться</a></p> #}
+  </footer>
+</article>

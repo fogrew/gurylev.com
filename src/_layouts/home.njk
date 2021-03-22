@@ -2,8 +2,11 @@
 layout: base
 template: wide
 ---
+<main class="page page--template-{{ template }}" id="main">
+
 {% if not header %}
 <h1 class="page__title p-name">{{ header or title }}</h1>
 {% endif %}
 
 {{ content | safe }}
+</main>
