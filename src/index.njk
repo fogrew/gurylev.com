@@ -4,16 +4,17 @@ layout: home
 eleventyNavigation:
   key: Андрей Гурылёв
   order: 10
+header: Андрей Гурылёв
 ---
 
+<div class="h-card">
+  <span style="float: right">
+    {% image '/img/avatar.jpg', 'u-photo avatar', 'фото Андрея Гурылева' %}
+  </span>
+  <h1 class="p-name"><a href="/" class="u-url u-uid" rel="me"></a>{{ header }}</h1>
+  <p class="p-note">Мне {{ config.age }} лет. Живу и работаю в вебе. Обычно делаю это из Петербурга. Отзываюсь в вебе на fogrew (читается как Фог Рю).</p>
+</div>
 <div class="grid grid--2">
-  <div class="grid__line">
-    <a href="/" class="u-author u-url u-uid" rel="me" style="float: right">
-      {% image '/img/avatar.jpg', 'u-photo avatar', 'фото Андрея Гурылева' %}
-    </a>
-    <h2>Вкратце обо мне</h2>
-    <p class="p-note">Мне {{ config.age }} лет. Живу и работаю в вебе. Обычно делаю это из Петербурга. Отзываюсь в вебе на fogrew (читается как Фог Рю).</p>
-  </div>
   <div>
     <h3 class="p-role role">Веб-разработчик с&nbsp;выдержкой</h3>
     <p>С 2007 года верстаю, стилизую и скриптую сайты. Видал всякого и умею выбирать подходящие инструменты для решения бизнес-задач.</p>
