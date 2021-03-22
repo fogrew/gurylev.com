@@ -58,7 +58,7 @@ module.exports = function(eleventyConfig) {
     }
   }
 
-  async function imageShortcode(src, klass, alt, sizes = '100vw') {
+  async function imageShortcode(src, className, alt, sizes) {
     // get metadata even the images are not fully generated
     let source = path.join(__dirname, "./src/assets/" , src);
     let extensions = getExtensionFallbacks(src);
@@ -75,31 +75,17 @@ module.exports = function(eleventyConfig) {
       }
     });
 
+    console.log(metadata)
+
     let imageAttributes = {
-      alt,
-      sizes,
       loading: "lazy",
       decoding: "async",
+      class: className,
+      sizes,
+      alt
     };
 
-    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
     return Image.generateHTML(metadata, imageAttributes);
-    // let lowsrc = metadata[extensions.pop()][0];
-
-    // return `
-    // <picture>
-    // ${Object.values(metadata).map(imageFormat => {
-    //   return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" ${sizes ? sizes="${sizes}" : ''}>`;
-    // }).join("\n")}
-    //   <img
-    //     src="${lowsrc.url}"
-    //     width="${lowsrc.width}"
-    //     height="${lowsrc.height}"
-    //     class="${klass}"
-    //     alt="${alt}"
-    //     loading="lazy"
-    //     decoding="async">
-    // </picture>`;
   }
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
