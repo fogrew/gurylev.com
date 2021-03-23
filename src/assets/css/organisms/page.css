@@ -13,6 +13,10 @@
   padding-right: var(--gap);
 }
 
+.page .note {
+  grid-column: nav;
+}
+
 .page__title {
   grid-area: header;
   margin-bottom: 1rem;

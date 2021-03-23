@@ -116,7 +116,9 @@ convert -list font | grep "Font:" | sed "s/Font: //g"
 convert -append -gravity center text.png fm.png result.png
 ```
 
-Здесь `append` указан с минусом вначале. Это говорит о том, что вставлять нужно вертикально. Image<b>Magick</b>✨ же!
+Здесь `append` указан с минусом вначале. Это говорит о том, что вставлять нужно вертикально.
+
+Image**Magick**✨ же!{.note}
 
 Вот и всё, картинка для анонса готова.
 ![frontend mix](/img/posts/fm2.png)

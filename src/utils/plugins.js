@@ -13,7 +13,7 @@ module.exports = {
     eleventyConfig.addPlugin(pluginSyntaxHighlight);
     eleventyConfig.addPlugin(pluginNavigation);
     eleventyConfig.addPlugin(pluginTOC, {
-      headingText: 'Содержание',
+      headingText: '',
       wrapperClass: 'toc__nav'
     });
   },

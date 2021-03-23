@@ -13,7 +13,7 @@ module.exports = {
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   htmlDateString: (dateObj) => {
     const date = new Date(dateObj)
-    return date.toLocaleDateString('en-CA')
+    return date.toISOString()
   },
 
   // Get the first `n` elements of a collection.
