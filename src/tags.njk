@@ -15,8 +15,10 @@ layout: home
 renderData:
   title: Страницы с тегом “{{ tag }}”
 permalink: /tags/{{ tag }}/
+header: Страницы с тегом “{{ tag }}”
 ---
 
+<h1>Страницы с тегом “{{ tag }}”</h1>
 <div class="grid grid--2">
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}
