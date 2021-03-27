@@ -1,0 +1,7 @@
+.avatar {
+  display: inline-block;
+  vertical-align: middle;
+}
+.avatar--circle {
+  border-radius: 50%;
+}

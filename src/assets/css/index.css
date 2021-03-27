@@ -14,6 +14,7 @@
 @import 'atoms/input.css';
 @import 'atoms/button.css';
 @import 'atoms/toc.css';
+@import 'atoms/avatar.css';
 @import 'atoms/sr-only.css';
 
 @import 'molecules/nav.css';
