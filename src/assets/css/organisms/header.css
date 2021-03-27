@@ -9,3 +9,11 @@
 .header__start {
   padding-right: 2em;
 }
+@media (min-width: 60rem) {
+  .header {
+    display: flex;
+  }
+  .header__end {
+    margin-left: auto;
+  }
+}
