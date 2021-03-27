@@ -17,7 +17,17 @@
       "permanent": true
     },
     {
+      "source": "/weblog/all/socio-name/",
+      "destination": "/code/native-social-buttons/",
+      "permanent": true
+    },
+    {
       "source": "/posts/2014.10.29-transparent-bootstrap-buttons/",
+      "destination": "/code/transparent-bootstrap-buttons/",
+      "permanent": true
+    },
+    {
+      "source": "/weblog/all/btn-outline/",
       "destination": "/code/transparent-bootstrap-buttons/",
       "permanent": true
     },
