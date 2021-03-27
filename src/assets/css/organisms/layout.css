@@ -18,24 +18,6 @@
   grid-row-start: 3;
   grid-row-end: 4;
 }
-.layout__skip-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  width: 1px;
-  height: 1px;
-  margin: 0.5rem;
-  padding: 0.5rem calc(var(--gap) * 0.5);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-.layout__skip-nav:focus {
-  width: auto;
-  height: auto;
-  clip: auto;
-  overflow: visible;
-}
 .layout__dev {
   position: fixed;
   bottom: 0;

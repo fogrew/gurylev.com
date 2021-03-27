@@ -1,5 +1,6 @@
 {% set navPages = collections.all | eleventyNavigation %}
 <nav class="nav">
+  <a href="#main" class="nav__link screen-reader-only">Пропустить навигацию</a>
 {%- for entry in navPages %}
   <a class="{{ entry.classes }} nav__link{% if entry.url == page.url %} nav__link--active{% endif %}" href="{{ entry.url | url }}" {% if entry.url == page.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
 {%- endfor %}
