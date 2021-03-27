@@ -11,8 +11,7 @@
         {% if (post.data.preview | extname) == '.svg' %}
         {{ post.data.preview | inline | safe }}
         {% else %}
-        {% image post.data.preview, 'card__image', post.data.title, "(min-width: 768px) 60vw, 100vw" %}
-        {# <img class="card__image" src="{{ post.data.preview | url }}"> #}
+        {% image post.data.preview, 'card__image', post.data.title, '(min-width: 768px) 400px, 100vw', '720,400' %}
         {% endif %}
       </span>
       {% endif %}

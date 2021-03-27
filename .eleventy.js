@@ -58,14 +58,18 @@ module.exports = function(eleventyConfig) {
     }
   }
 
-  async function imageShortcode(src, className, alt, sizes) {
-    // get metadata even the images are not fully generated
+  async function imageShortcode(src, className, alt, sizes, widths, imgWidth) {
     let source = path.join(__dirname, "./src/assets/" , src);
     let extensions = getExtensionFallbacks(src);
+    let widthsArray = widths.split(',').map(width => Number(width))
     let metadata = await Image(source, {
       outputDir: './dist/img/',
       urlPath: '/img/',
-      widths: [400,690],
+      widths: widths ? [...widthsArray, null] : [null],
+      sharpJpegOptions: {
+          quality: 80,
+          progressive: true
+      },
       formats: extensions,
       filenameFormat: function (id, src, width, format, options) {
         const extension = path.extname(src);
@@ -75,17 +79,48 @@ module.exports = function(eleventyConfig) {
       }
     });
 
-    let imageAttributes = {
-      loading: "lazy",
-      decoding: "async",
-      class: className,
-      sizes,
-      alt
-    };
+    if(imgWidth && !widths.includes(imgWidth)) {
+      throw new Error(`\`imgWidth\` (${imgWidth}) must be in the list \`widths\` (${widths}) from: ${src}`);
+    }
 
-    return Image.generateHTML(metadata, imageAttributes);
+    // console.log(metadata)
+
+    let firstSrc = metadata[extensions.pop()];
+    let lowsrc = firstSrc[0];
+
+    const getHeightByWidth = (targetWidth) => {
+      const firstSrc = metadata[extensions.pop()];
+      const targetImage = firstSrc.find(image => image.width == targetWidth)
+
+      if(!targetImage) {
+        console.log(firstSrc)
+        throw new Error(`\`targetWidth\` (${targetWidth}) not found in \`firstSrc\` (${firstSrc[0].url})`);
+      }
+
+      return targetImage.height
+    }
+    const generateSrcSetDPR = (entry, index) => `${entry.url} ${index + 1}x`
+    const generateSrcSetSizes = entry => entry.srcset
+
+    return `<picture>
+    ${Object.values(metadata).map(imageFormat => {
+      const srcSetGenerator = sizes ? generateSrcSetSizes : generateSrcSetDPR;
+      const sizesAttribute = sizes ? `sizes="${sizes}"` : '';
+      return `<source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(srcSetGenerator).join(", ")}" ${sizesAttribute}>`;
+    }).join("\n")}
+      <img
+        src="${lowsrc.url}"
+        width="${imgWidth || lowsrc.width}"
+        height="${imgWidth ? getHeightByWidth(imgWidth) : lowsrc.height}"
+        class="${className}"
+        alt="${alt}"
+        loading="lazy"
+        decoding="async">
+    </picture>`;
   }
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
 
   /**
    * Passthrough file copy

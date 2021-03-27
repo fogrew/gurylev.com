@@ -31,6 +31,7 @@
 
 .page :is(img, svg) {
   max-width: 100%;
+  height: auto;
 }
 
 .page ul {

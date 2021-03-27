@@ -18,7 +18,7 @@ preview: '/img/posts/fm2.png'
 
 Но это меня не остановило. Ведь картинки можно редактировать и без редактора! Вот уж что мне удобно, так это `command line interface`. Далее отправился изучать доки консольной утилиты [imagemagick](www.imagemagick.org). Через 20 минут изучения доков, нарисовал это
 
-![frontend mix](/img/posts/fm2.png){loading="lazy" decoding="async"}
+{% image '/img/posts/fm2.png', '', 'frontend mix', '(min-width: 768px) 940px, 100vw', '768,940', '940' %}
 
 Нагуглил и склеил две картинки, добавил подпись и всё. Работа элементарная. Никакого фотошопа. Никаких сложностей. Оказалось, запилить картинку для анонса не так и сложно. А однажды приобретя этот навык, в будущем будет совсем просто. Так и от фш можно будет напрочь избавиться.
 
@@ -121,4 +121,5 @@ convert -append -gravity center text.png fm.png result.png
 Image**Magick**✨ же!{.note}
 
 Вот и всё, картинка для анонса готова.
-![frontend mix](/img/posts/fm2.png)
+
+{% image '/img/posts/fm2.png', '', 'frontend mix', '(min-width: 768px) 940px, 100vw', '768,940', '940' %}

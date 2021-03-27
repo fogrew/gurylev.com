@@ -16,7 +16,7 @@
   grid-auto-rows: min-content;
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 768px) {
   .page--template-article {
     --grid-ascii-page:
     " . header  header . "

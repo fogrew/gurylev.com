@@ -9,7 +9,7 @@
 .header__start {
   padding-right: 2em;
 }
-@media (min-width: 60rem) {
+@media (min-width: 768px) {
   .header {
     display: flex;
   }
