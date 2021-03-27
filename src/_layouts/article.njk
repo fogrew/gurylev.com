@@ -5,7 +5,15 @@ template: article
 <article class="h-entry page page--template-{{ template }}" id="main">
   <header class="page__header">
     <h1 class="p-name">{{ title }}</h1>
-    <p>Опубликовано <a class="p-author h-card" href="/">мной</a> <time class="post-date dt-published" datetime="{{ date }}">{{ date | readableDate }}</time></p>
+    <p><a class="p-author h-card" href="/">
+    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} Андрей Гурылев</a> написал <time class="post-date dt-published" datetime="{{ date | htmlDateString }}"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
+    в
+    {% for tag in tags %}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="p-category tag">#{{ tag }}</a>
+    {% endfor %}
+
+    </p>
   </header>
 
   <p class="page__summary p-summary">{{ description }}</p>

@@ -25,6 +25,11 @@
   margin-bottom: 1rem;
 }
 
+.page__header .avatar {
+  width: 20px;
+  height: 20px;
+}
+
 .page .note {
   grid-column: nav;
 }
