@@ -5,8 +5,13 @@ template: wide
 <main class="page page--template-{{ template }}" id="main">
 
 {% if not header %}
-<h1 class="page__title p-name">{{ header or title }}</h1>
+<header class="page__header">
+  <h1 class="p-name">{{ header or title }}</h1>
+</header>
 {% endif %}
 
+<div class="page__content" id="content">
 {{ content | safe }}
+</div>
+
 </main>

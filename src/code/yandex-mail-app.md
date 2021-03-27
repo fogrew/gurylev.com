@@ -7,7 +7,6 @@ tags:
 preview: '/img/posts/yandex-mail-app.png'
 ---
 
-Очень был нужен отдельный контекст для чтения почты. Завернул в электрон.
 Сейчас уже не пользуюсь почтовым ящиком, поэтому проект в архиве.
 
 https://github.com/fogrew/yandex-mail-app

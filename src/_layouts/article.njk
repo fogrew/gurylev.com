@@ -1,0 +1,32 @@
+---
+layout: base
+template: article
+---
+<article class="h-entry page page--template-{{ template }}" id="main">
+  <header class="page__header">
+    <h1 class="p-name">{{ title }}</h1>
+    <p>Опубликовано <a class="p-author h-card" href="/">мной</a> <time class="post-date dt-published" datetime="{{ date }}">{{ date | readableDate }}</time></p>
+  </header>
+
+  <p class="page__summary p-summary">{{ description }}</p>
+
+  {% set table_of_contents = content | toc %}
+  {% if table_of_contents %}
+  <aside class="page__nav">
+    <details class="toc">
+      <a href="#content" class="screen-reader-only">Пропустить оглавление</a>
+      <summary><h2>Оглавление статьи</h2></summary>
+      {{ table_of_contents | safe }}
+      <a href="#main">↑ К началу статьи</a>
+    </details>
+  </aside>
+  {% endif %}
+
+  <div class="e-content page__content" id="content">
+  {{ content | safe }}
+  </div>
+
+  <footer class="page__footer">
+    {# <p><a href="{{ '/blog/' | url }}">← Вернуться</a></p> #}
+  </footer>
+</article>

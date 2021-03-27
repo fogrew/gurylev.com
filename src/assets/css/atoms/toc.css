@@ -1,5 +1,6 @@
 .toc {
   height: min-content;
+  padding-bottom: 1em;
   background: linear-gradient(var(--theme-background) calc(100% - 1em), transparent);
 }
 .toc h2 {

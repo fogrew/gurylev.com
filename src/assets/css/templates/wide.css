@@ -5,3 +5,6 @@
   " . footer . ";
   --grid-columns-page: 1fr minmax(320px, var(--full-width)) 1fr;
 }
+.page--template-wide .page__content {
+  grid-column: content;
+}
