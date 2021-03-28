@@ -13,13 +13,13 @@ eleventyNavigation:
 
 Почта: [andrew@gurylev.com](mailto:andrew@gurylev.com){rel="me" .u-email}
 
-Telegram: [fogrew](tg://resolve?domain=fogrew){rel="me"}
-Mastodon: [fogrew@mastodon.online](https://mastodon.online/@fogrew){rel="me"} (изредка захожу)
-Matrix: [fogrew:matrix.org](https://matrix.to/#/@fogrew:matrix.org){rel="me"} (изредка захожу)
-Вконтакте: [fogrew](https://vk.com/fogrew){rel="me"} (изредка захожу)
-Instagram: [fogrew](http://instagr.am/fogrew){rel="me"} (изредка захожу)
-Twitter: [fogrew](https://twitter.com/fogrew){rel="me"} (заброшен)
-Keybase: [fogrew](https://keybase.io/fogrew){rel="me"} (заброшен)
+[Telegram: fogrew](tg://resolve?domain=fogrew){rel="me"}
+[Mastodon: fogrew@mastodon.online](https://mastodon.online/@fogrew){rel="me"} (изредка захожу)
+[Matrix: fogrew:matrix.org](https://matrix.to/#/@fogrew:matrix.org){rel="me"} (изредка захожу)
+[Вконтакте: fogrew](https://vk.com/fogrew){rel="me"} (изредка захожу)
+[Instagram: fogrew](http://instagr.am/fogrew){rel="me"} (изредка захожу)
+[Twitter: fogrew](https://twitter.com/fogrew){rel="me"} (заброшен)
+[Keybase: fogrew](https://keybase.io/fogrew){rel="me"} (заброшен)
 
 ## Безопасная переписка
 

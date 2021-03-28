@@ -39,7 +39,9 @@ module.exports = {
     .use(markdownItAnchor, {
       permalink: true,
       permalinkClass: "anchor",
-      permalinkSymbol: "" // moved to ::after content to remove from table of contents
+      permalinkSymbol: "", // moved to ::after content to remove from table of contents
+      permalinkBefore: true,
+      permalinkAttrs: slug => ({ 'aria-label': `Перейти к заголовку «${decodeURIComponent(slug).replace('-', ' ')}»` })
     })
     .use(markdownItAttrs)
   }
