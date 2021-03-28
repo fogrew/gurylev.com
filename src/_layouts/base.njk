@@ -14,8 +14,25 @@ scripts: []
     {%- for style in styles %}
     <link rel="stylesheet" href="{{ style | url }}">
     {%- endfor %}
-    <link rel="shortcut icon" href="{{ '/img/favicon.png' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#333333">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#333333">
+    <meta name="theme-color" content="#f7f6ee">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="{{ metadata.title }}">
+    <meta name="apple-mobile-web-app-title" content="{{ metadata.title }}">
+    <meta name="msapplication-starturl" content="{{ metadata.url | url }}">
+
 	  <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
     <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
     <link rel="webmention" href="https://webmention.io/gurylev.com/webmention" />
@@ -60,5 +77,9 @@ scripts: []
     {%- for script in scripts %}
     <script async defer type="module" src="{{ script | url }}"></script>
     {%- endfor %}
+    <script>
+      if ("serviceWorker" in navigator)
+        navigator.serviceWorker.register("/service-worker.js");
+    </script>
   </body>
 </html>
