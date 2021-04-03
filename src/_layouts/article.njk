@@ -1,12 +1,13 @@
 ---
 layout: base
 template: article
+scripts: ["/js/article.mjs"]
 ---
 <article class="h-entry page page--template-{{ template }}" id="main">
   <header class="page__header">
     <h1 class="p-name">{{ title }}</h1>
     <p><a class="p-author h-card" href="/">
-    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} Андрей Гурылев</a> написал <time class="post-date dt-published" datetime="{{ date | htmlDateString }}"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
+    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} Андрей Гурылев</a> опубликовал <time class="post-date dt-published" datetime="{{ date | htmlDateString }}"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
     в
     {% for tag in tags %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
@@ -37,4 +38,5 @@ template: article
   <footer class="page__footer">
     {# <p><a href="{{ '/blog/' | url }}">← Вернуться</a></p> #}
   </footer>
+  <div class="progress-bar"></div>
 </article>
