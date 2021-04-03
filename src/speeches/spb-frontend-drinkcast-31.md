@@ -8,7 +8,7 @@ tags:
 ---
 
 <audio controls>
-  <source preload="auto" src="{{ '/media/SPB-Frontend-Drinkcast-26.mp3' | url }}" type="audio/mpeg">
+  <source class="u-audio" preload="auto" src="{{ '/media/SPB-Frontend-Drinkcast-26.mp3' | url }}" type="audio/mpeg">
   <a href="{{ '/media/SPB-Frontend-Drinkcast-31.mp3' | url }}" download>Скачать выпуск подкаста</a>
 </audio>
 <a href="{{ '/media/SPB-Frontend-Drinkcast-31.mp3' | url }}" download>Скачать выпуск подкаста</a>
