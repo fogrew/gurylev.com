@@ -22,6 +22,10 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
   padding: 0 1rem;
   background-color: var(--theme-background);
   border: 1px solid var(--theme-border);
@@ -29,4 +33,8 @@
 }
 .layout__dev:target {
   opacity: 1;
+  width: auto;
+  height: auto;
+  clip: auto;
+  overflow: visible;
 }
