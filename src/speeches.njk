@@ -13,13 +13,8 @@ eleventyNavigation:
   <div class="grid__line">
     <h2>Докладываю</h2>
   </div>
-  {% set postslist = collections.lectures | head(-3) %}
+  {% set postslist = collections.lectures %}
   {% include "postslist.njk" %}
-  {% if collections.lectures.length > 3 %}
-  <div class="grid__line">
-    <a href="{{ '/lectures/' | url }}">Больше докладов</a>
-  </div>
-  {% endif %}
 
   <div class="grid__line">
     <h2>Звучу в подкастах</h2>
