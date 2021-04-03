@@ -16,6 +16,7 @@
 @import 'atoms/toc.css';
 @import 'atoms/avatar.css';
 @import 'atoms/sr-only.css';
+@import 'atoms/progress-bar.css';
 
 @import 'molecules/nav.css';
 @import 'molecules/form.css';
