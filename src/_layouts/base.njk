@@ -24,9 +24,9 @@ scripts: []
     <meta name="msapplication-TileColor" content="#333333">
     <meta name="theme-color" content="#f7f6ee">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-
+    {% if config.env === 'production '%}
     <link rel="manifest" href="/manifest.json">
-
+    {% endif %}
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="{{ metadata.title }}">

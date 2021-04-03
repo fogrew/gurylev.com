@@ -13,18 +13,20 @@ module.exports = {
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(pluginSyntaxHighlight);
     eleventyConfig.addPlugin(pluginNavigation);
-    eleventyConfig.addPlugin(pluginPWA, {
-      cacheId: 'gurylev',
-      globPatterns: [
-        "**/*.{html,css,js,mjs,map,jpg,png,gif,webp,avif,ico,svg,woff2,woff,eot,ttf,otf,ttc,json}"
-      ],
-      runtimeCaching: [
-        {
-          urlPattern: /^.*\.(html|css|jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
-          handler: `staleWhileRevalidate`
-        }
-      ]
-    });
+    if(process.env.ELEVENTY_ENV === 'production') {
+      eleventyConfig.addPlugin(pluginPWA, {
+        cacheId: 'gurylev',
+        globPatterns: [
+          "**/*.{html,css,js,mjs,map,jpg,png,gif,webp,avif,ico,svg,woff2,woff,eot,ttf,otf,ttc,json}"
+        ],
+        runtimeCaching: [
+          {
+            urlPattern: /^.*\.(html|css|jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
+            handler: `staleWhileRevalidate`
+          }
+        ]
+      });
+    }
     eleventyConfig.addPlugin(pluginTOC, {
       headingText: '',
       wrapperClass: 'toc__nav'
