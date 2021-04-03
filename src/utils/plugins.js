@@ -7,6 +7,7 @@ const pluginPWA = require("eleventy-plugin-pwa");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require('markdown-it-attrs');
+const markdownItSpan = require('markdown-it-bracketed-spans');
 
 module.exports = {
   addPlugins: (eleventyConfig) => {
@@ -45,6 +46,7 @@ module.exports = {
       permalinkBefore: true,
       permalinkAttrs: slug => ({ 'aria-label': `Перейти к заголовку «${decodeURIComponent(slug).replace('-', ' ')}»` })
     })
+    .use(markdownItSpan)
     .use(markdownItAttrs)
   }
 }

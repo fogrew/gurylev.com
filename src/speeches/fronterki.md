@@ -2,6 +2,7 @@
 title: Городские сообщества и идеальный стэк
 description: Фронтёрки 2, про pitercss, SPB Frontend и NodeSchool SPB
 date: 2018-09-03
+layout: media
 tags:
   - podcasts
 ---

@@ -2,6 +2,7 @@
 title: Грустный
 description: SPB Frontend Drinkcast 26, общаемся с разработчиками про разное выгорание
 date: 2018-03-13
+layout: media
 tags:
   - podcasts
 ---

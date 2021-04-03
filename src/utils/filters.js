@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require("fs");
+const webvtt = require('node-webvtt');
 
 module.exports = {
   readableDate: (dateObj) => {
@@ -37,4 +38,12 @@ module.exports = {
 
     return content
   },
+
+  // Get SubRip subtitles as array of objects
+  vtt: (stringPath) => {
+    const newPath = path.join(__dirname, '../assets/', stringPath)
+    const subtitles = fs.readFileSync(newPath, 'utf8')
+
+    return webvtt.parse(subtitles).cues;
+  }
 }

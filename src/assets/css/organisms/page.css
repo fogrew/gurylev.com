@@ -25,6 +25,11 @@
   margin-bottom: 1rem;
 }
 
+.page__summary {
+  grid-area: summary;
+  margin-bottom: 1rem;
+}
+
 .page__header .avatar {
   width: 20px;
   height: 20px;
@@ -37,6 +42,10 @@
 .page :is(img, svg) {
   max-width: 100%;
   height: auto;
+}
+
+.page :is(audio, video) {
+  width: 100%;
 }
 
 .page ul {
