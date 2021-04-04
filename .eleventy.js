@@ -65,7 +65,7 @@ module.exports = function(eleventyConfig) {
     let metadata = await Image(source, {
       outputDir: './dist/img/',
       urlPath: '/img/',
-      widths: widths ? [...widthsArray, null] : [null],
+      widths: widths ? widthsArray : [null],
       sharpJpegOptions: {
           quality: 80,
           progressive: true
