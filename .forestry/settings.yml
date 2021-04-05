@@ -3,7 +3,34 @@ new_page_extension: md
 auto_deploy: false
 admin_path: ''
 webhook_url: 
-sections: 
+sections:
+- type: document
+  path: src/index.njk
+  label: Главная
+  match: "**/*"
+- type: document
+  path: src/now.md
+  label: Сейчас
+  match: "**/*"
+- type: directory
+  path: src/blog
+  label: Блог
+  create: documents
+  match: "*.md"
+- type: directory
+  path: src/code
+  label: Код
+  create: documents
+  match: "*.md"
+- type: directory
+  path: src/speeches
+  label: Выступления
+  create: documents
+  match: "*.md"
+- type: document
+  path: src/contacts.md
+  label: Контакты
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
