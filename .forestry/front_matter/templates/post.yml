@@ -28,3 +28,5 @@ fields:
 - type: file
   name: preview
   label: preview
+pages:
+- src/blog/test.md
