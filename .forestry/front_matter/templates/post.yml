@@ -4,20 +4,26 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Заголовок
+  config:
+    required: true
 - type: text
   name: description
-  label: description
+  label: Краткое описание
+  description: Используется в списке статей, не используй HTML!
+  config:
+    required: false
 - type: datetime
   name: date
-  label: date
+  label: Дата публикации
   config:
-    date_format: ''
+    date_format: YYYY-MM-DD
     export_format: YYYY-MM-DD
     required: true
+  default: now
 - type: list
   name: tags
-  label: tags
+  label: Теги
   config:
     use_select: true
     source:
@@ -27,6 +33,7 @@ fields:
       path: ''
 - type: file
   name: preview
-  label: preview
+  label: Картинка
+  description: Превью для списка постов и социалок
 pages:
 - src/blog/test.md
