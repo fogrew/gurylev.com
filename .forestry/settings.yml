@@ -4,6 +4,13 @@ auto_deploy: false
 admin_path: "/src/admin"
 webhook_url: 
 sections:
+- type: directory
+  path: src
+  label: Контент
+  create: all
+  match: "**/*"
+  templates:
+  - post
 - type: document
   path: src/index.njk
   label: Главная
