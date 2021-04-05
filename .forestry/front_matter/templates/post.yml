@@ -11,9 +11,20 @@ fields:
 - type: datetime
   name: date
   label: date
+  config:
+    date_format: ''
+    export_format: YYYY-MM-DD
+    required: true
 - type: list
   name: tags
   label: tags
+  config:
+    use_select: true
+    source:
+      type: documents
+      section: ''
+      file: 
+      path: ''
 - type: file
   name: preview
   label: preview
