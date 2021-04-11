@@ -3,11 +3,11 @@ layout: base
 template: article
 scripts: ["/js/article.mjs"]
 ---
-<article class="h-entry page page--template-{{ template }}" id="main">
+<article class="h-entry page page--template-{{ template }}" id="main" itemscope itemtype="http://schema.org/Article">
   <header class="page__header">
-    <h1 class="p-name">{{ title }}</h1>
-    <p><a class="p-author h-card" href="/">
-    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} Андрей Гурылев</a> опубликовал <time class="post-date dt-published" datetime="{{ date | htmlDateString }}"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
+    <h1 class="p-name" itemprop="name headline">{{ title }}</h1>
+    <p><a class="p-author h-card" href="/" itemprop="author" itemscope itemtype="https://schema.org/Person">
+    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} <span itemprop="name">Андрей Гурылев</span></a> опубликовал <time class="post-date dt-published" datetime="{{ date | htmlDateString }}" itemprop="datePublished"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
     в
     {% for tag in tags %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
@@ -15,9 +15,12 @@ scripts: ["/js/article.mjs"]
     {% endfor %}
 
     </p>
+    {% if preview %}
+    <meta itemprop="image" content="{{ preview }}">
+    {% endif %}
   </header>
 
-  <p class="page__summary p-summary">{{ description }}</p>
+  <p class="page__summary p-summary" itemprop="description">{{ description }}</p>
 
   {% set table_of_contents = content | toc %}
   {% if table_of_contents %}
@@ -31,7 +34,7 @@ scripts: ["/js/article.mjs"]
   </aside>
   {% endif %}
 
-  <div class="e-content page__content" id="content">
+  <div class="e-content page__content" id="content" itemprop="articleBody">
   {{ content | safe }}
   </div>
 

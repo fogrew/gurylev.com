@@ -1,17 +1,18 @@
 {% for post in postslist | reverse %}
-  <article class="h-entry card" aria-labelledby="{{ post.data.title | urlencode }}">
+  <article class="h-entry card" aria-labelledby="{{ post.data.title | urlencode }}" itemscope itemtype="http://schema.org/Article">
     <a class="u-url u-uid card__link" href="{{ post.url | url }}">
       <span class="card__body">
-        <h3 class="p-name card__title" id="{{ post.data.title | urlencode }}">{{ post.data.title }}</h3>
-        <time class="dt-published card__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-        <p class="p-summary">{{ post.data.description }}</p>
+        <h3 class="p-name card__title" id="{{ post.data.title | urlencode }}" itemprop="name headline">{{ post.data.title }}</h3>
+        <time class="dt-published card__date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">{{ post.date | readableDate }}</time>
+        <p class="p-summary" itemprop="description">{{ post.data.description }}</p>
       </span>
       {% if post.data.preview %}
       <span class="card__preview">
         {% if (post.data.preview | extname) == '.svg' %}
         {{ post.data.preview | inline | safe }}
+        <meta itemprop="image" content="{{ post.data.preview }}">
         {% else %}
-        {% image post.data.preview, 'card__image', post.data.title, '(min-width: 768px) 400px, 100vw', '720,400' %}
+        {% image post.data.preview, 'card__image', post.data.title, '(min-width: 768px) 400px, 100vw', '720,400', null, 'image' %}
         {% endif %}
       </span>
       {% endif %}

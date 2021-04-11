@@ -58,7 +58,7 @@ module.exports = function(eleventyConfig) {
     }
   }
 
-  async function imageShortcode(src, className, alt, sizes, widths, imgWidth) {
+  async function imageShortcode(src, className, alt, sizes, widths, imgWidth, itemprop) {
     let source = path.join(__dirname, "./src/assets/" , src);
     let extensions = getExtensionFallbacks(src);
     let widthsArray = widths.split(',').map(width => Number(width))
@@ -115,7 +115,8 @@ module.exports = function(eleventyConfig) {
         class="${className}"
         alt="${alt}"
         loading="lazy"
-        decoding="async">
+        decoding="async"
+        ${itemprop ? 'itemprop='+itemprop : ''}>
     </picture>`;
   }
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
