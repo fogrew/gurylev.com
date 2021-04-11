@@ -11,7 +11,7 @@ scripts: ["/js/media.mjs"]
     в
     {% for tag in tags %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="p-category tag">#{{ tag }}</a>
+      <a href="{{ tagUrl | url }}" rel="tag" class="p-category tag">#{{ tag }}</a>
     {% endfor %}
 
     </p>
