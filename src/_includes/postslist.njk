@@ -1,10 +1,10 @@
 {% for post in postslist | reverse %}
-  <article class="card" aria-labelledby="{{ post.data.title | urlencode }}">
-    <a class="card__link" href="{{ post.url | url }}">
+  <article class="h-entry card" aria-labelledby="{{ post.data.title | urlencode }}">
+    <a class="u-url u-uid card__link" href="{{ post.url | url }}">
       <span class="card__body">
-        <h3 class="card__title" id="{{ post.data.title | urlencode }}">{{ post.data.title }}</h3>
-        <time class="card__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-        <p>{{ post.data.description }}</p>
+        <h3 class="p-name card__title" id="{{ post.data.title | urlencode }}">{{ post.data.title }}</h3>
+        <time class="dt-published card__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <p class="p-summary">{{ post.data.description }}</p>
       </span>
       {% if post.data.preview %}
       <span class="card__preview">

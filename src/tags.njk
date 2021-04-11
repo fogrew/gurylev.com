@@ -19,7 +19,7 @@ header: Страницы с тегом “{{ tag }}”
 ---
 
 <h1>Страницы с тегом “{{ tag }}”</h1>
-<div class="grid grid--2">
+<div class="h-feed grid grid--2">
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}
 </div>
