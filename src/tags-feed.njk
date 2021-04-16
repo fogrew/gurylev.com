@@ -1,0 +1,34 @@
+---
+title: {{ tag }}
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{ tag }} - {{ metadata.title }}</title>
+	<link href="{{ metadata.url }}tags/{{ tag }}/feed.xml" rel="self"/>
+	<link href="{{ metadata.url }}"/>
+  {% set tagArray = collections[ tag ] %}
+	<updated>{{ collections.allContent | rssLastUpdatedDate }}</updated>
+	<id>{{ metadata.url }}tags/{{ tag }}/</id>
+	<author>
+		<name>{{ metadata.author.name }}</name>
+		<email>{{ metadata.author.email }}</email>
+	</author>
+	{%- for post in tagArray %}
+  {% if post.url and post.data.date %}
+	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+	<entry>
+		<title>{{ post.data.title }}</title>
+		<link href="{{ absolutePostUrl }}"/>
+		<updated>{{ post.date | rssDate }}</updated>
+		<id>{{ absolutePostUrl }}</id>
+		<content type="html">{{ post.data.description }}</content>
+	</entry>
+	{% endif %}
+	{%- endfor %}
+</feed>

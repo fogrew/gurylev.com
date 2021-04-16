@@ -15,6 +15,9 @@ scripts: []
     <link rel="stylesheet" href="{{ style | url }}">
     {%- endfor %}
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    {%- if renderData.feed %}
+    <link rel="alternate" href="{{ renderData.feed | url }}" type="application/atom+xml" title="{{ renderData.title or title or metadata.title }}">
+    {%- endif %}
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
