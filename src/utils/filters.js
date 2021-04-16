@@ -11,6 +11,10 @@ module.exports = {
     }).format(new Date(dateObj))
   },
 
+  log: (some) => {
+    console.log(some)
+  },
+
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   htmlDateString: (dateObj) => {
     const date = new Date(dateObj)
