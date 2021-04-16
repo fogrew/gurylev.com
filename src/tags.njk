@@ -19,10 +19,13 @@ permalink: /tags/{{ tag }}/
 header: Страницы с тегом “{{ tag }}”
 ---
 
-<h1>Страницы с тегом “{{ tag }}”</h1>
 <div class="h-feed grid grid--2">
-{% set postslist = collections[ tag ] %}
-{% include "postslist.njk" %}
+  <div class="grid__line">
+    <h1>Страницы с тегом “{{ tag }}”</h1>
+    <p><a href="/tags/{{ tag }}/feed.xml">Подписаться на RSS тега “{{ tag }}”</a></p>
+  </div>
+  {% set postslist = collections[ tag ] %}
+  {% include "postslist.njk" %}
 </div>
 
 <p>Смотри <a href="{{ '/tags/' | url }}">все теги</a>.</p>
