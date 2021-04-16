@@ -1,7 +1,7 @@
 ---
 title: Урок «Регулярки в JS»
 description: Подготовлено для учеников Epic Skills
-date: 2017-05-29
+date: 2017-06-04
 tags:
   - courses
   - epic-skills

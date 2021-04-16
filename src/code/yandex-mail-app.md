@@ -1,7 +1,7 @@
 ---
 title: Yandex Mail App
 description: Очень был нужен отдельный контекст для чтения почты. Завернул в электрон.
-date: 2018-06-07
+date: 2018-05-17
 tags:
   - projects
 preview: '/img/posts/yandex-mail-app.png'
