@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>{{ tag }} - {{ metadata.title }}</title>
+	<title>Страницы с тегом “{{ tag }}” - {{ metadata.title }}</title>
 	<link href="{{ metadata.url }}tags/{{ tag }}/feed.xml" rel="self"/>
 	<link href="{{ metadata.url }}"/>
   {% set tagArray = collections[ tag ] %}
