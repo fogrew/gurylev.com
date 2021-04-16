@@ -75,6 +75,11 @@
       "source": "/posts/2020.01.26-2019/",
       "destination": "/blog/2019/",
       "permanent": true
+    },
+    {
+      "source": "/feed/feed.xml",
+      "destination": "feed.xml",
+      "permanent": true
     }
   ]
 }
