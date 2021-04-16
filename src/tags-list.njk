@@ -4,7 +4,8 @@ permalink: /tags/
 layout: home
 ---
 
+<ul>
 {% for tag in collections.tagList %}
-  {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-  <a href="{{ tagUrl | url }}" rel="tag" class="tag">{{ tag }}</a>
+  <li><a rel="tag" href="/tags/{{ tag | url }}/">{{ tag }}</a> (<a href="/tags/{{ tag | url }}/feed.xml">rss</a>)</li>
 {% endfor %}
+</ul>
