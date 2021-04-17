@@ -24,7 +24,7 @@ header: Страницы с тегом “{{ tag }}”
     <h1>Страницы с тегом “{{ tag }}”</h1>
     <p><a href="/tags/{{ tag }}/feed.xml">Подписаться на RSS тега “{{ tag }}”</a></p>
   </div>
-  {% set postslist = collections[ tag ] %}
+  {% set postslist = collections[ tag ] | published %}
   {% include "postslist.njk" %}
 </div>
 

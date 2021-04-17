@@ -3,6 +3,9 @@ const fs = require("fs");
 const webvtt = require('node-webvtt');
 
 module.exports = {
+  published: (posts) => {
+    return posts.filter(post => !post.data.draft)
+  },
   readableDate: (dateObj) => {
     return new Intl.DateTimeFormat('ru', {
       year: 'numeric',

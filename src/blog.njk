@@ -11,6 +11,6 @@ eleventyNavigation:
     <p>Формулирую мысли</p>
     <p><a href="/tags/blog/">Все посты</a> | <a href="/tags/blog/feed.xml">Подписаться на RSS блога</a></p>
   </div>
-  {% set postslist = collections.blog %}
+  {% set postslist = collections.blog | published %}
   {% include "postslist.njk" %}
 </div>

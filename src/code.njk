@@ -16,7 +16,7 @@ eleventyNavigation:
     <p>Писал для фана, обычно не планирую развивать</p>
     <p><a href="/tags/projects/">Все проекты</a> | <a href="/tags/projects/feed.xml">Подписаться на RSS с проектами</a></p>
   </div>
-  {% set postslist = collections.projects %}
+  {% set postslist = collections.projects | published %}
   {% include "postslist.njk" %}
 
   <div class="grid__line">
@@ -24,6 +24,6 @@ eleventyNavigation:
     <p>Решениями, сниппетами, хаками, зови как хочешь 🤷</p>
     <p><a href="/tags/snippets/">Все сниппеты</a> | <a href="/tags/snippets/feed.xml">Подписаться на RSS со сниппетами</a></p>
   </div>
-  {% set postslist = collections.snippets %}
+  {% set postslist = collections.snippets | published %}
   {% include "postslist.njk" %}
 </div>
