@@ -2,6 +2,10 @@
 label: Post
 hide_body: false
 fields:
+- name: eleventyExcludeFromCollections
+  type: boolean
+  label: Draft
+  default: true
 - type: text
   name: title
   label: Заголовок
@@ -35,5 +39,3 @@ fields:
   name: preview
   label: Картинка
   description: Превью для списка постов и социалок
-pages:
-- src/blog/test.md
