@@ -9,8 +9,6 @@ scripts: []
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="description" content="{{ renderData.description or description or metadata.description }}">
-    <link rel="preload" href="{{ '/fonts/Lora.woff2' | url }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ '/fonts/SourceSansPro.woff2' | url }}" as="font" type="font/woff2" crossorigin>
     {%- for style in styles %}
     <link rel="stylesheet" href="{{ style | url }}">
     {%- endfor %}
