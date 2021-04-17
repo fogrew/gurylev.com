@@ -1,6 +1,6 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: Georgia, serif;
   font-weight: 500;
   font-feature-settings: 'kern' on, 'liga' on, 'calt' on;
   font-variation-settings: 'wght' 500;
