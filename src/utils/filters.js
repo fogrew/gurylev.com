@@ -14,6 +14,12 @@ module.exports = {
     }).format(new Date(dateObj))
   },
 
+  debugger: (...args) => {
+    console.log(...args)
+
+    debugger
+  },
+
   log: (some) => {
     console.log(some)
   },
