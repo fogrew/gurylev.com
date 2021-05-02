@@ -7,7 +7,10 @@ scripts: ["/js/article.mjs"]
   <header class="page__header">
     <h1 class="p-name" itemprop="name headline">{{ title }}</h1>
     <p><a class="p-author h-card" href="/" itemprop="author" itemscope itemtype="https://schema.org/Person">
-    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} <span itemprop="name">Андрей Гурылев</span></a> опубликовал <time class="post-date dt-published" datetime="{{ date | htmlDateString }}" itemprop="datePublished"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
+    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} <span itemprop="name">Андрей Гурылев</span></a> опубликовал
+    {% if date %}
+    <time class="post-date dt-published" datetime="{{ date | htmlDateString }}" itemprop="datePublished"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
+    {% endif %}
     в
     {% for tag in tags %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
