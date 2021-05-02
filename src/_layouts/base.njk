@@ -54,22 +54,14 @@ scripts: []
     {{ content | safe }}
 
     <footer class="layout__footer footer">
-      <p class="footer__copyright">Сайт Андрея Гурылева</p>
-      <p class="footer__help"><a class="footer__help" href="https://github.com/fogrew/gurylev.com/blob/master/{{ page.inputPath }}">Редактировать эту страницу</a>.</p>
+      <div class="footer__copyright">
+        <p>Сайт Андрея Гурылева</p>
+      </div>
+      <div class="footer__help">
+        <p><a class="footer__help" href="https://github.com/fogrew/gurylev.com/blob/master/{{ page.inputPath }}">Редактировать эту страницу</a>.</p>
+        <p>Последний релиз сайта: {{ config.release | readableDate }}</p>
+      </div>
     </footer>
-
-    <aside class="layout__dev" id="dev">
-      {% block dev %}
-      <table>
-      {% for key, value in config %}
-        <tr>
-          <td>{{ key }}:</td>
-          <td>{{ value }}</td>
-        </tr>
-      {% endfor %}
-      </table>
-      {% endblock %}
-    </aside>
 
     {%- for script in scripts %}
     <script async defer type="module" src="{{ script | url }}"></script>
