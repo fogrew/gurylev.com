@@ -28,6 +28,15 @@ scripts: ["/js/music.mjs"]
   <li>🌎 Дополняю этот сайт, порой по чуть-чуть внедряя идеи индивеба</li>
 </ul>
 
+<div class="h-feed grid grid--3">
+  <div class="grid__line">
+    <h2>Пишу статьи</h2>
+    <p>Опубликую их на этом сайте, когда допишу</p>
+  </div>
+  {% set postslist = collections.allContent | unpublished %}
+  {% include "postslist.njk" %}
+</div>
+
 <h2>Пишу код</h2>
 
 <figure>

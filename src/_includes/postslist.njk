@@ -1,11 +1,17 @@
 {% for post in postslist | reverse %}
   <article class="h-entry card" aria-labelledby="{{ post.data.title | urlencode }}" itemscope itemtype="http://schema.org/Article">
+    {% if post.data.draft != true %}
     <a class="u-url u-uid card__link" href="{{ post.url | url }}">
-      <span class="card__body">
+      <div class="card__body">
+    {% endif %}
         <h3 class="p-name card__title" id="{{ post.data.title | urlencode }}" itemprop="name headline">{{ post.data.title }}</h3>
+    {% if post.data.draft != true %}
         <time class="dt-published card__date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">{{ post.date | readableDate }}</time>
+      {% endif %}
         <p class="p-summary" itemprop="description">{{ post.data.description }}</p>
-      </span>
+      {% if post.data.draft != true %}
+      </div>
+      {% endif %}
       {% if post.data.preview %}
       <span class="card__preview">
         {% if (post.data.preview | extname) == '.svg' %}
@@ -16,6 +22,8 @@
         {% endif %}
       </span>
       {% endif %}
+    {% if post.data.draft != true %}
     </a>
+    {% endif %}
   </article>
 {% endfor %}

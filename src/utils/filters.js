@@ -7,6 +7,10 @@ module.exports = {
     return posts.filter(post => !post.data.draft)
   },
 
+  unpublished: (posts) => {
+    return posts.filter(post => post.data.draft == true)
+  },
+
   readingTime: (postOrContent) => {
     if (!postOrContent || typeof postOrContent !== 'string') {
       return ``;
