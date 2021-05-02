@@ -1,0 +1,8 @@
+---
+permalink: /css/pages/transparent-bootstrap-buttons.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+{% include "./transparent-bootstrap-buttons.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

@@ -5,26 +5,3 @@
 .avatar--circle {
   border-radius: 50%;
 }
-
-/** placeholder **/
-.avatar {
-  line-height: 0;
-  text-indent: -999em;
-}
-.avatar:after {
-  content: '';
-  display: block;
-  background-color: var(--theme-background);
-  background-image: url(/img/h-card--dark.svg);
-  background-position: center;
-  background-size: cover;
-  padding: 50% 0;
-  position: relative;
-  transition: background-color .2s ease-out;
-}
-
-@media(prefers-color-scheme: dark) {
-  .avatar:after {
-    background-image: url(/img/h-card--light.svg);
-  }
-}

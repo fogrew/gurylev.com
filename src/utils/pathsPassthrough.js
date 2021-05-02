@@ -1,7 +1,6 @@
 module.exports = [
   { "src/assets/img": "img" },
   { "src/assets/js": "js" },
-  { "src/assets/css": "css" },
   { "src/assets/keys": "keys" },
   { "src/assets/media": "media" },
   { "src/assets/fonts": "fonts" },

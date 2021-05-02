@@ -1,0 +1,31 @@
+---
+permalink: /css/styles.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+{% include "./variables.css" %}
+
+{% include "./reset.css" %}
+
+{% include "./typography/headings.css" %}
+
+{% include "./atoms/grid.css" %}
+{% include "./atoms/links.css" %}
+
+{% include "./atoms/input.css" %}
+{% include "./atoms/button.css" %}
+{% include "./atoms/avatar.css" %}
+{% include "./atoms/sr-only.css" %}
+
+{% include "./molecules/nav.css" %}
+{% include "./molecules/form.css" %}
+{% include "./molecules/card.css" %}
+
+{% include "./organisms/document.css" %}
+{% include "./organisms/layout.css" %}
+{% include "./organisms/page.css" %}
+
+{% include "./organisms/header.css" %}
+{% include "./organisms/footer.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

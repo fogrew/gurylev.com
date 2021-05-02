@@ -1,7 +1,12 @@
 ---
 layout: base
 template: article
-scripts: ["/js/article.mjs"]
+scripts:
+  - /js/article.mjs
+styles:
+  - /css/templates/article.css
+  - /css/plugins/markdown.css
+  - /css/plugins/avatar.css
 ---
 <article class="h-entry page page--template-{{ template }}" id="main" itemscope itemtype="http://schema.org/Article">
   <header class="page__header">

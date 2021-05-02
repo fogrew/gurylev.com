@@ -1,0 +1,8 @@
+---
+permalink: /css/plugins/code.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+{% include "../typography/code.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

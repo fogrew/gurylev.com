@@ -1,0 +1,8 @@
+---
+permalink: /css/plugins/markdown.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+{% include "../atoms/anchor.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

@@ -5,8 +5,10 @@ date: 2017-09-29
 tags:
   - snippets
   - evening_task
-styles: ["/css/pages/stylus-icon.css"]
-preview: "/img/posts/stylus-icon.svg"
+styles:
+  - /css/plugins/code.css
+  - /css/pages/stylus-icon.css
+preview: '/img/posts/stylus-icon.svg'
 ---
 Я замутил самому себе конкурс «вечерняя тасочка», чтобы как-то оправдывать своё безделье.
 

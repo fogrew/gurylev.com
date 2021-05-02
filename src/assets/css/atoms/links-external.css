@@ -1,0 +1,12 @@
+a:not([href^="#"]):not([href^="/"])::after {
+  content: "↗";
+  display: inline-block;
+  vertical-align: super;
+  font-size: .6em;
+  transform: translate(1px, 0);
+  transition: transform .1s ease-out;
+  will-change: transform;
+}
+a:not([href^="#"]):not([href^="/"]):is(:hover,:focus)::after {
+  transform: translate(2px, -1px);
+}

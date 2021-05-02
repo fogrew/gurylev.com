@@ -1,0 +1,8 @@
+---
+permalink: /css/templates/wide.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+{% include "./wide.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

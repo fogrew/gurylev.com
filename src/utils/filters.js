@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require("fs");
 const webvtt = require('node-webvtt');
+const csso = require('csso');
 
 module.exports = {
   published: (posts) => {
@@ -93,5 +94,9 @@ module.exports = {
     const subtitles = fs.readFileSync(newPath, 'utf8')
 
     return webvtt.parse(subtitles).cues;
+  },
+
+  cssmin: (css) => {
+    return csso.minify(css).css
   }
 }

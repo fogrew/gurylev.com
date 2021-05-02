@@ -4,7 +4,9 @@ description: Раз в неделю трачу часа два на воплощ
 date: 2014-10-29
 tags:
   - snippets
-styles: ["/css/pages/transparent-bootstrap-buttons.css"]
+styles:
+  - /css/plugins/code.css
+  - /css/pages/transparent-bootstrap-buttons.css
 ---
 Bootstrap 3.2.
 Стандартное поведение кнопок при наведении курсора — затемняться. Сделаем их прозрачными, чтоб на фоне фотографии они смотрелись красиво. Как дизайнер хочет.

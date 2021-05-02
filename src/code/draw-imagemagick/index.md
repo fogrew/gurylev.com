@@ -2,8 +2,12 @@
 title: Рисование консолью
 description: Использую imagemagick вместо фотошопа из терминала
 date: 2017-12-05
-tags: ["shell", "snippets"]
+tags:
+  - shell
+  - snippets
 preview: '/img/posts/fm2.png'
+styles:
+  - /css/plugins/code.css
 ---
 ## 🙀 Говорят, это случается
 

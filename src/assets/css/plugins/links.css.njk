@@ -1,0 +1,8 @@
+---
+permalink: /css/plugins/links.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+{% include "../atoms/links-external.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

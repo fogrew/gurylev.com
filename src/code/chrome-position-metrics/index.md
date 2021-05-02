@@ -6,6 +6,8 @@ tags:
   - snippets
   - evening_task
 preview: '/img/posts/chrome-position-metrics.svg'
+styles:
+  - /css/plugins/code.css
 ---
 
 Иногда пробую писать SVG, а не рисовать. Срисовал блок метрик в devtools... Он так убого свёрстан в оригинале, вам лучше не знать! Казалось бы, браузер ребята разрабатывают, должны бы верстать уметь.

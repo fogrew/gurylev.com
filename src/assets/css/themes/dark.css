@@ -1,0 +1,10 @@
+.document {
+  --theme-background: #333;
+  --theme-background-shadowed: #222;
+  --theme-border: #c0c0c0;
+  --theme-background-invert: #f4f4f4;
+  --theme-text: #e0e0e0;
+  --theme-primary: #f4f4f4;
+  --theme-secondary: #f4f4f4;
+  --theme-accent: #ff7315;
+}
