@@ -16,6 +16,9 @@ scripts: []
     {%- if renderData.feed %}
     <link rel="alternate" href="{{ renderData.feed | url }}" type="application/atom+xml" title="{{ renderData.title or title or metadata.title }}">
     {%- endif %}
+    {%- if draft == true %}
+    <meta name="robots" content="noindex, nofollow" />
+    {%- endif %}
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
@@ -59,7 +62,7 @@ scripts: []
       </div>
       <div class="footer__help">
         <p><a class="footer__help" href="https://github.com/fogrew/gurylev.com/blob/master/{{ page.inputPath }}">Редактировать эту страницу</a>.</p>
-        <p>Последний релиз сайта: {{ config.release | readableDate }}</p>
+        <p>Последний релиз сайта: {{ config.release }}</p>
       </div>
     </footer>
 
