@@ -5,7 +5,7 @@ date: 2020-04-01
 layout: media
 tags:
   - lectures
-preview: '/img/posts/JAM-stack.jpg'
+preview: /img/posts/JAM-stack.jpg
 subtitles: '/media/JAM-stack.vtt'
 ---
 

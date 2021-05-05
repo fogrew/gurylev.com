@@ -4,6 +4,7 @@ description: Выпуск подкаста «Фронтенд юность» №
 date: 2019-08-29
 tags:
   - podcasts
+preview: /img/posts/youknowst.svg
 ---
 Провинциальный PiterJS
 

@@ -5,6 +5,7 @@ date: 2019-09-03
 layout: media
 tags:
   - podcasts
+preview: /img/posts/spb-frontend.svg
 ---
 
 <audio controls>
