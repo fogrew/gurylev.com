@@ -1,5 +1,14 @@
 {
   "trailingSlash": true,
+  "collectMetrics": false,
+  "github": {
+    "silent": true
+  },
+  "functions": {
+    "api/music/index.js": {
+      "maxDuration": 10
+    }
+  },
   "redirects": [
     {
       "source": "/posts/",
@@ -79,6 +88,11 @@
     {
       "source": "/feed/feed.xml",
       "destination": "feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/tags/plans/",
+      "destination": "/tags/results/",
       "permanent": true
     }
   ]
