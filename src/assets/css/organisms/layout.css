@@ -2,7 +2,6 @@
   display: grid;
   min-height: 100%;
   grid-template-rows: auto 1fr auto;
-  margin: 0;
 }
 .layout__header,
 .layout__footer {
