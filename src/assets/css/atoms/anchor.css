@@ -11,7 +11,7 @@ a.anchor {
   opacity: 0;
 }
 a.anchor:after {
-  content: '#';
+  content: '§';
 }
 a.anchor:is(:hover, :focus-within) {
   opacity: 1;
