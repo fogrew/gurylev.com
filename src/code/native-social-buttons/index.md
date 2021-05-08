@@ -5,7 +5,7 @@ date: 2011-09-04
 tags:
   - snippets
   - sharing
-styles:
+asyncStyles:
   - /css/plugins/code.css
 ---
 

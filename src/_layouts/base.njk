@@ -1,6 +1,5 @@
 ---
-styles:
-  - /css/styles.css
+asyncStyles:
   - /css/plugins/links.css
 ---
 <!doctype html>
@@ -10,7 +9,8 @@ styles:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="description" content="{{ renderData.description or description or metadata.description }}">
-    {%- for style in styles %}
+    <link rel="stylesheet" href="/css/styles.css">
+    {%- for style in criticalStyles | reverse %}
     <link rel="stylesheet" href="{{ style | url }}">
     {%- endfor %}
     <link rel="stylesheet" href="{{ '/css/themes/dark.css' | url }}" media="(prefers-color-scheme: dark)">
@@ -49,6 +49,10 @@ styles:
     <link href="/keys/pgp_keys.asc" rel="pgpkey authn">
   </head>
   <body class="layout">
+    {%- for style in asyncStyles %}
+    <link rel="stylesheet" href="{{ style | url }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ style | url }}"></noscript>
+    {%- endfor %}
     <header class="layout__header header">
       <div class="header__start">
         {% include "nav.njk" %}

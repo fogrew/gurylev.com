@@ -5,7 +5,7 @@ date: 2017-09-29
 tags:
   - snippets
   - evening_task
-styles:
+asyncStyles:
   - /css/plugins/code.css
   - /css/pages/stylus-icon.css
 preview: '/img/posts/stylus-icon.svg'

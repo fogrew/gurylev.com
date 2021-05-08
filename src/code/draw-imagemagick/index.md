@@ -6,7 +6,7 @@ tags:
   - shell
   - snippets
 preview: '/img/posts/fm2.png'
-styles:
+asyncStyles:
   - /css/plugins/code.css
 ---
 ## 🙀 Говорят, это случается

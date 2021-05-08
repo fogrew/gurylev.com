@@ -6,7 +6,7 @@ tags:
   - snippets
   - evening_task
 preview: '/img/posts/chrome-position-metrics.svg'
-styles:
+asyncStyles:
   - /css/plugins/code.css
 ---
 
