@@ -1,9 +1,6 @@
 {
   "trailingSlash": true,
   "collectMetrics": false,
-  "github": {
-    "silent": true
-  },
   "functions": {
     "api/music/index.js": {
       "maxDuration": 10
