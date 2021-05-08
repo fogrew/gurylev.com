@@ -2,11 +2,9 @@ import { formatDate } from './formatDate.mjs';
 
 const node = document.querySelector('.recent-track')
 
-fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&api_key=cc9faf8fe35992da103b2b514f648254&user=Kasumi_Candor&limit=1&format=json`)
+fetch(`/api/music/?recent=1`)
   .then(response => response.json())
-  .then(({recenttracks}) => {
-    console.log(recenttracks);
-    const track = recenttracks.track[0];
+  .then((track) => {
     const isPlaying = track['@attr']?.nowplaying
     const time = isPlaying ? Date.now() : track.date["#text"];
     const verb = isPlaying ? 'Слушаю' : 'Слушал';
