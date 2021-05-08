@@ -2,7 +2,6 @@ a {
   vertical-align: baseline;
   text-decoration: underline var(--theme-secondary);
   color: var(--theme-accent);
-  transition: color .1s ease-out;
 }
 a:hover,
 a:focus {

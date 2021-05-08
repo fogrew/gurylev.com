@@ -11,7 +11,6 @@
   background-size: cover;
   padding: 50% 0;
   position: relative;
-  transition: background-color .2s ease-out;
 }
 
 @media(prefers-color-scheme: dark) {
