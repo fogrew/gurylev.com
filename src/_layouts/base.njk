@@ -9,9 +9,9 @@ asyncStyles:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="description" content="{{ renderData.description or description or metadata.description }}">
-    <style>{% include "../../dist/css/styles.css" %}</style>
+    <style>{% include "../assets/css/styles.css.njk" %}</style>
     {%- for style in criticalStyles %}
-    <style>{% include "../../dist/" + style %}</style>
+    <style>{% include "../assets/" + style + ".njk" %}</style>
     {%- endfor %}
     <link rel="stylesheet" href="{{ '/css/themes/dark.css' | url }}" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="{{ '/css/themes/light.css' | url }}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
