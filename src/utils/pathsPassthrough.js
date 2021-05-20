@@ -6,5 +6,6 @@ module.exports = [
   { "src/assets/fonts": "fonts" },
   { "src/assets/favicon.png": "favicon.png" },
   { "src/assets/robots.txt": "robots.txt" },
+  { "src/assets/budget.json": "budget.json" },
   { "src/assets/CNAME": "CNAME" },
 ]
