@@ -36,7 +36,7 @@ asyncStyles:
   {% set table_of_contents = content | toc %}
   {% if table_of_contents %}
   <aside class="page__nav">
-    <details class="toc">
+    <details class="toc" open>
       <a href="#content" class="screen-reader-only">Пропустить оглавление</a>
       <summary><h2>Оглавление статьи</h2></summary>
       {{ table_of_contents | safe }}

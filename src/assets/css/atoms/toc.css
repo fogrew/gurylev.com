@@ -7,12 +7,16 @@
   display: inline-block;
   font-size: var(--font-size-2);
 }
-.toc ol {
-  padding: 0;
+.toc__nav > ol {
+  padding-left: 0;
+}
+.toc__nav > ol ol {
+  padding-left: 1rem;
 }
 .toc li {
   display: block;
 }
 .toc a {
+  line-height: 1.4rem;
   text-decoration-style: dashed;
 }
