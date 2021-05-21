@@ -1,9 +1,134 @@
-// module.exports = [
-//   {
-//     url: 'blog',
-//     name: '',
-//     summary: '',
-//     template: '',
-//     preview: '',
-//   },
-// ]
+module.exports = {
+  blog: {
+    name: 'Страницы блога',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  code: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  courses: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  'epic-skills': {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  evening_task: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  frontend: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  interviews: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  lectures: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  'long-read': {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  minds: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  motivation: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  notes: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  podcasts: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  productivity: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  projects: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  results: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  share: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  sharing: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  shell: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  snippets: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  speeches: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+  telegram: {
+    name: '',
+    summary: '',
+    template: '',
+    preview: '',
+  },
+}
