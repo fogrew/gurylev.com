@@ -11,7 +11,7 @@ asyncStyles:
 ---
 <article class="h-entry page page--template-{{ template }}" id="main" itemscope itemtype="http://schema.org/Article">
   <header class="page__header">
-    <h1 class="p-name" itemprop="name headline">{{ title }}</h1>
+    <h1 class="page__title p-name" itemprop="name headline">{{ title }}</h1>
     <p><a class="p-author h-card" href="/" itemprop="author" itemscope itemtype="https://schema.org/Person">
     {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} <span itemprop="name">Андрей Гурылев</span></a> опубликовал
     {% if date %}

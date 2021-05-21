@@ -27,6 +27,13 @@
 .page__summary {
   grid-area: summary;
   margin-bottom: 1rem;
+  font-size: 2em;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.page__title {
+  font-size: 3em;
 }
 
 .page__header .avatar {
