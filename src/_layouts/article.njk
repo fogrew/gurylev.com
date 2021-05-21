@@ -13,11 +13,11 @@ asyncStyles:
   <header class="page__header">
     <h1 class="page__title p-name" itemprop="name headline">{{ title }}</h1>
     <p><a class="p-author h-card" href="/" itemprop="author" itemscope itemtype="https://schema.org/Person">
-    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} <span itemprop="name">Андрей Гурылев</span></a> опубликовал
+    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} <span itemprop="name">Андрей Гурылев</span></a> опубликовал статью
     {% if date %}
     <time class="post-date dt-published" datetime="{{ date | htmlDateString }}" itemprop="datePublished"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
     {% endif %}
-    в
+    и пометил тегами
     {% for tag in tags %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
       <a href="{{ tagUrl | url }}" rel="tag" class="p-category tag">#{{ tag }}</a>
@@ -25,7 +25,7 @@ asyncStyles:
 
     </p>
     {% set time = content | readingTime %}
-    <p>{{ time }} {{ time | getNoun('минута', 'минуты', 'минут') }} чтения</p>
+    <p>Можно прочитать за {{ time }} {{ time | getNoun('минута', 'минуты', 'минут') }}</p>
     {% if preview %}
     <meta itemprop="image" content="{{ preview }}">
     {% endif %}
