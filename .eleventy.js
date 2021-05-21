@@ -144,6 +144,8 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.setDataDeepMerge(true);
 
+  eleventyConfig.addWatchTarget('./src/assets/css/**/*.css');
+
   /**
    * Override BrowserSync Server options
    *
@@ -174,6 +176,7 @@ module.exports = function(eleventyConfig) {
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
+    jsDataFileSuffix: ".data",
     dir: {
       input: "src",
       layouts: "_layouts",
