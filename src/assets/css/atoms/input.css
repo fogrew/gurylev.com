@@ -8,3 +8,6 @@
   padding-left: .5em;
   padding-right: .5em;
 }
+[contenteditable] {
+	outline: var(--outline-width) solid var(--theme-text);
+}

@@ -1,0 +1,27 @@
+blockquote {
+  margin-left: var(--gap);
+  margin-right: var(--gap);
+  font-size: 1.5em;
+}
+
+blockquote p {
+  display: inline;
+  margin: 0;
+}
+
+blockquote:before,
+blockquote:after {
+  display: inline;
+  font-size: 0.75em;
+  opacity: 0.5;
+}
+
+blockquote:before {
+  content: "❝";
+  vertical-align: super;
+}
+
+blockquote:after {
+  content: "❞";
+  vertical-align: sub;
+}
