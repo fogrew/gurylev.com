@@ -1,0 +1,25 @@
+.share {
+  display: inline-block;
+  font-size: 0;
+}
+.share__link {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  margin-right: 3px;
+  padding: .25rem;
+  border-radius: 4px;
+  box-sizing: content-box;
+  vertical-align: middle;
+  opacity: .5;
+  transition: opacity .3s ease;
+}
+.share__link:hover,
+.share__link:focus {
+  opacity: 1;
+}
+.share__link svg {
+  width: 1rem;
+  height: 1rem;
+}
