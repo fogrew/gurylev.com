@@ -1,0 +1,16 @@
+---
+title: Статусы
+layout: home
+override:tags: []
+---
+
+<p>Пишу микроблог</p>
+<p><a href="/tags/status/feed.xml">Подписаться на RSS статусов</a></p>
+<br>
+<div class="h-feed">
+  {% set microblog = collections.status %}
+
+  {%- for status in microblog %}
+  <a href="{{ status.url }}">{{ status.templateContent | safe }}</a>
+  {%- endfor %}
+</div>
