@@ -1,31 +1,31 @@
----
-title: Страницы с тегом “{{ tag }}” - {{ metadata.title }}
-pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter:
-    - all
-    - nav
-    - post
-    - posts
-    - tagList
-  addAllPagesToCollections: true
-layout: home
-renderData:
-  title: Страницы с тегом “{{ tag }}” - {{ metadata.title }}
-  feed: /tags/{{ tag }}/feed.xml
-permalink: /tags/{{ tag }}/
-header: Страницы с тегом “{{ tag }}”
+---js
+{
+  pagination: {
+    data: "collections",
+    size: 1,
+    alias: "tag",
+    filter: [ "tagList" ],
+    addAllPagesToCollections: true
+  },
+  layout: "home",
+  eleventyComputed: {
+    title: "test",
+    feed: data => `/tags/${ data.tag }/feed.xml`,
+    permalink: data => `/tags/${ data.tag }/index.html`,
+    header: data => `Страницы с тегом “${ data.tag }”`
+  },
+}
 ---
 
 <div class="h-feed grid grid--2">
   <div class="grid__line">
-    <h1>Страницы с тегом “{{ tag }}”</h1>
+    <h1>{{ taggs[ tag ].name }}</h1>
     <p><a href="/tags/{{ tag }}/feed.xml">Подписаться на RSS тега “{{ tag }}”</a></p>
+
   </div>
   {% set postslist = collections[ tag ] | published %}
   {% include "postslist.njk" %}
+
 </div>
 
 <p>Смотри <a href="{{ '/tags/' | url }}">все теги</a>.</p>
