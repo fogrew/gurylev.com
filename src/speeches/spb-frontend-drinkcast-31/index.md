@@ -1,5 +1,5 @@
 ---
-title: 40 митапов или как дорасти до конференции
+title: Подкаст «SPB Frontend Drinkcast», выпуск «40 митапов или как дорасти до конференции»
 description: SPB Frontend Drinkcast 31, обсуждаем организацию и программу PiterJS conf
 date: 2019-09-03
 layout: media

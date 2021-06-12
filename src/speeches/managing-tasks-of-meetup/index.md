@@ -1,5 +1,5 @@
 ---
-title: Опыт владения инструментами PiterJS
+title: Доклад «Опыт владения инструментами PiterJS»
 description: О митапе PiterJS и его организации
 date: 2019-08-23
 tags:
