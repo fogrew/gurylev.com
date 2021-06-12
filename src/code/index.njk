@@ -17,7 +17,7 @@ eleventyNavigation:
     <p><a href="/tags/projects/">Все проекты</a> | <a href="/tags/projects/feed.xml">Подписаться на RSS с проектами</a></p>
   </div>
   {% set postslist = collections.projects %}
-  {% include "postslist.njk" %}
+  {% include "posts-grid.njk" %}
 
   <div class="grid__line">
     <h2>Делюсь кодом</h2>
@@ -25,5 +25,5 @@ eleventyNavigation:
     <p><a href="/tags/snippets/">Все сниппеты</a> | <a href="/tags/snippets/feed.xml">Подписаться на RSS со сниппетами</a></p>
   </div>
   {% set postslist = collections.snippets %}
-  {% include "postslist.njk" %}
+  {% include "posts-grid.njk" %}
 </div>

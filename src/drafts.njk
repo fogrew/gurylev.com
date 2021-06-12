@@ -8,5 +8,5 @@ eleventyExcludeFromCollections: true
 <div class="h-feed grid grid--3">
   {% set hasDraftLinks = true %}
   {% set postslist = collections.allContent | unpublished %}
-  {% include "postslist.njk" %}
+  {% include "posts-grid.njk" %}
 </div>
