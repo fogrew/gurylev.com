@@ -1,3 +1,16 @@
-# Сайт Андрея Гурылева
+# Andrew Gurylev's website
+![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fgurylev.com)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/fogrew/gurylev.com)
+![GitHub last commit](https://img.shields.io/github/last-commit/fogrew/gurylev.com)
+![GitHub deployments](https://img.shields.io/github/deployments/fogrew/gurylev.com/production?label=production%20build&logo=vercel)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fogrew/gurylev.com)
+![David](https://img.shields.io/david/fogrew/gurylev.com)
+![GitHub issues](https://img.shields.io/github/issues-raw/fogrew/gurylev.com?logo=github)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/fogrew/gurylev.com?logo=github)
+![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fgurylev.com)
+![Keybase PGP](https://img.shields.io/keybase/pgp/fogrew)
+[![wakatime](https://wakatime.com/badge/github/fogrew/gurylev.com.svg)](https://wakatime.com/badge/github/fogrew/gurylev.com)
 
-Работает на движке [11ty](https://github.com/11ty/eleventy). Основан на сборке [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog). Как запустить проект, описано там в 5 пункте.
+* JAM: [11ty](https://www.11ty.dev/docs/)
+* CI: [Vercel](https://vercel.com/)
+* CMS: [Forestry](https://forestry.io/)
