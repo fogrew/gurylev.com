@@ -16,7 +16,7 @@ eleventyNavigation:
     <p><a href="/tags/chats/">Все мысли из чатов</a> | <a href="/tags/results/chats.xml">Подписаться на RSS с мыслями из чатов</a></p>
   </div>
   {% set postslist = collections.chats %}
-  {% include "postslist.njk" %}
+  {% include "posts-grid.njk" %}
 
   <div class="grid__line">
     <h2>Подвожу итоги</h2>
@@ -24,7 +24,7 @@ eleventyNavigation:
     <p><a href="/tags/results/">Все итоги</a> | <a href="/tags/results/feed.xml">Подписаться на RSS с итогами</a></p>
   </div>
   {% set postslist = collections.results %}
-  {% include "postslist.njk" %}
+  {% include "posts-grid.njk" %}
 
   <div class="grid__line">
     <h2>Делюсь мотивацией</h2>
@@ -32,6 +32,6 @@ eleventyNavigation:
     <p><a href="/tags/motivation/">Все посты о мотивации</a> | <a href="/tags/motivation/feed.xml">Подписаться на RSS с постами о мотивации</a></p>
   </div>
   {% set postslist = collections.motivation %}
-  {% include "postslist.njk" %}
+  {% include "posts-grid.njk" %}
 
 </div>

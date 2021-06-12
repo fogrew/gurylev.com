@@ -17,7 +17,7 @@ eleventyNavigation:
     <p><a href="/tags/lectures/">Все доклады</a> | <a href="/tags/lectures/feed.xml">Подписаться на RSS с докладами</a></p>
   </div>
   {% set postslist = collections.lectures %}
-  {% include "postslist.njk" %}
+  {% include "posts-grid.njk" %}
 
   <div class="grid__line">
     <h2>Звучу в подкастах</h2>
@@ -25,7 +25,7 @@ eleventyNavigation:
     <p><a href="/tags/podcasts/">Все подкасты</a> | <a href="/tags/podcasts/feed.xml">Подписаться на RSS с подкастами</a></p>
   </div>
   {% set postslist = collections.podcasts %}
-  {% include "postslist.njk" %}
+  {% include "posts-grid.njk" %}
 
   <div class="grid__line">
     <h2>Даю интервью</h2>
@@ -33,7 +33,7 @@ eleventyNavigation:
     <p><a href="/tags/interviews/">Все интервью</a> | <a href="/tags/interviews/feed.xml">Подписаться на RSS с интервью</a></p>
   </div>
   {% set postslist = collections.interviews %}
-  {% include "postslist.njk" %}
+  {% include "posts-grid.njk" %}
 
   <div class="grid__line">
     <h2>Обучаю</h2>
@@ -41,5 +41,5 @@ eleventyNavigation:
     <p><a href="/tags/courses/">Все уроки</a> | <a href="/tags/courses/feed.xml">Подписаться на RSS с уроками</a></p>
   </div>
   {% set postslist = collections.courses %}
-  {% include "postslist.njk" %}
+  {% include "posts-grid.njk" %}
 </div>
