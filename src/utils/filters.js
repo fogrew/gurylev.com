@@ -4,6 +4,10 @@ const webvtt = require('node-webvtt');
 const csso = require('csso');
 
 module.exports = {
+  sortByDate: (posts) => {
+    return posts.sort((a, b) => new Date(a.date) - new Date(b.date))
+  },
+
   published: (posts) => {
     return posts.filter(post => !post.data.draft)
   },
