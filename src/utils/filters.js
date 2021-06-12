@@ -8,6 +8,10 @@ module.exports = {
     return posts.sort((a, b) => new Date(a.date) - new Date(b.date))
   },
 
+  merge: (arrays) => {
+    return arrays.flat()
+  },
+
   published: (posts) => {
     return posts.filter(post => !post.data.draft)
   },
