@@ -1,6 +1,5 @@
 ---
-title: Loftblog
-description: Интервью Loftblog про меня
+title: Интервью Loftblog
 date: 2020-04-03
 tags:
   - interviews

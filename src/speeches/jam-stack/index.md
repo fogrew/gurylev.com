@@ -1,5 +1,5 @@
 ---
-title: JAM-stack
+title: Доклад «JAM-stack»
 description: О лёгкости создания своих сайтов с модными словами
 date: 2020-04-01
 layout: media
