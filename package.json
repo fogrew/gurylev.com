@@ -3,10 +3,10 @@
   "version": "5.0.0",
   "description": "Personal blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build": "ELEVENTY_ENV=production npx eleventy",
-    "watch": "ELEVENTY_ENV=development npx eleventy --watch",
-    "serve": "ELEVENTY_ENV=development npx eleventy --serve",
-    "debug": "ELEVENTY_ENV=development DEBUG=* npx eleventy"
+    "build": "npx eleventy",
+    "watch": "npx eleventy --watch",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
   },
   "repository": {
     "type": "git",
