@@ -1,0 +1,14 @@
+<ul class="list">
+{% for post in postslist | reverse %}
+  {% set hasLinks = hasDraftLinks == true or post.data.draft != true %}
+  <li class="list__item">
+  {% if hasLinks %}
+    <a class="u-url u-uid" href="{{ post.url | url }}">
+  {% endif %}
+      {{ post.data.title }}
+  {% if hasLinks %}
+    </a>
+  {% endif %}
+  </li>
+{% endfor %}
+</ul>
