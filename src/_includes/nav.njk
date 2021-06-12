@@ -4,7 +4,7 @@
 {%- for entry in navPages %}
   <a class="{{ entry.classes }} nav__link{% if entry.url == page.url %} nav__link--active{% endif %}" href="{{ entry.url | url }}" {% if entry.url == page.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
 {%- endfor %}
-{% if config.env !== 'production '%}
+{% if config.env == 'development' %}
   <a class="nav__link{% if entry.url == page.url %} nav__link--active{% endif %}" href="/drafts/">Черновики</a>
 {% endif %}
 </nav>
