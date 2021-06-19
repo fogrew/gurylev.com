@@ -26,4 +26,12 @@ eleventyNavigation:
   </div>
   {% set postslist = collections.snippets %}
   {% include "posts-grid.njk" %}
+
+  <div class="grid__line">
+    <h2>Демонстрирую работы</h2>
+    <p>Только те, для которых не подписывал соглашения о неразглашении</p>
+    <p><a href="/tags/portfolio/">Все работы</a> | <a href="/tags/portfolio/feed.xml">Подписаться на RSS с работами</a></p>
+  </div>
+  {% set postslist = collections.portfolio %}
+  {% include "posts-grid.njk" %}
 </div>
