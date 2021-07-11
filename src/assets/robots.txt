@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /*.xml$
+Disallow: /*.asc$
 Sitemap: https://gurylev.com/sitemap.xml
