@@ -1,0 +1,8 @@
+---
+permalink: /css/plugins/share.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+{% include "../molecules/share.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

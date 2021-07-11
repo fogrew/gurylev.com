@@ -8,6 +8,7 @@ criticalStyles:
 asyncStyles:
   - /css/plugins/markdown.css
   - /css/plugins/avatar.css
+  - /css/plugins/share.css
 ---
 <article class="h-entry page page--template-{{ template }}" id="main" itemscope itemtype="http://schema.org/Article">
   <header class="page__header">
@@ -49,8 +50,21 @@ asyncStyles:
   {{ content | safe }}
   </div>
 
-  <footer class="page__footer">
-    {# <p><a href="{{ '/blog/' | url }}">← Вернуться</a></p> #}
-  </footer>
+  {# <footer class="page__footer">
+      Сохранить: в читалку, в закладки<br>
+      Распространить: в социалках, в мессенджерах<br>
+      Репостнуть: на своём сайте
+    <div class="share">
+      {% for name, network in networks %}
+        <a href="" class="share__link" style="background-color: {{ network.color }}" rel="noopener noreferrer noindex nofollow" target="_blank" title="{{ name }}">
+          {% include "../assets/img/networks/" + network.icon %}
+        </a>
+      {% endfor %}
+    </div>
+    <div class="subscribe">
+     Подписаться:
+    </div>
+    {# <p><a href="{{ '/blog/' | url }}">← Вернуться</a></p>
+  </footer> #}
   <div class="progress-bar"></div>
 </article>
