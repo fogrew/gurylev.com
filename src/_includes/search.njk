@@ -1,5 +1,44 @@
-<form action="https://duckduckgo.com/" method="get" class="form form--inline">
+<style>
+.search {
+  position: relative;
+}
+.search__results {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  right: 0;
+  width: max-content;
+  background-color: var(--theme-background);
+}
+.searchable-item {
+  padding: 1em;
+  display: none;
+}
+</style>
+<style id="search-style"></style>
+<form action="https://duckduckgo.com/" method="get" class="search form form--inline">
   <input hidden name="sites" value="gurylev.com">
-  <input id="search-term" type="text" name="q" class="form__control input" autocomplete="off" aria-label="Искать на сайте">
+  <input id="search-term" type="text" name="q" class="form__control input" autocomplete="off" minlength="3" aria-label="Искать на сайте">
   <button type="submit" class="form__control button" aria-label="Найти">🔎</button>
+  <div class="search__results">
+  {% set postslist = collections.allContent | reverse %}
+  {% for post in postslist %}
+  {% if post.data.title and post.data.tags %}
+    <div class="searchable-item" data-query="{{ post.data.title | escape }} {{ post.data.tags | join(', ') | escape }}">
+      {{ post.data.title }}<br>
+      {{ post.data.tags | join(', ') }}<br>
+      <a href="{{ post.data.url | url }}">Перейти</a>
+    </div>
+    {% endif %}
+  {% endfor %}
+  </div>
 </form>
+<script>
+const searchableSelector = '.searchable-item'
+const $searchStyle = document.getElementById('search-style')
+const $searchInput = document.getElementById('search-term')
+const hideItemsByName = (query) =>
+  $searchStyle.innerHTML = `#search-term:valid ~ .search__results ${searchableSelector}[data-query*="${query}"] {display:block}`
+const hideItemsOnInput = (event) => hideItemsByName(event.target.value)
+$searchInput.addEventListener('input', hideItemsOnInput)
+</script>
