@@ -1,4 +1,5 @@
 const fs = require("fs");
+const csv = require('@fast-csv/parse');
 
 const plugins = require("./src/utils/plugins")
 const filters = require("./src/utils/filters")
@@ -122,6 +123,23 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addLiquidShortcode("image", imageShortcode);
   eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
+  eleventyConfig.addDataExtension("csv", async (contents) => {
+    const rows = []
+
+    return await new Promise((resolve, reject) => {
+      csv.parseString(contents, { headers: true })
+        .on('error', error => {
+          reject(error)
+        })
+        .on('data', row => {
+          rows.push(row)
+        })
+        .on('end', () => {
+          resolve(rows)
+        });
+    })
+  });
 
   /**
    * Passthrough file copy
