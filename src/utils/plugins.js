@@ -40,11 +40,14 @@ module.exports = {
       linkify: true
     })
     .use(markdownItAnchor, {
-      permalink: true,
-      permalinkClass: "anchor",
-      permalinkSymbol: "", // moved to ::after content to remove from table of contents
-      permalinkBefore: true,
-      permalinkAttrs: slug => ({ 'aria-label': `Перейти к заголовку «${decodeURIComponent(slug).replace('-', ' ')}»` })
+      permalink: markdownItAnchor.permalink.ariaHidden({
+        class: 'anchor',
+        symbol: '', // moved to ::after content to remove from table of contents
+        renderAttrs: slug => ({
+          'aria-label': `Перейти к заголовку «${decodeURIComponent(slug).replace('-', ' ')}»`
+        }),
+        placement: 'before'
+      })
     })
     .use(markdownItSpan)
     .use(markdownItAttrs)
