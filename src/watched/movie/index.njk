@@ -1,0 +1,7 @@
+---
+title: Watched Movies
+layout: home
+---
+{%- set watchedByType = watched | groupby("Type") -%}
+{%- set watchedList = watchedByType.movie -%}
+{% include "watched.njk" %}

@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <th>#</th>
+    <th>Title</th>
+    <th>TMBD</th>
+    <th>Type</th>
+    <th>Rating</th>
+    <th>Rated</th>
+  </thead>
+  <tbody>
+  {%- for item in watchedList -%}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ item["Name"] }}</td>
+      <td>
+      {% if item["TMDb ID"] %}
+        <a href="https://www.themoviedb.org/{{ item["Type"] }}/{{ item["TMDb ID"] }}" target="_blank" rel="noopener noreferrer">TMDB</a>
+      {% else %}
+        -
+      {% endif %}
+      </td>
+      <td>{{ item["Type"] }}</td>
+      <td>{{ item["Your Rating"] }}</td>
+      <td>{{ item["Date Rated"] | readableDate }}</td>
+    </tr>
+  {%- endfor -%}
+  </tbody>
+</table>

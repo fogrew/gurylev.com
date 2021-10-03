@@ -2,22 +2,5 @@
 title: Watched
 layout: home
 ---
-
-<table>
-  <thead>
-    <th>#</th>
-    <th>Title</th>
-    <th>Rating</th>
-    <th>Rated</th>
-  </thead>
-  <tbody>
-  {%- for item in watched -%}
-    <tr>
-      <td>{{ loop.index }}</td>
-      <td>{{ item["Name"] }}</td>
-      <td>{{ item["Your Rating"] }}</td>
-      <td>{{ item["Date Rated"] | readableDate }}</td>
-    </tr>
-  {%- endfor -%}
-  </tbody>
-</table>
+{% set watchedList = watched %}
+{% include "watched.njk" %}
