@@ -2,24 +2,14 @@
   <thead>
     <th>#</th>
     <th>Title</th>
-    <th>TMBD</th>
-    <th>Type</th>
     <th>Rating</th>
     <th>Rated</th>
   </thead>
   <tbody>
-  {%- for item in watchedList -%}
+  {%- for item in watchedList|reverse -%}
     <tr>
       <td>{{ loop.index }}</td>
-      <td>{{ item["Name"] }}</td>
-      <td>
-      {% if item["TMDb ID"] %}
-        <a href="https://www.themoviedb.org/{{ item["Type"] }}/{{ item["TMDb ID"] }}" target="_blank" rel="noopener noreferrer">TMDB</a>
-      {% else %}
-        -
-      {% endif %}
-      </td>
-      <td>{{ item["Type"] }}</td>
+      <td><a href="/lists/{{ item["Type"] }}/{{ item["TMDb ID"] }}">{{ item["Name"] }}</a></td>
       <td>{{ item["Your Rating"] }}</td>
       <td>{{ item["Date Rated"] | readableDate }}</td>
     </tr>

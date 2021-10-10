@@ -1,7 +1,8 @@
 ---
-title: Watched TVs
+title: Просмотренные сериалы
 layout: home
 ---
+<p><a href="/lists/">← вернуться к спискам</a></p>
 {%- set watchedByType = watched | groupby("Type") -%}
 {%- set watchedList = watchedByType.tv -%}
 {% include "watched.njk" %}
