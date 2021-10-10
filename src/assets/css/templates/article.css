@@ -28,7 +28,7 @@
   .page--template-article .page__content {
     grid-column-start: content;
     grid-column-end: nav;
-    grid-row-start: -2;
+    grid-row-start: -3;
   }
   .page--template-article .toc {
     position: sticky;

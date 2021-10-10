@@ -88,6 +88,12 @@ module.exports = {
     return path.extname(stringUrl)
   },
 
+  // Get parent folder from url
+  // @example: 'this.parent("/blog/dotfiles/")' returns '/blog/'
+  parent: (stringUrl) => {
+    return stringUrl.match(/^(.*[\/]).*\/$/)?.[1]
+  },
+
   // Get SVG content to inline
   inline: (stringPath) => {
     const newPath = path.join(__dirname, '../assets/', stringPath)
