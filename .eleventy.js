@@ -187,7 +187,7 @@ module.exports = function(eleventyConfig) {
       }
     }
   });
-
+  eleventyConfig.setQuietMode(true);
   // console.log(eleventyConfig);
 
   return {
