@@ -39,6 +39,7 @@ exports.render = async function({movie}) {
       <meta itemprop="worstRating" content = "1">
       Оценил на <span itemprop="ratingValue">${Number.parseInt(movie["Your Rating"])}</span>
       из <span itemprop="bestRating">10</span>
+      <br>${'★'.repeat(Number.parseInt(movie["Your Rating"])).padEnd(10, '☆')}
     </span>
   </p>
   <div class="e-content page__content" id="content" itemprop="reviewBody">
