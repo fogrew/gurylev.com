@@ -10,29 +10,7 @@ asyncStyles:
   - /css/plugins/avatar.css
 ---
 <article class="h-entry page page--template-{{ template }}" id="main" itemscope itemtype="http://schema.org/Article">
-  <header class="page__header">
-    <h1 class="page__title p-name" itemprop="name headline">{{ title }}</h1>
-    <p><a class="p-author h-card" href="/" itemprop="author" itemscope itemtype="https://schema.org/Person">
-    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} <span itemprop="name">Андрей Гурылев</span></a> опубликовал статью
-    {% if date %}
-    <time class="post-date dt-published" datetime="{{ date | htmlDateString }}" itemprop="datePublished"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
-    {% endif %}
-    и пометил тегами
-    {% for tag in tags %}
-      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-      <a href="{{ tagUrl | url }}" rel="tag" class="p-category tag">#{{ tag }}</a>
-    {% endfor %}
-
-    </p>
-    {% set time = content | readingTime %}
-    <p>Можно прочитать за {{ time }} {{ time | getNoun('минута', 'минуты', 'минут') }}</p>
-    {% if preview %}
-    <meta itemprop="image" content="{{ preview }}">
-    {% endif %}
-  </header>
-
-  <p class="page__summary p-summary" itemprop="description">{{ description }}</p>
-
+  {% include "post-header.njk" %}
   {% set table_of_contents = content | toc %}
   {% if table_of_contents %}
   <aside class="page__nav">
@@ -48,9 +26,13 @@ asyncStyles:
   <div class="e-content page__content" id="content" itemprop="articleBody">
   {{ content | safe }}
   </div>
+{% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.blog | getNextCollectionItem(page) %}
 
   <footer class="page__footer">
-    <p><a href="{{ page.url | parent }}">← Вернуться</a></p>
+    <p><a href="{{ page.url | parent }}">← Вернуться в {{category}}</a></p>
+    {% if previousPost %}Следующий пост: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
+    {% if nextPost %}<br>Предыдущий пост: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
   </footer>
   <div class="progress-bar"></div>
 </article>

@@ -9,25 +9,8 @@ asyncStyles:
   - /css/plugins/markdown.css
   - /css/plugins/avatar.css
 ---
-<article class="h-entry page page--template-{{ template }}" id="main">
-  <header class="page__header">
-    <h1 class="page__title p-name">{{ title }}</h1>
-    <p><a class="p-author h-card" href="/">
-    {% image '/img/avatar.jpg', 'u-photo avatar avatar--circle', 'фото Андрея Гурылева', '', '20,40' %} Андрей Гурылев</a> опубликовал
-    {% if date %}
-    <time class="post-date dt-published" datetime="{{ date | htmlDateString }}"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
-    {% endif %}
-    в
-    {% for tag in tags %}
-      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-      <a href="{{ tagUrl | url }}" rel="tag" class="p-category tag">#{{ tag }}</a>
-    {% endfor %}
-
-    </p>
-  </header>
-
-  <p class="page__summary p-summary">{{ description }}</p>
-
+<article class="h-entry page page--template-{{ template }}" id="main"itemscope itemtype="http://schema.org/Article">
+  {% include "post-header.njk" %}
   {% if subtitles %}
   {% set table_of_contents = subtitles | vtt %}
   <aside class="page__nav">
