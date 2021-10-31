@@ -1,0 +1,8 @@
+---
+permalink: /css/plugins/seekable.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+{% include "../atoms/seekable.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

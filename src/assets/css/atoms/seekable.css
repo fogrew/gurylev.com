@@ -1,0 +1,13 @@
+.seekable {
+  position: relative;
+}
+.seekable::before {
+  position: absolute;
+  right: 100%;
+}
+.seekable.seeked::before {
+  content: "✅";
+}
+.seekable.seeking::before {
+  content: "👁";
+}
