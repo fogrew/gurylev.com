@@ -2,5 +2,6 @@
   "layout": "article",
   "tags": [
     "blog"
-  ]
+  ],
+  "category": "blog"
 }
