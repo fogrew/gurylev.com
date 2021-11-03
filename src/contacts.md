@@ -13,10 +13,6 @@ eleventyNavigation:
 
 Почта: [andrew@gurylev.com](mailto:andrew@gurylev.com){rel="me" .u-email}
 
-[Telegram: fogrew](tg://resolve?domain=fogrew){rel="me"}
-[Вконтакте: fogrew](https://vk.com/fogrew){rel="me"} (изредка захожу)
-[Keybase: fogrew](https://keybase.io/fogrew){rel="me"} (заброшен)
-
 ## Безопасная переписка
 
 Со мной можно связаться более приватно.
