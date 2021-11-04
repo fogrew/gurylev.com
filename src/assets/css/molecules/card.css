@@ -35,6 +35,7 @@
   max-width: 100%;
   max-height: 100%;
   margin: auto;
-  object-fit: scale-down;
+  object-fit: cover;
+  object-position: top;
   text-align: center;
 }

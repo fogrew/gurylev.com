@@ -1,6 +1,6 @@
 .grid {
   --cols: 1;
-  --home-gap: 1.25rem;
+  --home-gap: 1.5rem;
 
   display: grid;
   gap: var(--home-gap);
