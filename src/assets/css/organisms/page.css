@@ -46,6 +46,12 @@
   grid-column: nav;
   z-index: 2;
 }
+.page .note.note--tall {
+  grid-row-start: 2 span;
+}
+.page .note.note--center {
+  align-self: center;
+}
 
 .page :is(img, svg) {
   max-width: 100%;
