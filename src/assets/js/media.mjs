@@ -37,7 +37,7 @@ const updateTableOfContents = () => {
 
 mediaElement.addEventListener('pause', saveEndedState)
 // mediaElement.addEventListener('timeupdate', updateTableOfContents)
-mediaElement.addEventListener('timeupdate', updateTableOfContents)
+mediaElement.addEventListener('timeupdate', updateTableOfContents, { passive: true })
 // mediaElement.addEventListener('timeupdate', saveEndedState)
 // stop-stop-stop, cowboy! take care of the performance please
 // TODO: add debounce
