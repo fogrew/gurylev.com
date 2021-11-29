@@ -42,6 +42,6 @@
     "node-webvtt": "^1.9.3"
   },
   "dependencies": {
-    "node-fetch": "^3.0.0"
+    "node-fetch": "^3.1.0"
   }
 }
