@@ -12,7 +12,7 @@ Bootstrap 3.2.
 Стандартное поведение кнопок при наведении курсора — затемняться. Сделаем их прозрачными, чтоб на фоне фотографии они смотрелись красиво. Как дизайнер хочет.
 
 ```css
-{{ asyncStyles | last | inline | safe }}
+{{ asyncStyles | last | inline }}
 ```
 <div class="pane standart">
   <p>Standard bootstrap 3.2 buttons</p>
