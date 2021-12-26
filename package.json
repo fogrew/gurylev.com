@@ -9,7 +9,8 @@
     "build": "npx eleventy",
     "watch": "npx eleventy --watch",
     "serve": "npx eleventy --serve",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "v": "vercel dev"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,7 @@
   },
   "homepage": "https://github.com/fogrew/gurylev.com#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0-beta.4",
     "@11ty/eleventy-img": "^0.10.0",
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
@@ -39,9 +40,11 @@
     "markdown-it-anchor": "^8.3.1",
     "markdown-it-attrs": "^4.0.0",
     "markdown-it-bracketed-spans": "^1.0.1",
-    "node-webvtt": "^1.9.3"
+    "node-webvtt": "^1.9.3",
+    "vercel": "^23.1.2"
   },
   "dependencies": {
-    "node-fetch": "^3.0.0"
+    "@11ty/eleventy-upgrade-help": "^1.0.1",
+    "node-fetch": "^2.6.6"
   }
 }
