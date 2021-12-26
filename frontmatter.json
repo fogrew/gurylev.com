@@ -1,0 +1,17 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "blog",
+      "path": "[[workspace]]/src/blog"
+    },
+    {
+      "title": "code",
+      "path": "[[workspace]]/src/code"
+    },
+    {
+      "title": "speeches",
+      "path": "[[workspace]]/src/speeches"
+    }
+  ]
+}
