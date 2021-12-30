@@ -1,10 +1,10 @@
-{% set navPages = collections.all | eleventyNavigation %}
+{% set navPages = collections[locale] | eleventyNavigation %}
 <nav class="nav">
-  <a href="#main" class="nav__link screen-reader-only">Пропустить навигацию</a>
+  <a href="#main" class="nav__link screen-reader-only">{{ strings[locale]['Skip navigation'] }}</a>
 {%- for entry in navPages %}
   <a class="{{ entry.classes }} nav__link{% if entry.url == page.url %} nav__link--active{% endif %}" href="{{ entry.url | url }}" {% if entry.url == page.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
 {%- endfor %}
 {% if config.env == 'development' %}
-  <a class="nav__link{% if entry.url == page.url %} nav__link--active{% endif %}" href="/drafts/">Черновики</a>
+  <a class="nav__link{% if entry.url == page.url %} nav__link--active{% endif %}" href="/drafts/">{{ strings[locale]['Drafts'] }}</a>
 {% endif %}
 </nav>
