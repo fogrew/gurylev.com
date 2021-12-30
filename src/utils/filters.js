@@ -12,6 +12,25 @@ module.exports = {
     return arrays.flat()
   },
 
+  /*
+  * filterPostsByTags
+  * @param {Object[]} posts - an eleventy posts collection
+  * @param {string|string[]} tags - tag or tags for filtering
+  * @return {Object[]} filtered posts
+  *
+  * @example
+  *   filterPostsByTags(posts, 'posts', 'en')
+  * @example
+  *   filterPostsByTags(posts, 'posts')
+  */
+  filterPostsByTags: (posts, ...tags) => {
+    return posts.filter(post =>
+      post.data?.tags.some(tag =>
+        tags.includes(tag)
+      )
+    )
+  },
+
   published: (posts) => {
     return posts.filter(post => !post.data.draft)
   },
