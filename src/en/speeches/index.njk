@@ -1,0 +1,45 @@
+---
+title: Speeches
+layout: home
+permalink: /speeches/
+eleventyNavigation:
+  key: Speeches
+  order: 40
+---
+
+<p>I define by this term all the cases when I got up and told something to the public.</p>
+<p><a href="/tags/speeches/feed.xml">Subscribe to RSS with all the speeches</a></p>
+
+<div class="h-feed grid grid--3">
+  <div class="grid__line">
+    <h2>Lectures</h2>
+    <p>I go on stage, click on the clicker, explain the slides</p>
+    <p><a href="/tags/lectures/">All lectures</a> | <a href="/tags/lectures/feed.xml">Subscribe to RSS with all the lectures</a></p>
+  </div>
+  {% set postslist = collections.lectures | filterPostsByTags(locale)%}
+  {% include "posts-grid.njk" %}
+
+  <div class="grid__line">
+    <h2>Sound in podcasts</h2>
+    <p>I sit down in front of the microphone with headphones to discuss something</p>
+    <p><a href="/tags/podcasts/">All podcasts</a> | <a href="/tags/podcasts/feed.xml">Subscribe to RSS with all the podcasts</a></p>
+  </div>
+  {% set postslist = collections.podcasts | filterPostsByTags(locale) %}
+  {% include "posts-grid.njk" %}
+
+  <div class="grid__line">
+    <h2>Giving an interview</h2>
+    <p>People ask questions - I answer</p>
+    <p><a href="/tags/interviews/">All interviews</a> | <a href="/tags/interviews/feed.xml">Subscribe to RSS with all the interviews</a></p>
+  </div>
+  {% set postslist = collections.interviews | filterPostsByTags(locale) %}
+  {% include "posts-grid.njk" %}
+
+  <div class="grid__line">
+    <h2>Teach</h2>
+    <p>I'm making a smart look, starting to tell, just try to stop</p>
+    <p><a href="/tags/courses/">All courses</a> | <a href="/tags/courses/feed.xml">Subscribe to RSS with courses</a></p>
+  </div>
+  {% set postslist = collections.courses | filterPostsByTags(locale) %}
+  {% include "posts-grid.njk" %}
+</div>

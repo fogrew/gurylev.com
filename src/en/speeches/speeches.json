@@ -1,0 +1,8 @@
+{
+  "layout": "article",
+  "tags": [
+    "speeches"
+  ],
+  "category": "speeches",
+  "permalink": "/speeches/{{page.fileSlug}}/"
+}
