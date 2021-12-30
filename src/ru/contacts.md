@@ -9,7 +9,7 @@ eleventyNavigation:
 
 ## Открытая переписка
 
-Для открытой переписки используйте почту или мессенджеры
+Для открытой переписки используйте почту
 
 Почта: [andrew@gurylev.com](mailto:andrew@gurylev.com){rel="me" .u-email}
 

@@ -9,4 +9,4 @@ preview: '/img/posts/mukhin.jpg'
 
 Кроссбраузерная, валидная, не адаптивная вёрстка. html5, less->css3
 
-{% image '/img/posts/mukhin.jpg', '', 'Как выглядела вёрстка сайта Вейпы в 2014', '(min-width: 768px) 940px, 100vw', '768,940', '940' %}
+{% image '/img/posts/mukhin.jpg', '', 'Как выглядела вёрстка сайта Никлоая Мухина в 2010', '(min-width: 768px) 940px, 100vw', '768,940', '940' %}
