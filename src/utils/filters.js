@@ -63,7 +63,7 @@ module.exports = {
 
   i18n: function(string) {
     const { strings, locale = 'en' } = this.ctx
-    return strings[locale][string]
+    return locale ==='en' ? string : strings[locale][string]
   },
 
   getNoun: (number, one, two, five) => {
