@@ -1,18 +1,18 @@
 ---
-title: Урок «События в JS»
-description: Подготовлено для учеников Epic Skills
+title: Lesson «Events in JS»
+description: Prepared for Epic Skills students
 date: 2017-06-17
 tags:
   - courses
   - epic-skills
 ---
 
-Цель этих уроков в том, чтобы лично в оффлайн-формате объяснять концепции языка.
+The purpose of these lessons is to explain language concepts in person in an offline format.
 
-Снабдил слайды про событийную модель в JavaScript отрывками и кадрами из Kingsman, чтобы разбавить новую информацию знакомым драйвом. Легче и понятнее им от этого не стало, но воспринимать оказалось попроще.
-Если боишься спойлеров, не стоит открывать.
+I added excerpts and footage from Kingsman to the slides about the event model in JavaScript, in order to dilute the new information with a familiar drive. It didn't make it any easier or clearer, but it was easier to understand.
+If you're afraid of spoilers, don't open it.
 
-Слайды: https://fogrew.github.io/keynotes-events/
-Исходники слайдов: https://github.com/fogrew/keynotes-events
+Slides: https://fogrew.github.io/keynotes-events/
+Source slides: https://github.com/fogrew/keynotes-events
 
-[Epic Skills](https://epixx.ru/) это профессионалы с многолетним опытом работы в разных областях, чей турбо-двигатель — желание распространять знания. Мне очень хочется, чтобы они не потеряли свою оффлайн-базу из-за карантинной напряжёнки и могли обучать там студентов дальше. Сейчас они нуждаются в финансовой поддержке. [Поможем ребятам?](https://donate.epixx.ru/)
+[Epic Skills](https://epixx.ru/) are professionals with years of experience in various fields whose turbo engine is the desire to spread knowledge. I really wish they hadn't lost their offline base due to quarantine strain and could teach students there further. Right now they need financial support. [Help the guys?](https://donate.epixx.ru/)
