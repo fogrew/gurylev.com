@@ -17,5 +17,8 @@ module.exports = {
     "← Back to section": "← Вернуться в раздел",
     "Next post:": "Следующий пост:",
     "Previous post:": "Предыдущий пост:",
+    "Draft, not available yet": "Черновик, пока недоступен",
+    "Search the current site": "Искать на сайте",
+    "Search": "Найти"
   },
 }

@@ -61,7 +61,7 @@ asyncStyles:
       </div>
       <div class="header__end">
         {% include "search.njk" %}
-        <a href="submit" class="button" aria-label="">🔎</a>
+        <a href="" class="nav__link" aria-label="{{ 'Current language:' | i18n }} {% if locale ==='en' %}{{ 'English' | i18n }}{% else %}{{ 'Russian' | i18n }}{% endif %}">🌐 {% if locale ==='en' %}на русском{% else %}to English{% endif %}</a>
       </div>
     </header>
 

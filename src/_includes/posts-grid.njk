@@ -9,7 +9,7 @@
     {% if hasLinks %}
         <time class="dt-published card__date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">{{ post.date | readableDate }}</time>
       {% else %}
-        <span class="card__date">черновик, пока недоступен</span>
+        <span class="card__date">{{ "Draft, not available yet" | i18n }}</span>
       {% endif %}
         <p class="p-summary" itemprop="description">{{ post.data.description }}</p>
       {% if hasLinks %}
