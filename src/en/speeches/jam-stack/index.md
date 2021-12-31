@@ -6,7 +6,7 @@ layout: media
 tags:
   - lectures
 preview: /img/posts/JAM-stack.jpg
-subtitles: '/media/JAM-stack.vtt'
+subtitles: '/media/JAM-stack-en.vtt'
 ---
 
 <video width="100%" controls poster="/img/posts/JAM-stack.jpg">
