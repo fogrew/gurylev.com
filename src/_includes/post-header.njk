@@ -9,8 +9,7 @@
   {% endif %}
   {{ "and tagged it with" | i18n }}
   {% for tag in tags %}
-    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-    <a href="{{ tagUrl | url }}" rel="tag" class="p-category tag">#{{ tag }}</a>
+    <a href="{{ '/tags/' + tag | url }}" rel="tag" class="p-category tag">#{{ tag }}</a>
   {% endfor %}
 
   </p>
