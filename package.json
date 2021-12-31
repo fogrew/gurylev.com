@@ -10,6 +10,7 @@
     "watch": "npx eleventy --watch",
     "serve": "npx eleventy --serve",
     "debug": "DEBUG=* npx eleventy",
+    "clean": "rm -rf ./dist/*",
     "v": "vercel dev"
   },
   "repository": {
