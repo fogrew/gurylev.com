@@ -53,8 +53,11 @@ module.exports = {
     return estimatedTime;
   },
 
-  readableDate: (dateObj) => {
-    return new Intl.DateTimeFormat('ru', {
+  readableDate: function(dateObj) {
+    // TODO(i18n): adopt locales to 11ty templates correctly
+    const locale = this?.ctx?.locale || this?.data?.locale
+
+    return new Intl.DateTimeFormat(locale, {
       year: 'numeric',
       month: 'short',
       day: 'numeric'

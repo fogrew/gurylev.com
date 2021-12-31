@@ -3,6 +3,7 @@ exports.data = {
   template: 'article',
   criticalStyles: ['/css/templates/article.css'],
   asyncStyles: ['/css/plugins/avatar.css'],
+  locale: 'ru',
   pagination: {
     data: 'watched',
     size: 1,
