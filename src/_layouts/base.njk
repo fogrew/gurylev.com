@@ -3,7 +3,7 @@ asyncStyles:
   - /css/plugins/links.css
 ---
 <!doctype html>
-<html lang="ru" class="document" data-theme="light">
+<html lang="{{ locale }}" class="document" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,6 +61,7 @@ asyncStyles:
       </div>
       <div class="header__end">
         {% include "search.njk" %}
+        <a href="submit" class="button" aria-label="">🔎</a>
       </div>
     </header>
 
