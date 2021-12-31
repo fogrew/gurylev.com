@@ -61,6 +61,11 @@ module.exports = {
     }).format(new Date(dateObj))
   },
 
+  i18n: function(string) {
+    const { strings, locale = 'en' } = this.ctx
+    return strings[locale][string]
+  },
+
   getNoun: (number, one, two, five) => {
     let n = Math.abs(number);
     n %= 100;
