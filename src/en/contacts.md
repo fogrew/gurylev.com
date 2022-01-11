@@ -8,20 +8,17 @@ eleventyNavigation:
   order: 50
 ---
 
-For open correspondence, use email: [andrew@gurylev.com](mailto:andrew@gurylev.com){rel="me" .u-email}
+For open correspondence, use email: <strong>and<!-- anti-spam@here.gmail -->rew&commat;gurylev<!-- anti-spam@here.gmail -->&period;com</strong>
 
-### Pretty Good Privacy
 
-You can contact me more privately. Just encrypt the message with PGP before sending, and send me your public PGP key (or say from which key-server I can get it).
+<details>
+<summary>Details in case you're worried about the privacy our correspondence</h2></summary>
+
+My email is located in the cloud of the ProtonMail mail service, on Swiss servers. I receive and send mail only through official clients, which protects against the interception of letters on the way from me and to me.
+
+If you are worried about the privacy of our correspondence, encrypt the message with PGP and send it to the same email. Be sure to share your PGP public key with me, so I can add you to my contacts and encrypt the reply email.
 
 My PGP key: [985FE55E](/keys/pgp_keys.asc){rel="pgpkey authn"}
 
-### Special cases
-
-I have a special email: [fogrew@pm.me](mailto:fogrew@pm.me){rel="me" .u-email}
-
-It is located in the cloud of the ProtonMail mail service, on Swiss servers.
-
-PGP key: [955C5182](/keys/publickey.fogrew@pm.me.asc){rel="pgpkey authn"}
-
-If it means something to you, you know what to do.
+Keep in mind that with PGP, the body of the email is always encrypted, but the subject of the email is transmitted in plaintext and the fact that there is encrypted correspondence is available to a potential interceptor. If you want to discuss something privately, invite me to coffee in the park.
+</details>
