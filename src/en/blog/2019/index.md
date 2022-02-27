@@ -76,20 +76,20 @@ I managed to have enough rest. But felt tired most of the time.
 
 ## The world around
 
-Чтобы переключать контекст и отдыхать дольше, выбирался подальше:
+To switching context so long as possible and rest longer, getted away:
 
-- В начале года свозил родителей на Кипр, а-то мама ещё не бывала за границами бывшего СССР. Очень хотелось показать другой мир.
-- Летом побывал во Пскове, вспомнил времена службы в армии. И ещё впервые побывал в Великом Новгороде.
-- Осенью был в отпуске в Тайланде (на Пхукете)
-- А ближе к концу осени побывали Японии (в Токио и Никко). Это приз за победу в хакатоне.
+- In the beginning of year, arrived my parents to Cyprus, so my Mom not was outside of the old USSR. I really wanted to show another world for her.
+- In the summer I was in Pskov city, remember army times. Also I firstly was in Velikiy Novgorod city.
+- In autumn I was in Thailand in vacation (in Phuket)
+- Also in end of autumn I was in Japan (in Tokio and Nikko). It was a prize for a winning in the hackaton in Wrike.
 
 ## Home & Comfort
 
-Чтобы и дома было хорошо, были планы для смены обстановки без её смены.
+To save home confort, I changed the scenery without changing it.
 
-- Сделал дома перестановку
-- Обустроил балкон
-- Купил телевизор
-- Навёл систему в гардеробе
+- Rearranged furniture
+- Arranged a balcony
+- Bought a TV
+- Made a system in the wardrobe
 
-Вот и весь мой 2019 год.
+It is whole my 2019 year. Thank you for reading.
