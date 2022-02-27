@@ -60,7 +60,7 @@ module.exports = function(eleventyConfig) {
   }
 
   async function imageShortcode(src, className, alt, sizes, widths, imgWidth, itemprop) {
-    let source = path.join(__dirname, "./src/assets/" , src);
+    let source = path.join("src/assets/" , src);
     let extensions = getExtensionFallbacks(src);
     let widthsArray = widths.split(',').map(width => Number(width))
     let metadata = await Image(source, {
