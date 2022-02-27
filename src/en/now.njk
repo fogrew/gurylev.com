@@ -1,0 +1,43 @@
+---
+title: Now
+layout: home
+permalink: /now/index.html
+eleventyNavigation:
+  key: Now
+  order: 15
+scripts: ["/js/music.mjs"]
+---
+
+<h2>Idea</h2>
+
+<p>This page is a public statement of priorities and a reminder to yourself.<br>
+The idea of such pages <a href="https://sive.rs/nowff">was spread</a> by Derek Sivers.</p>
+
+<h2>Current state</h2>
+
+<p>I live in St. Petersburg and focus on the following things:</p>
+{% set lastStatus = collections.status | last %}
+
+<ul>
+  <li>Status: {{ lastStatus.templateContent | striptags(true) | escape | nl2br }} (<a href="/status/">all statuses</a>)</li>
+  <li>🧘 I am sharpening the personal system of planning, motivation and introspection "Air".</li>
+  <li>🎧 <span class="recent-track">Listen <a href="https://www.last.fm/user/Kasumi_Candor">music</a>…</span></li>
+  <li>👣 I enhance the privacy and security of home appliances by changing vendors</li>
+  <li>🌎 I supplement this site, sometimes introducing indieweb ideas a little bit at a time.</li>
+</ul>
+
+<div class="h-feed grid grid--3">
+  <div class="grid__line">
+    <h2>I write articles</h2>
+    <p>I will publish them on this site when I finish.</p>
+  </div>
+  {% set postslist = collections.allContent | unpublished %}
+  {% include "posts-grid.njk" %}
+</div>
+
+<h2>I write code</h2>
+
+<figure>
+  <figcaption>👨‍💻 I've been writing in these syntaxes for the last 30 days:</figcaption>
+  <img alt="Distribution of programming languages in the last 30 days" src="https://wakatime.com/share/@fogrew/3585fbb8-cdaf-403b-b18b-8de1068e5a28.svg" width="800" height="600" loading="lazy" decoding="async">
+</figure>

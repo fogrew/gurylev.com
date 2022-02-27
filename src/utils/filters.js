@@ -12,6 +12,25 @@ module.exports = {
     return arrays.flat()
   },
 
+  /*
+  * filterPostsByTags
+  * @param {Object[]} posts - an eleventy posts collection
+  * @param {string|string[]} tags - tag or tags for filtering
+  * @return {Object[]} filtered posts
+  *
+  * @example
+  *   filterPostsByTags(posts, 'posts', 'en')
+  * @example
+  *   filterPostsByTags(posts, 'posts')
+  */
+  filterPostsByTags: (posts, ...tags) => {
+    return posts.filter(post =>
+      post.data?.tags.some(tag =>
+        tags.includes(tag)
+      )
+    )
+  },
+
   published: (posts) => {
     return posts.filter(post => !post.data.draft)
   },
@@ -34,12 +53,20 @@ module.exports = {
     return estimatedTime;
   },
 
-  readableDate: (dateObj) => {
-    return new Intl.DateTimeFormat('ru', {
+  readableDate: function(dateObj) {
+    // TODO(i18n): adopt locales to 11ty templates correctly
+    const locale = this?.ctx?.locale || this?.data?.locale
+
+    return new Intl.DateTimeFormat(locale, {
       year: 'numeric',
       month: 'short',
       day: 'numeric'
     }).format(new Date(dateObj))
+  },
+
+  i18n: function(string) {
+    const { strings, locale = 'en' } = this.ctx
+    return locale === 'en' ? string : strings[locale][string]
   },
 
   getNoun: (number, one, two, five) => {

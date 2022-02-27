@@ -1,21 +1,20 @@
 <header class="page__header">
   <h1 class="page__title p-name" itemprop="name headline">{{ title }}</h1>
-  <p>{% include "author.njk"%} опубликовал статью
+  <p>{% include "author.njk"%} {{ "published" | i18n }} {{ "the article" | i18n }}
   {% if date %}
   <time class="post-date dt-published" datetime="{{ date | htmlDateString }}" itemprop="datePublished"><a class="u-url" href="{{ page.url | url }}">{{ date | readableDate }}</a></time>
   {% endif %}
   {% if date %}
-  в категории <a href="{{ page.url | parent }}">{{category}}</a>
+  {{ "in the category" | i18n }} <a href="{{ page.url | parent }}">{{category}}</a>
   {% endif %}
-  и пометил тегами
+  {{ "and tagged it with" | i18n }}
   {% for tag in tags %}
-    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-    <a href="{{ tagUrl | url }}" rel="tag" class="p-category tag">#{{ tag }}</a>
+    <a href="{{ '/tags/' + tag | url }}" rel="tag" class="p-category tag">#{{ tag }}</a>
   {% endfor %}
 
   </p>
   {% set time = content | readingTime %}
-  <p>Можно прочитать за {{ time }} {{ time | getNoun('минута', 'минуты', 'минут') }}</p>
+  <p>{{ "Can be read in" | i18n }} {{ time }} {% if locale === 'ru' %}{{ time | getNoun('минуту', 'минуты', 'минут') }}{% else %}{{ time | getNoun('minute', 'minutes', 'minutes') }}{% endif %}</p>
   {% if preview %}
   <meta itemprop="image" content="{{ preview }}">
   {% endif %}

@@ -1,0 +1,12 @@
+---
+title: Drafts
+permalink: /drafts/index.html
+layout: home
+eleventyExcludeFromCollections: true
+---
+<p>I will publish them on this site when I finish writing.</p>
+<div class="h-feed grid grid--3">
+  {% set hasDraftLinks = true %}
+  {% set postslist = collections.en | unpublished %}
+  {% include "posts-grid.njk" %}
+</div>

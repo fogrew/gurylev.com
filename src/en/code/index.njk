@@ -1,0 +1,37 @@
+---
+title: Code
+layout: home
+permalink: /code/
+eleventyNavigation:
+  key: Code
+  order: 30
+---
+
+<p>Many years I'm writing the code, and sometimes I want to share it.</p>
+<p><a href="/tags/code/feed.xml">Subscribe to RSS feed with my code</a></p>
+
+<div class="h-feed grid grid--3">
+  <div class="grid__line">
+    <h2>Share projects</h2>
+    <p>I written it for fun, usually I wan't to evolve it.</p>
+    <p><a href="/tags/projects/">All projects</a> | <a href="/tags/projects/feed.xml">Subscribe to RSS with projects</a></p>
+  </div>
+  {% set postslist = collections.projects | filterPostsByTags(locale)  %}
+  {% include "posts-grid.njk" %}
+
+  <div class="grid__line">
+    <h2>Share the code</h2>
+    <p>Solutions, snippets, hacks, call it as you want 🤷</p>
+    <p><a href="/tags/snippets/">All snippets</a> | <a href="/tags/snippets/feed.xml">Subsribe to RSS with snippets</a></p>
+  </div>
+  {% set postslist = collections.snippets | filterPostsByTags(locale)  %}
+  {% include "posts-grid.njk" %}
+
+  <div class="grid__line">
+    <h2>Present my works</h2>
+    <p>Only projects for which I don't signed non-disclosure agreement</p>
+    <p><a href="/tags/portfolio/">All works</a> | <a href="/tags/portfolio/feed.xml">Subscribe to RSS with workds</a></p>
+  </div>
+  {% set postslist = collections.portfolio | filterPostsByTags(locale)  %}
+  {% include "posts-grid.njk" %}
+</div>

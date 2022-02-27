@@ -1,0 +1,8 @@
+{
+  "layout": "article",
+  "tags": [
+    "blog"
+  ],
+  "category": "blog",
+  "permalink": "/blog/{{page.fileSlug}}/"
+}

@@ -1,0 +1,36 @@
+---
+title: Код
+layout: home
+eleventyNavigation:
+  key: Код
+  order: 30
+---
+
+<p>Много лет пишу код, изредка хочется им делиться.</p>
+<p><a href="/tags/code/feed.xml">Подписаться на RSS с моим кодом</a></p>
+
+<div class="h-feed grid grid--3">
+  <div class="grid__line">
+    <h2>Делюсь проектами</h2>
+    <p>Писал для фана, обычно не планирую развивать</p>
+    <p><a href="/tags/projects/">Все проекты</a> | <a href="/tags/projects/feed.xml">Подписаться на RSS с проектами</a></p>
+  </div>
+  {% set postslist = collections.projects | filterPostsByTags(locale)  %}
+  {% include "posts-grid.njk" %}
+
+  <div class="grid__line">
+    <h2>Делюсь кодом</h2>
+    <p>Решениями, сниппетами, хаками, зови как хочешь 🤷</p>
+    <p><a href="/tags/snippets/">Все сниппеты</a> | <a href="/tags/snippets/feed.xml">Подписаться на RSS со сниппетами</a></p>
+  </div>
+  {% set postslist = collections.snippets | filterPostsByTags(locale)  %}
+  {% include "posts-grid.njk" %}
+
+  <div class="grid__line">
+    <h2>Демонстрирую работы</h2>
+    <p>Только те, для которых не подписывал соглашения о неразглашении</p>
+    <p><a href="/tags/portfolio/">Все работы</a> | <a href="/tags/portfolio/feed.xml">Подписаться на RSS с работами</a></p>
+  </div>
+  {% set postslist = collections.portfolio | filterPostsByTags(locale)  %}
+  {% include "posts-grid.njk" %}
+</div>

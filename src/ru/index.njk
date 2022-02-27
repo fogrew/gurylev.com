@@ -1,0 +1,35 @@
+---
+title: Андрей Гурылёв
+layout: home
+eleventyNavigation:
+  key: Андрей Гурылёв
+  order: 10
+header: Привет, я Андрей Гурылёв 👋🏻
+asyncStyles:
+  - /css/plugins/avatar.css
+---
+<span style="float: right">
+    <a href="/" class="u-url u-uid" rel="me">{% image '/img/avatar.jpg', 'u-photo avatar', 'фото Андрея Гурылева', '', '120,240', '120' %}</a>
+  </span>
+<h1 class="page__header page__title p-name">{{ header }}</h1>
+<p class="p-note page__summary">Веб-разработчик, тимлид, контрол-фрик и гик. <a href="/about/">Обо мне</a></p>
+<div class="grid grid--3">
+  <div class="h-feed">
+    <h3>Последние статьи</h3>
+    {% set postslist = [collections.chats, collections.results, collections.motivation] | merge | sortByDate | published | head(-4) %}
+    {% include "posts-list.njk" %}
+    <a href="/blog/">Почитать другие статьи из блога</a>
+  </div>
+  <div class="h-feed">
+    <h3>Последний код</h3>
+    {% set postslist = [collections.projects, collections.snippets] | merge | sortByDate | published | head(-4) %}
+    {% include "posts-list.njk" %}
+    <a href="/code/">Посмотреть ещё кода</a>
+  </div>
+  <div class="h-feed">
+    <h3>Последние выступления</h3>
+    {% set postslist = [collections.lectures, collections.podcasts, collections.interviews, collections.courses] | merge | published | sortByDate | head(-4) %}
+    {% include "posts-list.njk" %}
+    <a href="/speeches/">Посмотреть больше выступлений</a>
+  </div>
+</div>
