@@ -13,20 +13,21 @@ asyncStyles:
 
 Imagine, I have run out of my Photoshop license. People says it happens sometimes. Following Muphy's Law, it immediately required to paint a picture — announce of August meetup [Frontend Mix](https://meetabit.com/events/piterjs-16). I'm strive to help [PiterJS community](http://piterjs.org) with meetups organizing by management part, SMM, and graphics.
 
-Summary, I was sad. I was violently disappointed. Sadness for my inability, depression from hopelessness, something like that. I wrote to the guys that I'm helpless for some time - can't draw. Let them cope somehow. As a last resort, let them just insert the logo of PiterJS into announce as we did it earler.
+In summary, I was sad. I was violently disappointed. Sadness for my inability, depression from hopelessness, something like that. I wrote to the guys that I'm helpless for some time - can't draw. Let them cope somehow. As a last resort, let them just insert the logo of PiterJS into announce as we did it earler.
 
 ## 🖌 Possible without an editor
 
-Но я же не могу так быстро сдаться...
-В очередной раз загуглил альтернативы фотошопу для редактирования растровой графики (делаю это примерно раз в год). В очередной раз убедился, что ничего толкового нет. Большинством GUI просто невозможно пользоваться. Они отвратительны.
+But I can't give up so quickly...
 
-Но это меня не остановило. Ведь картинки можно редактировать и без редактора! Вот уж что мне удобно, так это `command line interface`. Далее отправился изучать доки консольной утилиты [imagemagick](www.imagemagick.org). Через 20 минут изучения доков, нарисовал это
+Once again I googled alternatives for photoshop for editing raster graphics (I do it once in year). Once again made sure that there was nothing suittable. Most GUI absolutely unusable. It was terrible.
+
+But it not stopped me. After all I can edit images without editor! What I love that is `command line interface`! Next I learned docs of CLI utility [imagemagick](www.imagemagick.org). After 20 minutes docs reading, I draw it
 
 {% image '/img/posts/fm2.png', '', 'frontend mix', '(min-width: 768px) 940px, 100vw', '768,940', '940' %}
 
-Нагуглил и склеил две картинки, добавил подпись и всё. Работа элементарная. Никакого фотошопа. Никаких сложностей. Оказалось, запилить картинку для анонса не так и сложно. А однажды приобретя этот навык, в будущем будет совсем просто. Так и от фш можно будет напрочь избавиться.
+Googled how to o and stuck together two images. That's it! Elementary work. Nothing photoshop. Nothing difficult. It turned out to create a picture for announce not so hard. And one day learned it, in the future it is completely easy. So, with this I can forgot about Photoshop.
 
-Нарисовал я это примерно так:
+I draw it with this commands:
 
 ```bash
 curl -o yandex-money.png http://www.4androidapk.net/data/programs/images/yandex-money-online-payments_1086.png
@@ -38,48 +39,51 @@ convert -fill black -font Trebuchet -pointsize 72 -size 450x100 -gravity center 
 convert -append -gravity center text.png fm.png result.png
 ```
 
-Тут в целом происходит всякая фигня. Давайте разберём по шагам.
+In general, there is happen something mess. Let's study it step by step.
 
-## 👆 Предустановки
+## 👆 Pre-requirements
 
-Конечно, предварительно должен быть установлен обработчик картинок - imagemagick. Можно его скачать [отсюда](http://www.imagemagick.org/script/download.php), затем установить + добавить переменные окружения. Однако я предпочёл пойти привычным мне путём: поставить через [homebrew](https://brew.sh/index_ru.html).
+Of cource, here should be installed images utility in advance - imagemagick.
+You can download it [here](http://www.imagemagick.org/script/download.php), then install it + add environment variables. By the way, I prefer to use habitual way for me: install it via [homebrew](https://brew.sh/index_ru.html).
 
 ``` bash
 brew install imagemagick
 ```
 
-## 🔍 Поиск
+## 🔍 Research
 
-В первую очередь я провёл не консольную работу.
+Firstly, I did non-console work.
 
-> Не умеешь гуглить - не сможешь жить
+> If you can't google, you can't life
 
-Митап проводят Яндекс.Деньги в их офисе при поддержке PiterJS. Не хочется подчёркивать чью-то важность, ибо для PiterJS это очередной ежемесячный митап, а не присоединение к чужому митапу, а для яндекс.денег это свой митап на своей территории. Поэтому я постарался уровнять логотипы. Оттого: логотипы нужны одинаковых пропорций — квадраты.
+The meetup organized by Yandex.Money in their office by supporting of PiterJS.
+I didn't want to highlight someone importance, because for PiterJS it is another recurrence monthly meetup, not joining to another meetup, but for Yandex.Money it is meetup on their territory. So I tried to equal logos. As result: logos should be the same sizes - square.
 
-С PiterJS всё просто. Есть [специальный репозиторий](https://github.com/piterjs/resources), где хранятся ресурсы стайлгайда. Там же я откопал и логотип. Растровый. В `png`.
+With PiterJS it is simple. We have [speccial repository](https://github.com/piterjs/resources), where we store style guide. I copied the logo from there. Raster. In `png`.
 
-С яндекс.деньгами получилось сложнее. Официального стайлгайда я найти не смог. Пришлось гуглить картинки. Держу в памяти и настраиваю в поиске, что мне нужен квадрат, по меньшей мере 512px. Вначале я нашёл подходящий, но маленький квадратный логотип андроидовского приложения яндекс.денег, а затем нашёл его [крупнее](http://www.4androidapk.net/data/programs/images/yandex-money-online-payments_1086.png). Его я и использовал для анонса.
+With Yandex.Money it was harder a bit. I could not find the official style guide. So I had to google images. Keep it in mind and setting up in the search that I want the square, at least with side in 512 pixels. Firstly, I found suitable, but small square logo of android app of Yandex.Money, and then I found it [larger](http://www.4androidapk.net/data/programs/images/yandex-money-online-payments_1086.png). I used it for the announcement.
 
-## ↭ Скачиваем и меняем размеры
+## ↭ Download and change sizes
 
-Ну, тут всё просто: для скачивания, у всех есть замечательный `curl` с опцией `--output`, которую я привык сокращать до `-o`. После этого первым аргументом имя нового файла, вторым — ссылка, откуда его скачать. Так мы скачиваем две картинки в папочку, в которой находимся.
+So, here everything is simple: for downloading, all unix-machines have graceful `curl` with option `--output`, which I usually shorten to `-o`. After it, as first argument use the name of a new file, as second argument use the URL from which it should be downloaded. So, thus we're downloading two images into folder, where we are.
 
 ``` bash
 curl -o yandex-money.png http://www.4androidapk.net/data/programs/images/yandex-money-online-payments_1086.png
 curl -o piterjs.png https://raw.githubusercontent.com/piterjs/resources/master/logo/PiterJS.png
 ```
 
-Лого piterjs слишком крупное для анонса, 1024px. Нужно пропорционально уменьшить, изменить размер.
+PiterJS logo too large for the announcement, 1024px. We need to reduce the size proportional.
 
-Любая конвертация картинок с помощью imagemagick выполняется командой `convert`. А конкретно изменение размера делается простым и логичным аргументом `resize`.
+Any images converting with the ImageMagick can be run with `convert` command. And resizing can be used with simple and logical argument `resize`.
 
-Я сохраняю в отдельный файл, чтобы суметь увидеть «прогресс», когда всё закончится. Чтобы знать постфактум, на каком шаге что пошло не так, если вдруг это случится. Почему я называю новый файл, начиная с `fm` — разберу чуть позже.
+I save into a new file to see the "progress" when all will be completed. To know after all on which step we had something wrong, if it will happen. I tell below why I name new file started with `fm`.
 
 ```bash
 convert piterjs.png -resize 512x512 fm-2piterjs.png
 ```
 
-Дальше интереснее. Картинка логотипа яндекс.денег — 512x512px, как надо. Но с «воздухом» беда. Не хватает места по краям. Нужно просто добавить белого фона со всех сторон на 7-10%. Я наобум округлил до 550px. И тут пошла математика (я её не люблю):
+Next it will be more interesting. Logo of Yandex.Money - 512x512px, as we need.
+But with "air" something wrong. Haven't empty space at edges. We can just add the white background to all sides for 7-10%. I did round to 550px. And there И тут пошла математика (я её не люблю):
 
 1. 550-512 = 38. Столько нужно добавить по краям.
 2. 550+38 = 588. Так надо «обрезать» (в большую сторону) картинку, чтоб добавить место с краёв.
