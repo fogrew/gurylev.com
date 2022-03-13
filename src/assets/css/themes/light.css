@@ -1,10 +1,12 @@
-.document {
-  --theme-background: #f7f6ee;
-  --theme-background-shadowed: #e0e0e0;
-  --theme-border: #e0e0e0;
-  --theme-background-invert: #333;
-  --theme-text: #544;
-  --theme-primary: #333;
-  --theme-secondary: #333;
-  --theme-accent: #d62e00;
+@media (prefers-color-scheme: no-preference), (prefers-color-scheme: light) {
+  .document {
+    --theme-background: #f7f6ee;
+    --theme-background-shadowed: #e0e0e0;
+    --theme-border: #e0e0e0;
+    --theme-background-invert: #333;
+    --theme-text: #544;
+    --theme-primary: #333;
+    --theme-secondary: #333;
+    --theme-accent: #d62e00;
+  }
 }
