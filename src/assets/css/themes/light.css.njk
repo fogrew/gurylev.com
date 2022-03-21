@@ -1,8 +1,0 @@
----
-permalink: /css/themes/light.css
-eleventyExcludeFromCollections: true
----
-{% set css %}
-{% include "./light.css" %}
-{% endset %}
-{{ css | cssmin | safe }}

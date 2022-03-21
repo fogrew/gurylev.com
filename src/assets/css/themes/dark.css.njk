@@ -1,8 +1,0 @@
----
-permalink: /css/themes/dark.css
-eleventyExcludeFromCollections: true
----
-{% set css %}
-{% include "./dark.css" %}
-{% endset %}
-{{ css | cssmin | safe }}
