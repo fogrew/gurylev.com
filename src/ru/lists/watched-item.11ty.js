@@ -30,7 +30,7 @@ exports.render = async function({movie}) {
         <span content="${movie["Type"]}">${movie["Type"] == 'movie' ? 'фильм' : 'сериал' }</span>
         <span itemprop="name">${movie["Name"]}</span>
       </span>
-      <time class="post-date dt-published" datetime="${this.htmlDateString(movie["Date Rated"])}" itemprop="datePublished">
+      <time class="post-date dt-published" datetime="${movie["Date Rated"]}" itemprop="datePublished">
         <a class="u-url" href="${ this.url(this.page.url) }">${this.readableDate(movie["Date Rated"])}</a>
       </time>
     </p>
