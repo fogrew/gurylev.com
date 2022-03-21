@@ -6,6 +6,6 @@ layout: home
 
 <ul>
 {% for tag in collections.tagList %}
-  <li><a rel="tag" href="/tags/{{ tag | url }}/">{{ tag }}</a> (<a href="/tags/{{ tag | url }}/feed.xml">rss</a>)</li>
+  <li><a rel="tag" href="/tags/{{ tag }}/">{{ tag }}</a> (<a href="/tags/{{ tag }}/feed.xml">rss</a>)</li>
 {% endfor %}
 </ul>

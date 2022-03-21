@@ -9,8 +9,8 @@ preview: /img/posts/spb-frontend.svg
 ---
 
 <audio controls>
-  <source class="u-audio" preload="auto" src="{{ '/media/SPB-Frontend-Drinkcast-26.mp3' | url }}" type="audio/mpeg">
-  <a href="{{ '/media/SPB-Frontend-Drinkcast-26.mp3' | url }}" download>Download the podcast episode</a>
+  <source class="u-audio" preload="auto" src="/media/SPB-Frontend-Drinkcast-26.mp3" type="audio/mpeg">
+  <a href="/media/SPB-Frontend-Drinkcast-26.mp3" download>Download the podcast episode</a>
 </audio>
 
 https://spb-frontend.ru/podcast/26

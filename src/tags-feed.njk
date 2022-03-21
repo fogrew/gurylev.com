@@ -21,7 +21,7 @@ eleventyExcludeFromCollections: true
 	</author>
 	{%- for post in tagArray %}
   {% if post.url and post.data.date %}
-	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+	{% set absolutePostUrl %}{{ post.url | absoluteUrl(metadata.url) }}{% endset %}
 	<entry>
 		<title>{{ post.data.title }}</title>
 		<link href="{{ absolutePostUrl }}"/>

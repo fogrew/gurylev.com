@@ -9,9 +9,9 @@ preview: /img/posts/spb-frontend.svg
 ---
 
 <audio controls>
-  <source class="u-audio" preload="auto" src="{{ '/media/SPB-Frontend-Drinkcast-26.mp3' | url }}" type="audio/mpeg">
-  <a href="{{ '/media/SPB-Frontend-Drinkcast-31.mp3' | url }}" download>Скачать выпуск подкаста</a>
+  <source class="u-audio" preload="auto" src="/media/SPB-Frontend-Drinkcast-26.mp3" type="audio/mpeg">
+  <a href="/media/SPB-Frontend-Drinkcast-31.mp3" download>Скачать выпуск подкаста</a>
 </audio>
-<a href="{{ '/media/SPB-Frontend-Drinkcast-31.mp3' | url }}" download>Скачать выпуск подкаста</a>
+<a href="/media/SPB-Frontend-Drinkcast-31.mp3" download>Скачать выпуск подкаста</a>
 
 https://spb-frontend.ru/podcast/31

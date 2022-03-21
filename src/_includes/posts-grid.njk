@@ -2,7 +2,7 @@
   {% set hasLinks = hasDraftLinks == true or post.data.draft != true %}
   <section class="h-entry card" aria-labelledby="{{ post.data.title | urlencode }}" itemscope itemtype="http://schema.org/Article">
     {% if hasLinks %}
-    <a class="u-url u-uid card__link" href="{{ post.url | url }}">
+    <a class="u-url u-uid card__link" href="{{ post.url }}">
       <div class="card__body">
     {% endif %}
         <h3 class="p-name card__title" id="{{ post.data.title | urlencode }}" itemprop="name headline">{{ post.data.title }}</h3>

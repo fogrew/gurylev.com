@@ -3,7 +3,7 @@
   {% set hasLinks = hasDraftLinks == true or post.data.draft != true %}
   <li class="list__item">
   {% if hasLinks %}
-    <a class="u-url u-uid" href="{{ post.url | url }}">
+    <a class="u-url u-uid" href="{{ post.url }}">
   {% endif %}
       {{ post.data.title }}
   {% if hasLinks %}
