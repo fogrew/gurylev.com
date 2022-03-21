@@ -14,29 +14,16 @@
   --sides: calc(var(--col-width) * 4 + var(--container-width) + 2rem);
 }
 
-/* * tablet * */
 @media (min-width: 768px) {
   :root {
     --font-size-base: 18px;
     --gap: 1.25rem;
   }
 }
-/* * laptop * */
+
 @media (min-width: 1024px) {
   :root {
     --font-size-base: 20px;
     --gap: 1.5rem;
-  }
-}
-/* * desktop * */
-@media (min-width: 1440px) {
-  :root {
-    /* --gap: 2rem; */
-  }
-}
-/* * wide * */
-@media (min-width: 1920px) {
-  :root {
-    /* --gap: 3rem; */
   }
 }

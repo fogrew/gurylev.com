@@ -27,8 +27,5 @@
 @import 'organisms/header.css';
 @import 'organisms/footer.css';
 
-@import 'templates/article.css';
-@import 'templates/wide.css';
-
 @import 'themes/light.css';
 @import 'themes/dark.css';
