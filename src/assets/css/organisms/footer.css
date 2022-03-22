@@ -6,5 +6,5 @@
 /* .footer__copyright {}
 .footer__links {} */
 .footer__help {
-  text-align: right;
+  margin-left: auto;
 }
