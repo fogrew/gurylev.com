@@ -4,13 +4,13 @@
   margin: 0 calc(var(--gap) * -0.5);
   list-style: none;
 }
-.nav__link {
+.nav__item {
   display: inline-block;
   white-space: nowrap;
   padding: .5rem calc(var(--gap) * 0.5);
 }
 
-.nav__link--active {
+.nav__item--active {
   outline-width: var(--outline-width);
   outline-style: dashed;
   outline-color: var(--theme-accent);
