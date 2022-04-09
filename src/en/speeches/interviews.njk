@@ -1,0 +1,20 @@
+---
+title: Interviews
+layout: home
+permalink: /speeches/interviews/
+header: Interviews
+eleventyNavigation:
+  key: Interviews
+  excerpt: People ask questions - I answer
+  parent: Speeches
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Giving an interview</h1>
+    <p>People ask questions - I answer</p>
+    <p><a href="/tags/interviews/feed.xml">Subscribe to RSS with courses</a></p>
+  </div>
+  {% set postslist = collections.interviews | filterPostsByTags(locale) | published %}
+  {% include "posts-grid.njk" %}
+</div>

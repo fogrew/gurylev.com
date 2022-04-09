@@ -1,0 +1,20 @@
+---
+title: Projects
+layout: home
+permalink: /code/projects/
+header: Projects
+eleventyNavigation:
+  key: Projects
+  excerpt: My pet-projects
+  parent: Code
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Share projects</h1>
+    <p>I written it for fun, usually I wan't to evolve it.</p>
+    <p><a href="/tags/projects/feed.xml">Subscribe to RSS with projects</a></p>
+  </div>
+  {% set postslist = collections.projects | filterPostsByTags(locale) | published %}
+  {% include "posts-grid.njk" %}
+</div>

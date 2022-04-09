@@ -1,0 +1,20 @@
+---
+title: Courses
+layout: home
+permalink: /speeches/courses/
+header: courses
+eleventyNavigation:
+  key: Courses
+  excerpt: Courses and lessons where I taught
+  parent: Speeches
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Teach</h1>
+    <p>I'm making a smart look, starting to tell, just try to stop</p>
+    <p><a href="/tags/courses/feed.xml">Subscribe to RSS with courses</a></p>
+  </div>
+  {% set postslist = collections.courses | filterPostsByTags(locale) | published %}
+  {% include "posts-grid.njk" %}
+</div>

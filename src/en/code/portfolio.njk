@@ -1,0 +1,20 @@
+---
+title: Portfolio
+layout: home
+permalink: /code/portfolio/
+header: Portfolio
+eleventyNavigation:
+  key: Portfolio
+  excerpt: Examples of my work from past
+  parent: Code
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h2>Present my works</h2>
+    <p>Only projects for which I don't signed non-disclosure agreement</p>
+    <p><a href="/tags/portfolio/feed.xml">Subscribe to RSS with works</a></p>
+  </div>
+  {% set postslist = collections.portfolio | filterPostsByTags(locale) | published %}
+  {% include "posts-grid.njk" %}
+</div>

@@ -1,0 +1,20 @@
+---
+title: Podcasts
+layout: home
+permalink: /speeches/podcasts/
+header: Podcasts
+eleventyNavigation:
+  key: Podcasts
+  excerpt: I'm discussed some topics with mic
+  parent: Speeches
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Sound in podcasts</h1>
+    <p>I sit down in front of the microphone with headphones to discuss something</p>
+    <p><a href="/tags/podcasts/feed.xml">Subscribe to RSS with all the podcasts</a></p>
+  </div>
+  {% set postslist = collections.podcasts | filterPostsByTags(locale) | published %}
+  {% include "posts-grid.njk" %}
+</div>
