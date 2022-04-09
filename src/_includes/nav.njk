@@ -1,10 +1,43 @@
 {% set navPages = collections[locale] | eleventyNavigation %}
-<nav class="nav">
-  <a href="#main" class="nav__item screen-reader-only">{{ 'Skip navigation' | i18n }}</a>
-{%- for entry in navPages %}
-  <a class="{{ entry.classes }} nav__item{% if entry.url == page.url %} nav__item--active{% endif %}" href="{{ entry.url }}" {% if entry.url == page.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
-{%- endfor %}
-{% if config.env == 'development' %}
-  <a class="nav__item{% if entry.url == page.url %} nav__item--active{% endif %}" href="/drafts/">{{ 'Drafts' | i18n }}</a>
+{% macro renderNavListItem(entry) -%}
+{%- set hasSubmenu = entry.children.length > 0 -%}
+{%- set isActive = entry.url == page.url -%}
+{% if entry.condition !== false %}
+  <li
+    class="
+      nav__item
+      {% if hasSubmenu %}nav__item--submenu{% endif %}
+      {% if isActive %}nav__item--active{% endif %}
+    "
+  >
+    <a
+      class="
+        {{- entry.classes }}
+        nav__link
+        {% if isActive %}nav__link--active{% endif %}
+      "
+      href="{{ entry.url }}"
+      {% if isActive -%}aria-current="page"{%- endif %}
+    >
+    <span class="nav__text">{{ entry.title }}</span>
+    <span class="nav__excerpt">{{ entry.excerpt }}</span>
+    </a>
+    {%- if entry.children.length -%}
+      <ul class="nav__list">
+        {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+      </ul>
+    {%- endif -%}
+  </li>
 {% endif %}
+{%- endmacro %}
+{% macro renderNav(nav) -%}
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a href="#main" class="nav__link screen-reader-only">{{ 'Skip navigation' | i18n }}</a>
+    </li>
+{%- for entry in nav %}{{ renderNavListItem(entry) }}{%- endfor -%}
+  </ul>
 </nav>
+{%- endmacro %}
+{{ renderNav(navPages) }}

@@ -2,7 +2,10 @@
 title: Drafts
 permalink: /drafts/index.html
 layout: home
-eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: Drafts
+  order: 50
+  condition: config.env == 'development'
 ---
 <p>I will publish them on this site when I finish writing.</p>
 <div class="h-feed grid grid--3">

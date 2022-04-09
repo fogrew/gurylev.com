@@ -5,7 +5,8 @@ layout: home
 permalink: /contacts/index.html
 eleventyNavigation:
   key: Contacts
-  order: 50
+  excerpt: Email & PGP key
+  parent: Andrey Gurylev
 ---
 
 For open correspondence, use email: <strong>and<!-- anti-spam@here.gmail -->rew&commat;gurylev<!-- anti-spam@here.gmail -->&period;com</strong>

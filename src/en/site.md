@@ -2,6 +2,10 @@
 title: Facts about this site
 permalink: /site/index.html
 layout: home
+eleventyNavigation:
+  key: About site
+  excerpt: Tools, design, privacy policy, terms of terms
+  parent: Andrey Gurylev
 ---
 
 ## Accessibility
@@ -19,17 +23,17 @@ layout: home
 
 * I purposely don't remember users in any way. I don't have advertising trackers, Google Analytics and other unethical external things. So far, there are several YouTube iframes in the performances section, all using youtube-nocookie. I plan to replace them with video storage at home.
 
-## Динамическая информация
+## Dynamic variables
 
 * Environment: {{config.env}}
 * Last release date: {{config.release}}
 
-## Общая техническая информация
+## Tools
 
 * Git: [github](https://github.com/fogrew/gurylev.com/) + personal gitlab
 * Tasks: [github issues](https://github.com/fogrew/gurylev.com/issues/)
-* Hosting: vercel.io
-* CI: vercel.io
+* Hosting: [Cloudflare Pages](https://pages.cloudflare.com/) and reserved: vercel.io
+* CI: [Cloudflare Pages](https://pages.cloudflare.com/) and reserved: vercel.io
 * Static generator: [11ty.dev](https://www.11ty.dev/)
 * Admin panel: forestry.io
 
@@ -44,7 +48,7 @@ layout: home
 
 * are separated in the file system according to the principles of Atomic Design
 * written in pure CSS using the BEM methodology
-* they are not converted using preprocessors like sas or postcss
+* they are not converted using preprocessors like sass or postcss
 * critical styles for loading the first screen are embedded in the pages at the build stage of eleventy
 * non-critical ones are loaded asynchronously
 

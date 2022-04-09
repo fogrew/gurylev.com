@@ -1,17 +1,89 @@
 .nav {
+  display: block;
+  margin: 0 calc(var(--gap) * -0.5);
+}
+.nav__list {
   display: inline-flex;
   flex-wrap: wrap;
-  margin: 0 calc(var(--gap) * -0.5);
+  gap: var(--outline-width);
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .nav__item {
-  display: inline-block;
-  white-space: nowrap;
+  display: inline-flex;
+  position: relative;
+}
+.nav__link {
+  width: 100%;
   padding: .5rem calc(var(--gap) * 0.5);
+  text-decoration: none;
+}
+.nav__link:hover,
+.nav__link:focus {
+  transition: all .2s ease-out;
+  outline-width: var(--outline-width);
+  outline-style: solid;
+  outline-color: var(--theme-accent);
+}
+.nav__link:hover .nav__text,
+.nav__link:focus .nav__text {
+  color: var(--theme-secondary);
+}
+.nav__text {
+  display: block;
+  text-decoration: underline var(--theme-secondary);
+  color: var(--theme-accent);
+  white-space: nowrap;
+}
+.nav__excerpt {
+  display: block;
+  margin-top: 0.2em;
+  font-size: .75em;
+  color: var(--theme-secondary);
 }
 
-.nav__item--active {
+.nav__link--active,
+.nav__item--submenu.nav__item--active {
   outline-width: var(--outline-width);
   outline-style: dashed;
   outline-color: var(--theme-accent);
+}
+
+.nav__item--submenu {
+  position: relative;
+}
+
+.nav__item--submenu > ul {
+  position: absolute;
+  left: calc(var(--outline-width) * -1);
+  top: calc(100% + var(--outline-width));
+  z-index: var(--z-index-menu);
+  min-width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity .2s ease-in;
+  pointer-events: none;
+  background-color: var(--theme-background);
+  border: var(--outline-width) solid var(--theme-background-shadowed);
+}
+.nav__item--submenu > ul:before {
+  content: '';
+  position: absolute;
+  top: calc(var(--outline-width) * -2);
+  left: 0;
+  width: 100%;
+  height: var(--outline-width);
+}
+
+.nav__item--submenu:hover > ul,
+.nav__item--submenu:focus > ul,
+.nav__item--submenu:focus-within > ul {
+  opacity: 1;
+  pointer-events: all;
 }
