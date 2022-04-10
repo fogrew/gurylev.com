@@ -5,6 +5,7 @@ layout: home
 permalink: /contacts/index.html
 eleventyNavigation:
   key: Contacts
+  order: 20
   excerpt: Email & PGP key
   parent: Andrey Gurylev
 ---

@@ -4,6 +4,7 @@ permalink: /site/index.html
 layout: home
 eleventyNavigation:
   key: About site
+  order: 50
   excerpt: Tools, design, privacy policy, terms of terms
   parent: Andrey Gurylev
 ---
