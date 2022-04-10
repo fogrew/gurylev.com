@@ -8,6 +8,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require('markdown-it-attrs');
 const markdownItSpan = require('markdown-it-bracketed-spans');
+const slugify = require('slugify');
 
 module.exports = {
   addPlugins: (eleventyConfig) => {
@@ -40,11 +41,12 @@ module.exports = {
       linkify: true
     })
     .use(markdownItAnchor, {
+      slugify: s => slugify(s),
       permalink: markdownItAnchor.permalink.ariaHidden({
         class: 'anchor',
         symbol: '', // moved to ::after content to remove from table of contents
         renderAttrs: slug => ({
-          'aria-label': `Перейти к заголовку «${decodeURIComponent(slug).replace('-', ' ')}»`
+          'aria-label': `Перейти к заголовку «${decodeURIComponent(slug).replace(/-/g, ' ')}»`
         }),
         placement: 'before'
       })

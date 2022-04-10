@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-upgrade-help": "^1.0.1",
-    "node-fetch": "^3.2.3"
+    "node-fetch": "^3.2.3",
+    "slugify": "^1.6.5"
   }
 }
