@@ -9,6 +9,34 @@ eleventyNavigation:
   parent: Andrey Gurylev
 ---
 
+## Tools
+
+* Built on [11ty](https://www.11ty.dev/) static generator
+* I use forestry.io as admin panel when I want to post something via phone
+* Site is hosted on [Cloudflare Pages](https://pages.cloudflare.com/) and has reserved hosting on vercel.io for hot-switch if need be
+* Site builds on CI of [Cloudflare Pages](https://pages.cloudflare.com/) and can be built via reserved vercel.io
+* Versioned by git on [github](https://github.com/fogrew/gurylev.com/) + my personal gitlab
+* I plan improvements using [github issues](https://github.com/fogrew/gurylev.com/issues/)
+
+## Design
+
+* Themes:
+  * Light: beige for background, brown for text and orange for interactive elements.
+  * Dark: dark gray for background, almost white for text and orange for interactive elements. They are selected automatically based on the system settings
+* Fonts: Georgia for headers, native sans-serif font of your system for everything else. I don't upload external fonts.
+
+## Styles
+
+* are separated in the file system according to the principles of Atomic Design
+* written in pure CSS using the BEM methodology
+* they are not converted using preprocessors like sass or postcss
+* critical styles for loading the first screen are embedded in the pages at the build stage of eleventy
+* non-critical ones are loaded asynchronously
+
+## Templates
+
+* the templates is written using 11ty, nunjucks, markdown
+
 ## Accessibility
 
 * I tried to adapt the site for convenient use from desktops, mobile, text browsers, voice assistants.
@@ -28,31 +56,3 @@ eleventyNavigation:
 
 * Environment: {{config.env}}
 * Last release date: {{config.release}}
-
-## Tools
-
-* Git: [github](https://github.com/fogrew/gurylev.com/) + personal gitlab
-* Tasks: [github issues](https://github.com/fogrew/gurylev.com/issues/)
-* Hosting: [Cloudflare Pages](https://pages.cloudflare.com/) and reserved: vercel.io
-* CI: [Cloudflare Pages](https://pages.cloudflare.com/) and reserved: vercel.io
-* Static generator: [11ty.dev](https://www.11ty.dev/)
-* Admin panel: forestry.io
-
-## Design
-
-* Themes:
-  * Daytime: beige for background, brown for text and orange for interactive elements.
-  * Night: dark gray for background, almost white for text and orange for interactive elements. They are selected automatically based on the system settings
-* Fonts: Georgia for headers, native sans-serif font of your system for everything else. I don't upload external fonts.
-
-## Styles
-
-* are separated in the file system according to the principles of Atomic Design
-* written in pure CSS using the BEM methodology
-* they are not converted using preprocessors like sass or postcss
-* critical styles for loading the first screen are embedded in the pages at the build stage of eleventy
-* non-critical ones are loaded asynchronously
-
-## Templates
-
-* the templates is written using 11ty, nunjucks, markdown
