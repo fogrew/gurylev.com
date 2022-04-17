@@ -26,6 +26,7 @@ asyncStyles:
   <div class="e-content page__content" id="content" itemprop="articleBody">
   {{ content | safe }}
   </div>
+{% if category %}
 {% set previousPost = collections[category] | filterPostsByTags(locale) | getPreviousCollectionItem(page) %}
 {% set nextPost = collections[category] | filterPostsByTags(locale) | getNextCollectionItem(page) %}
 
@@ -34,5 +35,6 @@ asyncStyles:
     {% if previousPost %}{{ "Next post:" | i18n }} <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
     {% if nextPost %}<br>{{ "Previous post:" | i18n }} <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
   </footer>
+{% endif %}
   <div class="progress-bar"></div>
 </article>
