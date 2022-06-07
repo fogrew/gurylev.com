@@ -8,7 +8,7 @@ sections:
   label: English
 - type: directory
   path: src/en
-  label: Root/
+  label: "/"
   create: all
   match: "**/*"
   templates:
@@ -45,7 +45,40 @@ sections:
   label: Russian
 - type: directory
   path: src/ru
-  label: Root
+  label: "/"
+  create: all
+  match: "**/*"
+  templates:
+  - post
+- type: document
+  path: src/ru/index.njk
+  label: Домашка
+  match: "**/*"
+- type: document
+  path: src/ru/now.njk
+  label: Сейчас
+  match: "**/*"
+- type: document
+  path: src/ru/contacts.md
+  label: Контакты
+  match: "**/*"
+- type: directory
+  path: src/ru/blog
+  label: Блог
+  create: all
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: src/ru/code
+  label: Код
+  create: all
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: src/ru/speeches
+  label: Выступления
   create: all
   match: "**/*"
   templates:
