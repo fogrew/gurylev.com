@@ -9,6 +9,8 @@ sections:
   label: English
   create: all
   match: "**/*"
+  templates:
+  - post
 - type: directory
   path: src
   label: Контент
