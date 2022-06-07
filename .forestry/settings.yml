@@ -4,44 +4,61 @@ auto_deploy: false
 admin_path: "/src/admin"
 webhook_url: 
 sections:
+- type: heading
+  label: English
 - type: directory
   path: src/en
-  label: English
-  create: all
-  match: "**/*"
-  templates:
-  - post
-- type: directory
-  path: src
-  label: Контент
+  label: Root/
   create: all
   match: "**/*"
   templates:
   - post
 - type: document
-  path: src/index.njk
-  label: Главная
+  path: src/en/index.njk
+  label: Home
 - type: document
-  path: src/now.md
-  label: Сейчас
+  path: src/en/now.md
+  label: Now
+- type: document
+  path: src/contacts.md
+  label: Contacts
 - type: directory
   path: src/blog
-  label: Блог
+  label: Blog/
   create: documents
   match: "*.md"
 - type: directory
   path: src/code
-  label: Код
+  label: Code/
   create: documents
   match: "*.md"
+  templates:
+  - post
 - type: directory
-  path: src/speeches
-  label: Выступления
+  path: src/en/speeches
+  label: Speeches/
   create: documents
   match: "*.md"
-- type: document
-  path: src/contacts.md
-  label: Контакты
+  templates:
+  - post
+- type: heading
+  label: Russian
+- type: directory
+  path: src/ru
+  label: Root
+  create: all
+  match: "**/*"
+  templates:
+  - post
+- type: heading
+  label: All
+- type: directory
+  path: src
+  label: Content
+  create: all
+  match: "**/*"
+  templates:
+  - post
 upload_dir: src/assets/img
 public_path: "/img"
 front_matter_path: ''
