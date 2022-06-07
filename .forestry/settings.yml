@@ -5,6 +5,11 @@ admin_path: "/src/admin"
 webhook_url: 
 sections:
 - type: directory
+  path: src/en
+  label: English
+  create: all
+  match: "**/*"
+- type: directory
   path: src
   label: Контент
   create: all
