@@ -1,0 +1,25 @@
+---
+title: Books
+layout: home
+permalink: /lists/books/
+header: Books
+eleventyNavigation:
+  key: Books
+  excerpt: The books I read
+  order: 40
+  parent: Lists
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Read books</h1>
+    <p></p>
+    <p><a href="/tags/books/feed.xml">Subsribe to RSS with books I read</a></p>
+  </div>  
+</div>
+
+{%- set watchedByType = watched | groupby("Type") -%}
+{%- set watchedList = watchedByType.books | sortByNumber('Your Rating') -%}
+{% include "watched.njk" %}
+
+<p><a href="/geek/">← back to geek things</a></p>

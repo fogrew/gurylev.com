@@ -4,3 +4,6 @@
 figure {
   margin: 0;
 }
+summary {
+  cursor: pointer;
+}

@@ -1,0 +1,21 @@
+---
+title: Team manager
+layout: home
+permalink: /leader/team-manager/
+header: Team manager
+eleventyNavigation:
+  key: Team manager
+  excerpt: People manager, Scrum master, Agile advocate
+  order: 20
+  parent: Leader
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Team manager</h1>
+    <p></p>
+    <p><a href="/tags/team-manager/feed.xml">Subsribe to RSS with manager things</a></p>
+  </div>
+  {% set postslist = collections['team-manager'] | filterPostsByTags(locale)  %}
+  {% include "posts-grid.njk" %}
+</div>

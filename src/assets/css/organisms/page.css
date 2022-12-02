@@ -12,7 +12,6 @@
 
 .page__header,
 .page__footer,
-.page__summary,
 .page__nav,
 .page__content > * {
   grid-column: content;
@@ -53,10 +52,11 @@
   align-self: center;
 }
 
+/* don't do height: auto to avoid CLS problems
 .page :is(img, svg) {
   max-width: 100%;
   height: auto;
-}
+} */
 
 .page :is(audio, video) {
   width: 100%;
@@ -64,6 +64,7 @@
 
 .page ul {
   margin-top: 0;
+  /* padding-left: 1em; */
 }
 p + ol,
 p + ul {
@@ -72,6 +73,6 @@ p + ul {
 }
 
 .page__footer {
-  grid-column: footer;
+  grid-row: footer;
   align-self: end;
 }

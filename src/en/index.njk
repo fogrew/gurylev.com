@@ -5,16 +5,45 @@ permalink: /
 eleventyNavigation:
   key: Andrey Gurylev
   order: 10
+  parent: Main
 header: Hi, I'm Andrey Gurylev 👋🏻
 asyncStyles:
   - /css/plugins/avatar.css
 ---
-<span style="float: right">
+
+<div class="h-card">
+  <span style="float: right">
     <a href="/" class="u-url u-uid" rel="me">{% image '/img/avatar.jpg', 'u-photo avatar', 'Andrey Gurylev photo', '', '120,240', '120' %}</a>
   </span>
-<h1 class="page__header page__title p-name">{{ header }}</h1>
-<p class="p-note page__summary">Web developer, leader, and geek. <a href="/about/">About me</a></p>
-<div class="grid grid--3">
+  <h1 class="page__title p-name">{{ header }}</h1>
+  <p class="p-note">I'm {{ config.age }} years old. I live and work in the web. Now I life in Cyprus. On the Internet I will answer as fogrew.</p>
+  
+  <p>For open correspondence, use email and<!-- anti-spam@here.gmail -->rew&commat;gurylev<!-- anti-spam@here.gmail -->&period;com or telegram @fogrew. <a href="/contacts/">For private…</a></p>
+</div>
+<div class="grid grid--2 grid--with-cards">
+  <h2 class="grid__line">About me</h2>
+  <div>
+    <h3 class="p-role role">Web developer with&nbsp;aging</h3>
+    <p>Since 2007, {{ config.years_in_web_dev }} years, I have been making up, styling and scripting websites. I've seen a lot and know how to choose the right tools for solving business problems.</p>
+    <a class="button u-url u-uid" href="/web-developer/">See all my posts related with web-development</a>
+  </div>
+  <div>
+    <h3 class="p-role role">Leader in&nbsp;volume</h3>
+    <p>Since 2016, I'm organized many regular FE-events: PiterJS, NodeSchool Spb, pitercss. In 2016-2017 taught frontend at the Epic Skills. Since 2019, I leading developers in my teams. </p>
+    <a class="button u-url u-uid" href="/leader/">See all my posts related with leadership</a>
+  </div>
+  <div>
+    <h3 class="p-role role">Control freak with ambitions</h3>
+    <p>Since 2015, I have been keeping track of time and tasks, setting myself goals for the month, quarter and year. I try to formulate long-term ones by OKR, and short-term ones by SMART.</p>
+    <a class="button u-url u-uid" href="/qualities/control-freak/">See all my posts related with control</a>
+  </div>
+  <div>
+    <h3 class="p-role role">Geek</h3>
+    <p>I restore energy by playing consoles, PC, board games, tabletop role-playing games, pokemon go, reading comics, watching movies, TV series and anime. I've been trying to recover for as long as I can remember.</p>
+    <a class="button u-url u-uid" href="/geek/">See all my posts related with control</a>
+  </div>
+</div>
+{# <div class="grid grid--3">
   <div class="h-feed">
     <h3>Last articles</h3>
     {% set postslist = [collections.chats, collections.results, collections.motivation] | merge | sortByDate | published | filterPostsByTags(locale) | head(-4) %}
@@ -33,4 +62,4 @@ asyncStyles:
     {% include "posts-list.njk" %}
     <a href="/speeches/">See more talks</a>
   </div>
-</div>
+</div> #}

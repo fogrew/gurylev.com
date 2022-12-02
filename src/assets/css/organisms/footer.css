@@ -1,7 +1,12 @@
 .footer {
-  display: grid;
-  grid-auto-flow: column;
+  background-color: var(--theme-background-shadowed);
+}
+.footer__wrapper {
+  display: flex;
   padding: 0 var(--gap);
+}
+.footer ul {
+  padding-left: 1em;
 }
 /* .footer__copyright {}
 .footer__links {} */

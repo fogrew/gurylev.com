@@ -1,0 +1,25 @@
+---
+title: 
+layout: home
+permalink: /lists/bookmarks/
+header: Bookmarks
+eleventyNavigation:
+  key: Bookmarks
+  excerpt: 
+  order: 70
+  parent: Lists
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Bookmarks</h1>
+    <p></p>
+    <p><a href="/tags/bookmark/feed.xml">Subsribe to RSS with bookmarks</a></p>
+  </div>  
+</div>
+
+{%- set watchedByType = watched | groupby("Type") -%}
+{%- set watchedList = watchedByType.comics | sortByNumber('Your Rating') -%}
+{% include "watched.njk" %}
+
+<p><a href="/geek/">← back to geek things</a></p>

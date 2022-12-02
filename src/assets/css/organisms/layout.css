@@ -1,19 +1,12 @@
 .layout {
   display: grid;
   min-height: 100%;
+  margin: 0;
   grid-template-rows: auto 1fr auto;
 }
-.layout__header,
-.layout__footer {
+.layout__wrapper {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   max-width: var(--full-width);
-}
-.layout__header {
-  margin-bottom: 1.5rem;
-}
-.layout__footer {
-  grid-row-start: 3;
-  grid-row-end: 4;
 }

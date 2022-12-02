@@ -13,6 +13,8 @@
   --post-width: calc(var(--col-width) + var(--container-width));
   --sides: calc(var(--col-width) * 4 + var(--container-width) + 2rem);
 
+  --border-radius: 4px;
+
   --z-index-menu: 1000;
 }
 

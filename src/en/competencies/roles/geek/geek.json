@@ -1,0 +1,7 @@
+{
+  "tags": [
+    "geek"
+  ],
+  "category": "geek",
+  "permalink": "/geek/{{page.fileSlug}}/"
+}

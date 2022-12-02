@@ -1,18 +1,47 @@
+<style>
+  table { width: 100%; border-collapse: separate; }
+  thead { position: sticky; top: 0; z-index: 1; background-color: var(--theme-background-shadowed); }
+  tfoot { position: sticky; bottom: 0; z-index: 1; background-color: var(--theme-background-shadowed); }
+  thead th { border-bottom: 1px solid var(--theme-secondary); }
+  tfoot td { border-top: 1px solid var(--theme-secondary); }
+  th, td { padding: 4px; vertical-align: middle; }
+  td img { vertical-align: middle; }
+  tr:nth-child(even) { background-color: var(--theme-background-shadowed); }
+  .rating--10 {
+    background-color: var(--theme-green);
+  }
+  .cell--property {
+    text-align: center;
+  }
+</style>
 <table>
   <thead>
-    <th>#</th>
-    <th>Title</th>
-    <th>Rating</th>
-    <th>Rated</th>
+    <th scope="col">#</th>
+    <th scope="col">Title</th>
+    <th scope="col">Rating</th>
+    <th scope="col">Rated</th>
+    <th scope="col">Links</th>
   </thead>
   <tbody>
   {%- for item in watchedList|reverse -%}
     <tr>
-      <td>{{ loop.index }}</td>
-      <td><a href="/lists/{{ item["Type"] }}/{{ item["TMDb ID"] }}">{{ item["Name"] }}</a></td>
-      <td>{{ item["Your Rating"] }}</td>
-      <td>{{ item["Date Rated"] | readableDate }}</td>
+      <th scope="row">{{ loop.index }}</th>
+      <td class="cell cell--value">
+        <a href="/lists/{{ item["Type"] }}/{{ item["TMDb ID"] }}"><img src="{% moviePreview item["TMDb ID"] %}" width="100" height="150" loading="lazy" decoding="async"></a>
+        <a href="/lists/{{ item["Type"] }}/{{ item["TMDb ID"] }}">{{ item["Name"] }}</a>
+      </td>
+      <td class="cell cell--property rating rating--{{ item["Your Rating"] | int }}">{{ item["Your Rating"] | int }}</td>
+      <td class="cell cell--property">{{ item["Date Rated"] | readableDate }}</td>
+      <td class="cell cell--property"><a href="https://www.themoviedb.org/{{ item["Type"] }}/{{ item["TMDb ID"] }}" target="_blank" rel="noopener nofollow">TMDB</a>, <a href="https://www.imdb.com/title/{{ item["IMDb ID"] }}" target="_blank" rel="noopener nofollow">IMDB</a></td>
     </tr>
   {%- endfor -%}
   </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Total: {{ watchedList | length }}</td>
+      <td class="cell cell--value"></td>
+      <td class="cell cell--value"></td>
+      <td class="cell cell--value"></td>
+    </tr>
+  </tfoot>
 </table>

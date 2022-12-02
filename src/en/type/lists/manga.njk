@@ -1,0 +1,25 @@
+---
+title: The manga I read
+layout: home
+permalink: /lists/manga/
+header: Manga
+eleventyNavigation:
+  key: Manga
+  excerpt: The manga I read
+  order: 50
+  parent: Lists
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>The manga I read</h1>
+    <p></p>
+    <p><a href="/tags/manga/feed.xml">Subsribe to RSS with manga I read</a></p>
+  </div>  
+</div>
+
+{%- set watchedByType = watched | groupby("Type") -%}
+{%- set watchedList = watchedByType.manga | sortByNumber('Your Rating') -%}
+{% include "watched.njk" %}
+
+<p><a href="/geek/">← back to geek things</a></p>

@@ -1,0 +1,8 @@
+{
+  "layout": "article",
+  "tags": [
+    "leader"
+  ],
+  "category": "leader",
+  "permalink": "/leader/{{page.fileSlug}}/"
+}

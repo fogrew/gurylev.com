@@ -1,0 +1,21 @@
+---
+title: Dungeon master
+layout: home
+permalink: /geek/dnd/
+header: DnD
+eleventyNavigation:
+  key: Dungeon master
+  excerpt: Share stuff related with Dungeons and Dragons
+  order: 40
+  parent: Geek
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Make stuff for DMs</h1>
+    <p>Stuff for dungeon masters, my expierence of participating in games as player and dungeon master</p>
+    <p>{% subscribe '/tags/dnd/feed.xml', 'D&D stuff' %}</p>
+  </div>
+  {% set postslist = collections['dnd'] | filterPostsByTags(locale) | published %}
+  {% include "posts-grid.njk" %}
+</div>

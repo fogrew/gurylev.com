@@ -1,8 +1,0 @@
-{
-  "layout": "article",
-  "tags": [
-    "code"
-  ],
-  "category": "code",
-  "permalink": "/code/{{page.fileSlug}}/"
-}

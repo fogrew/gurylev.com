@@ -1,4 +1,3 @@
-{% set navPages = collections[locale] | eleventyNavigation %}
 {% macro renderNavListItem(entry) -%}
 {%- set hasSubmenu = entry.children.length > 0 -%}
 {%- set isActive = entry.url == page.url -%}
@@ -30,14 +29,27 @@
   </li>
 {% endif %}
 {%- endmacro %}
-{% macro renderNav(nav) -%}
+{% macro renderNav(nav, before, after) -%}
 <nav class="nav">
   <ul class="nav__list">
-    <li class="nav__item">
-      <a href="#main" class="nav__link screen-reader-only">{{ 'Skip navigation' | i18n }}</a>
-    </li>
+    {{ before | e }}
 {%- for entry in nav %}{{ renderNavListItem(entry) }}{%- endfor -%}
+    {{ after | e }}
   </ul>
 </nav>
 {%- endmacro %}
+{% set before %}
+<li class="nav__item">
+  <a href="#main" class="nav__link screen-reader-only">{{ 'Skip navigation' | i18n }}</a>
+</li>
+{% endset %}
+{% set after %}
+{% if config.env == 'development' %}
+{% set drafts = {
+  url: '/drafts/',
+  title: 'Drafts' | i18n
+} %}
+  {{ renderNavListItem(drafts) }}
+{% endif %}
+{% endset %}
 {{ renderNav(navPages) }}

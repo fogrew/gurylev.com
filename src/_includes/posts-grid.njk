@@ -1,29 +1,34 @@
 {% for post in postslist | reverse %}
-  {% set hasLinks = hasDraftLinks == true or post.data.draft != true %}
+  {% set hasLinks = hasDraftLinks == true or post.data.draft != true or config.env == 'development' %}
   <section class="h-entry card" aria-labelledby="{{ post.data.title | urlencode }}" itemscope itemtype="http://schema.org/Article">
     {% if hasLinks %}
-    <a class="u-url u-uid card__link" href="{{ post.url }}">
+    <a class="u-url u-uid card__link" href="{{ post.url | locale_url }}">
       <div class="card__body">
     {% endif %}
         <h3 class="p-name card__title" id="{{ post.data.title | urlencode }}" itemprop="name headline">{{ post.data.title }}</h3>
     {% if hasLinks %}
-        <time class="dt-published card__date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">{{ post.date | readableDate }}</time>
+        <time class="dt-published card__date" datetime="{{ post.date | htmlDateString }}" itemprop="datePublished">Published: {{ post.date | readableDate }}</time>
       {% else %}
         <span class="card__date">{{ "Draft, not available yet" | i18n }}</span>
       {% endif %}
+        <div class="card__tags">
+          Tags:
+          {% set comma = joiner() %}
+          {% for tag in post.data.tags -%}
+            {{ comma() }} {{ tag }}
+          {%- endfor %}
+        </div>
         <p class="p-summary" itemprop="description">{{ post.data.description }}</p>
       {% if hasLinks %}
       </div>
       {% endif %}
       {% if post.data.preview %}
-      <span class="card__preview">
         {% if (post.data.preview | extname) == '.svg' %}
-        {{ post.data.preview | inline | safe }}
-        <meta itemprop="image" content="{{ post.data.preview }}">
+          {{ post.data.preview | inline | safe }}
+          <meta itemprop="image" content="{{ post.data.preview }}">
         {% else %}
-        {% image post.data.preview, 'card__image', post.data.title, '(min-width: 768px) 400px, 100vw', '720,400', null, 'image' %}
+          {% image post.data.preview, 'card__image', post.data.title, '(min-width: 768px) 400px, 100vw', '720,400', null, 'image' %}
         {% endif %}
-      </span>
       {% endif %}
     {% if hasLinks %}
     </a>

@@ -53,25 +53,92 @@ asyncStyles:
     <link rel="stylesheet" href="{{ style }}" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="{{ style }}"></noscript>
     {%- endfor %}
-    <header class="layout__header header">
-      <div class="header__start">
-        {% include "nav.njk" %}
-      </div>
-      <div class="header__end">
-        {% include "search.njk" %}
+    <header class="header">
+      <div class="layout__wrapper header__wrapper">
+        <div class="header__start">
+          {% set navPages = collections[locale] | eleventyNavigation("Main") %}
+          {% include "nav.njk" %}
+        </div>
+        <div class="header__end">
+          {# {% set navPages = collections[locale] | eleventyNavigation("Types") %}
+          {% include "nav.njk" %} #}
+        </div>
       </div>
     </header>
 
     {{ content | safe }}
 
-    <footer class="layout__footer footer">
-      <div class="nav footer__copyright">
-        <span class="nav__item">{{ "Andrey Gurylev's website" | i18n }} (<a href="/site/">{{ "about site" | i18n }}</a>)</span>
+    <footer class="footer">
+      <div class="layout__wrapper">
+        <div class="footer__menu grid grid--4">
+          <div>
+            <h3>Posts by role</h3>
+            <nav>
+              <ul>
+                {% set navRoles = collections[locale] | eleventyNavigation("Roles") %}
+                {%- for entry in navRoles %}
+                <li>
+                  <a href="{{ entry.url }}">{{ entry.title }}</a>
+                  {% set navSubRoles = collections[locale] | eleventyNavigation(entry.title) %}
+                  <ul>
+                  {%- for entry in navSubRoles %}<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>{%- endfor -%}
+                  </ul>
+                </li>{%- endfor -%}
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h3>Posts by qualities</h3>
+            <nav>
+              <ul>
+                {% set navQualities = collections[locale] | eleventyNavigation("Qualities") %}
+                {%- for entry in navQualities %}
+                <li>
+                  <a href="{{ entry.url }}">{{ entry.title }}</a>
+                  {% set navSubQualities = collections[locale] | eleventyNavigation(entry.title) %}
+                  <ul>
+                  {%- for entry in navSubQualities %}<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>{%- endfor -%}
+                  </ul>
+                </li>{%- endfor -%}
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h3>Posts by type</h3>
+            <nav>
+              <ul>
+                {% set navTypes = collections[locale] | eleventyNavigation("Types") %}
+                {%- for entry in navTypes %}
+                <li>
+                  <a href="{{ entry.url }}">{{ entry.title }}</a>
+                  {% set navSubTypes = collections[locale] | eleventyNavigation(entry.title) %}
+                  <ul>
+                  {%- for entry in navSubTypes %}<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>{%- endfor -%}
+                  </ul>
+                </li>{%- endfor -%}
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h3>Lists</h3>
+            <nav>
+              <ul>
+                {% set navLists = collections[locale] | eleventyNavigation("Lists") %}
+                {%- for entry in navLists %}<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>{%- endfor -%}
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__wrapper">
+          <div class="nav footer__copyright">
+            <span class="nav__item">{{ "Andrey Gurylev's website" | i18n }} (<a href="/site/">{{ "about site" | i18n }}</a>)</span>
+          </div>
+          <nav class="nav footer__help">
+            <a href="{% if locale ==='en' %}/ru{{ page.url }}{% else %}{{ page.url.replace('/ru','') }}{% endif %}" class="nav__item" aria-label="{{ 'Current language:' | i18n }} {% if locale ==='en' %}{{ 'English' | i18n }}{% else %}{{ 'Russian' | i18n }}{% endif %}">🌐 {% if locale ==='en' %}на русском{% else %}to English{% endif %}</a>
+            <a class="nav__item" href="https://github.com/fogrew/gurylev.com/blob/master/{{ page.inputPath }}">{{ "Edit this page" | i18n }}</a>
+          </nav>
+        </div>
       </div>
-      <nav class="nav footer__help">
-        <a href="{% if locale ==='en' %}/ru{{ page.url }}{% else %}{{ page.url.replace('/ru','') }}{% endif %}" class="nav__item" aria-label="{{ 'Current language:' | i18n }} {% if locale ==='en' %}{{ 'English' | i18n }}{% else %}{{ 'Russian' | i18n }}{% endif %}">🌐 {% if locale ==='en' %}на русском{% else %}to English{% endif %}</a>
-        <a class="nav__item" href="https://github.com/fogrew/gurylev.com/blob/master/{{ page.inputPath }}">{{ "Edit this page" | i18n }}</a>
-      </nav>
     </footer>
 
     {%- for script in scripts %}

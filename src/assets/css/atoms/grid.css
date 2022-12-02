@@ -1,12 +1,12 @@
 .grid {
   --cols: 1;
-  --home-gap: 1.5rem;
+  --home-gap: 1rem;
 
   display: grid;
   gap: var(--home-gap);
   grid-template-columns: repeat(var(--cols), 1fr);
 
-  margin: 3rem 0;
+  margin: 0;
 }
 
 .grid > * {
@@ -22,9 +22,12 @@
   .grid--3 {
     --cols: 3;
   }
+  .grid--4 {
+    --cols: 4;
+  }
 }
 
 .grid__line {
   grid-column: 1 / span var(--cols);
-  margin: 0;
+  margin-bottom: 0;
 }

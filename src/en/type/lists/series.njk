@@ -1,0 +1,25 @@
+---
+title: Series
+layout: home
+permalink: /lists/tv/
+header: Series
+eleventyNavigation:
+  key: Series
+  excerpt: Lists - watched and want to watch
+  order: 20
+  parent: Lists
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Watched TVs</h1>
+    <p></p>
+    <p><a href="/tags/tv/feed.xml">Subsribe to RSS with series what I watched</a></p>
+  </div>  
+</div>
+
+{%- set watchedByType = watched | groupby("Type") -%}
+{%- set watchedList = watchedByType.tv | sortByNumber('Your Rating') -%}
+{% include "watched.njk" %}
+
+<p><a href="/lists/">← back to lists</a></p>

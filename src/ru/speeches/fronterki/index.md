@@ -5,6 +5,7 @@ date: 2018-09-03
 layout: media
 tags:
   - podcasts
+  - event-manager
 preview: /img/posts/fronterki.svg
 ---
 

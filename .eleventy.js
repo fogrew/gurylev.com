@@ -39,10 +39,43 @@ module.exports = function(eleventyConfig) {
    * @link https://www.11ty.io/docs/shortcodes/
    */
   Object.keys(shortcodes).forEach((shortcodeName) => {
-    eleventyConfig.addNunjucksAsyncShortcode("image", shortcodes[shortcodeName]);
-    eleventyConfig.addLiquidShortcode("image", shortcodes[shortcodeName]);
-    eleventyConfig.addJavaScriptFunction("image", shortcodes[shortcodeName]);
+    eleventyConfig.addNunjucksAsyncShortcode(shortcodeName, shortcodes[shortcodeName]);
+    eleventyConfig.addLiquidShortcode(shortcodeName, shortcodes[shortcodeName]);
+    eleventyConfig.addJavaScriptFunction(shortcodeName, shortcodes[shortcodeName]);
   })
+
+  eleventyConfig.addUrlTransform(({url}) => {
+    const postsFolderName = '/posts'
+
+    if(url.startsWith(postsFolderName)) {
+      return url.slice(postsFolderName.length)
+    }
+  });
+
+  eleventyConfig.addUrlTransform(({url}) => {
+    console.log(url)
+    const postsFolderName = 'privacy'
+
+    if(url.startsWith(postsFolderName)) {
+      return url.slice(postsFolderName.length)
+    }
+  });
+
+  // eleventyConfig.addUrlTransform(({url}) => {
+  //   // `url` is guaranteed to be a string here even if you're using `permalink: false`
+  //   const postsFolderName = 'posts'
+  //   const defaultFileName = 'index'
+  //   const postfixLocalisation = '\.[a-z]{2}'
+  //   const reLocalisedIndexFile = new RegExp(`(${postsFolderName}\/)?(.+)\/(${defaultFileName})?${postfixLocalisation}\.html`)
+  //   const matchLocalisedPosts = url.match(reLocalisedIndexFile)
+  //   const hasLocalisedIndexFile = matchLocalisedPosts.length === 3
+  //   const hasLocalisation = matchLocalisedPosts.length === 1 || hasLocalisedIndexFile
+
+  //   if(hasLocalisation) {
+  //     console.log()
+  //   }
+  //   // Returning undefined skips the url transform.
+  // });
 
   eleventyConfig.addDataExtension("csv", async (contents) => {
     const rows = []
@@ -83,6 +116,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addWatchTarget('./src/assets/css/**/*.css');
+  eleventyConfig.addWatchTarget('./src/utils/**/*.js');
 
   /**
    * Override BrowserSync Server options

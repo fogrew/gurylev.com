@@ -1,0 +1,44 @@
+---
+title: Portfolio
+layout: home
+permalink: /portfolio/
+eleventyNavigation:
+  key: Portfolio
+  order: 30
+  parent: Main
+---
+
+<p>Many years I'm writing the code, and sometimes I want to share it.</p>
+<p><a href="/tags/code/feed.xml">Subscribe to RSS feed with my code</a></p>
+
+<div class="h-feed grid grid--3">
+  <div class="grid__line">
+    <h2>Share projects</h2>
+    <p>I written it for fun, usually I wan't to evolve it.</p>
+  </div>
+  {% set postslist = collections.projects | filterPostsByTags(locale) | head(-3) %}
+  {% include "posts-grid.njk" %}
+  <div class="grid__line">
+    <a href="/code/projects/">All projects</a>
+  </div>
+
+  <div class="grid__line">
+    <h2>Share the code</h2>
+    <p>Solutions, snippets, hacks, call it as you want 🤷</p>
+  </div>
+  {% set postslist = collections.snippets | filterPostsByTags(locale) | head(-3) %}
+  {% include "posts-grid.njk" %}
+  <div class="grid__line">
+    <a href="/code/snippets/">All snippets</a>
+  </div>
+
+  <div class="grid__line">
+    <h2>Present my works</h2>
+    <p>Only projects for which I don't signed non-disclosure agreement</p>
+  </div>
+  {% set postslist = collections.portfolio | filterPostsByTags(locale) | head(-3) %}
+  {% include "posts-grid.njk" %}
+  <div class="grid__line">
+    <a href="/code/portfolio/">All works</a>
+  </div>
+</div>

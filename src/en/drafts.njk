@@ -2,11 +2,9 @@
 title: Drafts
 permalink: /drafts/index.html
 layout: home
-eleventyNavigation:
-  key: Drafts
-  order: 50
-  condition: config.env == 'development'
+eleventyExcludeFromCollections: true
 ---
+{{ data.condition | dump }}
 <p>I will publish them on this site when I finish writing.</p>
 <div class="h-feed grid grid--3">
   {% set hasDraftLinks = true %}

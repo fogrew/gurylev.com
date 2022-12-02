@@ -1,5 +1,6 @@
 const content = document.querySelector('.page');
 const progressBar = document.querySelector('.progress-bar');
+const toc = document.querySelector('.toc');
 
 let ticking = false;
 let windowHeight = window.innerHeight;
@@ -30,3 +31,12 @@ function updateBar() {
   ticking = false;
   progressBar.style.width = `${barWidth}%`;
 }
+
+const tocLinkNodes = toc.querySelectorAll('a')
+const tocLinks = [...tocLinkNodes].map(el => el.attributes.href.value)
+const headers = tocLinks.map(el => document.querySelector(el))
+
+console.log(headers)
+// function getModulesZone() {
+//   tocLinks.forEach(node)
+// }

@@ -1,0 +1,25 @@
+---
+title: Watched movies
+layout: home
+permalink: /lists/movies/
+header: Movies
+eleventyNavigation:
+  key: Movies
+  excerpt: Lists - watched and want to watch
+  order: 10
+  parent: Lists
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Watched movies</h1>
+    <p></p>
+    <p><a href="/tags/movie/feed.xml">Subsribe to RSS with movies what I watched</a></p>
+  </div>  
+</div>
+
+{%- set watchedByType = watched | groupby("Type") -%}
+{%- set watchedList = watchedByType.movies | sortByNumber('Your Rating')-%}
+{% include "watched.njk" %}
+
+<p><a href="/geek/">← back to geek things</a></p>

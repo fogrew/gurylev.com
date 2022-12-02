@@ -1,0 +1,21 @@
+---
+title: Hacks
+layout: home
+permalink: /code/hacks/
+header: Hacks
+eleventyNavigation:
+  key: Hacks
+  excerpt: How I added some hacks
+  order: 50
+  parent: Code
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Share the code</h1>
+    <p>Solutions, snippets, hacks, call it as you want 🤷</p>
+    <p><a href="/tags/snippets/feed.xml">Subsribe to RSS with snippets</a></p>
+  </div>
+  {% set postslist = collections.snippets | filterPostsByTags(locale) | published %}
+  {% include "posts-grid.njk" %}
+</div>

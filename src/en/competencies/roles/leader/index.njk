@@ -1,0 +1,32 @@
+---
+title: Leader
+layout: home
+permalink: /leader/
+eleventyNavigation:
+  key: Leader
+  order: 30
+  parent: Roles
+---
+
+<div class="h-feed grid grid--3">
+  <div class="grid__line">
+    <h2></h2>
+    <p></p>
+  </div>
+  {% set postslist = collections.organizer | filterPostsByTags(locale) | head(-3) %}
+  {% include "posts-grid.njk" %}
+  <div class="grid__line">
+    <a href="/code/organizer/">All </a>
+  </div>
+
+  <div class="grid__line">
+    <h2></h2>
+    <p></p>
+  </div>
+  {% set postslist = collections['control-freak'] | filterPostsByTags(locale) | head(-3) %}
+  {% include "posts-grid.njk" %}
+  <div class="grid__line">
+    <a href="/code/control-freak/">All </a>
+  </div>
+
+</div>

@@ -1,5 +1,6 @@
 const path = require('path');
 const Image = require("@11ty/eleventy-img");
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 function getExtensionFallbacks (src) {
   const extension = path.extname(src);
@@ -78,6 +79,27 @@ module.exports = {
         ${itemprop ? 'itemprop='+itemprop : ''}>
     </picture>`;
   },
+  moviePreview: async function(id) {
+    const apiHost = 'https://api.themoviedb.org';
+    const imgHost = 'https://image.tmdb.org/t/p/original';
+    const apiKey = 'f2136ccacb0977dc008d5ea49c768321';
+    const apiMovie = `${apiHost}/3/movie/${id}/images?api_key=${apiKey}`
+    const posterFallback = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg'
+
+    try {
+      const payload = await EleventyFetch(apiMovie, {
+        duration: "1y",
+        type: "json"
+      });
+      const poster = payload?.posters?.[0]?.file_path
+      return poster ? `${imgHost}${poster}` : posterFallback // this.image(poster, 'card__image', 'poster')
+    } catch (error) {
+      return posterFallback
+    }
+  },
+  subscribe: async function(link, topic) {
+    return `<a href="${link}">📰 Subsribe to RSS feed with ${topic}</a>`
+  }
   // card: function({ url, title, date, text, imageLink, tag, classes } = {
   //   url,
   //   title,

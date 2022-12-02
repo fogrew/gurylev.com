@@ -7,6 +7,7 @@
 .card__title {
   margin-bottom: 0.25rem;
 }
+.card__tags ,
 .card__date {
   font-size: 0.75rem;
   word-spacing: -0.5px;
@@ -16,26 +17,16 @@
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  outline-width: var(--outline-width);
-  outline-style: solid;
-  outline-color: var(--theme-text);
+  background-color: var(--theme-background-shadowed);
+  border-radius: var(--border-radius);
 }
-.card__preview {
-  position: relative;
+.card :is(picture, svg) {
   order: -1;
-  padding-top: calc( 1 / 2 * 100% );
 }
-.card__preview :is(img, svg) {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  margin: auto;
-  object-fit: cover;
+.card :is(picture, img, svg) {
+  display: flex;
+  object-fit: contain;
   object-position: top;
   text-align: center;
+  aspect-ratio: 2 / 1;
 }

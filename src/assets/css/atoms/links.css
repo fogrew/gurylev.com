@@ -1,9 +1,38 @@
+/* all links */
 a {
   vertical-align: baseline;
-  text-decoration: underline var(--theme-secondary);
+  /* text-decoration: underline var(--theme-secondary); */
+  text-decoration: none;
   color: var(--theme-accent);
+  transition: color .1s ease-out;
 }
-a:hover,
-a:focus {
+a:is(:hover,:focus) {
   color: var(--theme-secondary);
+}
+/* internal links */
+/* a:is([href^="#"],[href^="/"])::after {
+  content: "→";
+  display: inline-block;
+  vertical-align: super;
+  font-size: .6em;
+  transform: translate(1px, 0);
+  transition: transform .1s ease-out;
+  will-change: transform;
+}
+a:is([href^="#"],[href^="/"]):is(:hover,:focus)::after {
+  transform: translate(2px, 0);
+} */
+
+/* external links */
+a:not([href^="#"]):not([href^="/"])::after {
+  content: "↗";
+  display: inline-block;
+  vertical-align: super;
+  font-size: .6em;
+  transform: translate(1px, 0);
+  transition: transform .1s ease-out;
+  will-change: transform;
+}
+a:not([href^="#"]):not([href^="/"]):is(:hover,:focus)::after {
+  transform: translate(2px, -1px);
 }

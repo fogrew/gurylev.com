@@ -2,10 +2,15 @@ const path = require('path');
 const fs = require("fs");
 const webvtt = require('node-webvtt');
 const csso = require('csso');
+const { isBuffer } = require('util');
 
 module.exports = {
   sortByDate: (posts) => {
     return posts.sort((a, b) => new Date(a.date) - new Date(b.date))
+  },
+
+  sortByNumber: (posts, value) => {
+    return posts?.sort((a, b) => parseInt(a[value]) - parseInt(b[value]))
   },
 
   merge: (arrays) => {
@@ -24,6 +29,9 @@ module.exports = {
   *   filterPostsByTags(posts, 'posts')
   */
   filterPostsByTags: (posts, ...tags) => {
+    if(!posts) {
+      return []
+    }
     return posts.filter(post =>
       post.data?.tags.some(tag =>
         tags.includes(tag)

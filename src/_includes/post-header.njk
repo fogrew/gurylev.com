@@ -1,22 +1,9 @@
 <header class="page__header">
   <h1 class="page__title p-name" itemprop="name headline">{{ title }}</h1>
-  <p>{% include "author.njk"%} {{ "published" | i18n }} {{ "the article" | i18n }}
-  {% if date %}
-  <time class="post-date dt-published" datetime="{{ date | htmlDateString }}" itemprop="datePublished"><a class="u-url" href="{{ page.url }}">{{ date | readableDate }}</a></time>
-  {% endif %}
-  {% if date %}
-  {{ "in the category" | i18n }} <a href="{{ page.url | parent }}">{{category}}</a>
-  {% endif %}
-  {{ "and tagged it with" | i18n }}
-  {% for tag in tags %}
-    <a href="{{ '/tags/' + tag }}" rel="tag" class="p-category tag">#{{ tag }}</a>
-  {% endfor %}
-
-  </p>
+  <p class="page__summary p-summary" itemprop="description">{{ description }}</p>
   {% set time = content | readingTime %}
   <p>{{ "Can be read in" | i18n }} {{ time }} {% if locale === 'ru' %}{{ time | getNoun('минуту', 'минуты', 'минут') }}{% else %}{{ time | getNoun('minute', 'minutes', 'minutes') }}{% endif %}</p>
   {% if preview %}
   <meta itemprop="image" content="{{ preview }}">
   {% endif %}
 </header>
-<p class="page__summary p-summary" itemprop="description">{{ description }}</p>

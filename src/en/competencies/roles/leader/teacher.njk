@@ -1,0 +1,21 @@
+---
+title: Teacher
+layout: home
+permalink: /leader/teacher/
+header: Teacher
+eleventyNavigation:
+  key: Teacher
+  excerpt: My cources, lessons
+  order: 40
+  parent: Leader
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>Teacher</h1>
+    <p>I'm talking how to use basics</p>
+    <p><a href="/tags/teacher/feed.xml">Subsribe to RSS with teacher things</a></p>
+  </div>
+  {% set postslist = collections['epic-skills'] | filterPostsByTags(locale) | published %}
+  {% include "posts-grid.njk" %}
+</div>

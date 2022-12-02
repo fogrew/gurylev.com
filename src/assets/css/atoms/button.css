@@ -1,10 +1,12 @@
 .button {
-  padding-left: .5em;
-  padding-right: .5em;
+  display: inline-block;
+  padding: .5em 1em;
   border: 0;
   font-size: inherit;
   vertical-align: bottom;
-  outline-width: var(--outline-width);
+  background-color: var(--theme-background-shadowed);
+  /* outline-width: var(--outline-width);
   outline-style: solid;
-  outline-color: var(--theme-border);
+  outline-color: var(--theme-border); */
+  border-radius: var(--border-radius);
 }

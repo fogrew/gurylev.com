@@ -2,16 +2,9 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.content.pageFolders": [
     {
-      "title": "blog",
-      "path": "[[workspace]]/src/blog"
-    },
-    {
-      "title": "code",
-      "path": "[[workspace]]/src/code"
-    },
-    {
-      "title": "speeches",
-      "path": "[[workspace]]/src/speeches"
+      "title": "posts",
+      "path": "[[workspace]]/src/en/posts"
     }
-  ]
+  ],
+  "frontMatter.framework.id": "11ty"
 }

@@ -1,0 +1,25 @@
+---
+title: The comics I read
+layout: home
+permalink: /lists/comics/
+header: Comics
+eleventyNavigation:
+  key: Comics
+  excerpt: The comics I read
+  order: 60
+  parent: Lists
+---
+
+<div class="h-feed grid grid--2">
+  <div class="grid__line">
+    <h1>The comics I read</h1>
+    <p></p>
+    <p><a href="/tags/comics/feed.xml">Subsribe to RSS with comics I read</a></p>
+  </div>  
+</div>
+
+{%- set watchedByType = watched | groupby("Type") -%}
+{%- set watchedList = watchedByType.comics | sortByNumber('Your Rating') -%}
+{% include "watched.njk" %}
+
+<p><a href="/geek/">← back to geek things</a></p>
