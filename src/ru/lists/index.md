@@ -1,5 +1,5 @@
 ---
-title: Watched
+title: Просмотрено
 layout: home
 ---
 

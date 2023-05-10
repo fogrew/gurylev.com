@@ -1,0 +1,14 @@
+---
+title: Watched movies
+layout: home
+permalink: /lists/movie/
+eleventyNavigation:
+  key: Series
+  excerpt: Watched by me
+  order: 10
+  parent: Lists
+---
+<p><a href="/lists/">← back to lists</a></p>
+{%- set watchedByType = watched | groupby("Type") -%}
+{%- set watchedList = watchedByType.movie -%}
+{% include "watched.njk" %}
