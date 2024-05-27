@@ -2,7 +2,6 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginTOC = require("eleventy-plugin-nesting-toc");
-const pluginPWA = require("eleventy-plugin-pwa");
 
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
@@ -15,20 +14,6 @@ module.exports = {
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(pluginSyntaxHighlight);
     eleventyConfig.addPlugin(pluginNavigation);
-    if(process.env.ELEVENTY_ENV === 'production') {
-      eleventyConfig.addPlugin(pluginPWA, {
-        cacheId: 'gurylev',
-        globPatterns: [
-          "**/*.{html,css,js,mjs,map,jpg,png,gif,webp,avif,ico,svg,woff2,woff,eot,ttf,otf,ttc,json}"
-        ],
-        runtimeCaching: [
-          {
-            urlPattern: /^.*\.(html|css|jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
-            handler: `staleWhileRevalidate`
-          }
-        ]
-      });
-    }
     eleventyConfig.addPlugin(pluginTOC, {
       headingText: '',
       wrapperClass: 'toc__nav'
@@ -46,7 +31,7 @@ module.exports = {
         class: 'anchor',
         symbol: '', // moved to ::after content to remove from table of contents
         renderAttrs: slug => ({
-          'aria-label': `Перейти к заголовку «${decodeURIComponent(slug).replace(/-/g, ' ')}»`
+          'aria-label': `Move to heading «${decodeURIComponent(slug).replace(/-/g, ' ')}»`
         }),
         placement: 'before'
       })
