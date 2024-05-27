@@ -2,4 +2,6 @@ dist/
 node_modules/
 .cache/
 .vercel/
+.wrangler/
+wrangler.toml
 .env
