@@ -3,7 +3,7 @@ title: Watched
 layout: home
 permalink: /lists/
 eleventyNavigation:
-  key: Lists
+  key: Geek lists
   order: 50
 ---
 
