@@ -14,23 +14,12 @@ asyncStyles:
   </span>
 <h1 class="page__header page__title p-name">{{ header }}</h1>
 <p class="p-note page__summary">Web developer, leader, and geek. <a href="/about/">About me</a></p>
-<div class="grid grid--3">
-  <div class="h-feed">
-    <h3>Last articles</h3>
-    {% set postslist = [collections.chats, collections.results, collections.motivation] | merge | sortByDate | published | filterPostsByTags(locale) | head(-4) %}
-    {% include "posts-list.njk" %}
-    <a href="/blog/">See more blog articles</a>
+
+<div class="h-feed grid">
+  <div class="grid__line">
+    <h2>All feeds</h2>
+    <p>Here is all content that I produce.</p>
   </div>
-  <div class="h-feed">
-    <h3>Last code</h3>
-    {% set postslist = [collections.projects, collections.snippets] | merge | sortByDate | published | filterPostsByTags(locale) | head(-4) %}
-    {% include "posts-list.njk" %}
-    <a href="/code/">See more code</a>
-  </div>
-  <div class="h-feed">
-    <h3>Last talks</h3>
-    {% set postslist = [collections.lectures, collections.podcasts, collections.interviews, collections.courses] | merge | published | filterPostsByTags(locale) | sortByDate | head(-4) %}
-    {% include "posts-list.njk" %}
-    <a href="/speeches/">See more talks</a>
-  </div>
+  {% set postslist = [collections.chats, collections.results, collections.motivation, collections.projects, collections.snippets, collections.lectures, collections.podcasts, collections.interviews, collections.courses] | merge | sortByDate | filterPostsByTags(locale) | published %}
+  {% include "posts-grid.njk" %}
 </div>

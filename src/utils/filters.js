@@ -25,7 +25,7 @@ module.exports = {
   */
   filterPostsByTags: (posts, ...tags) => {
     return posts.filter(post =>
-      post.data?.tags.some(tag =>
+      post.data?.tags?.some(tag =>
         tags.includes(tag)
       )
     )
