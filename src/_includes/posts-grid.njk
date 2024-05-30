@@ -1,6 +1,7 @@
+{% if postslist.length > 0 %}
 {% for post in postslist | reverse %}
   {% set hasLinks = hasDraftLinks == true or post.data.draft != true %}
-  <section class="h-entry card" aria-labelledby="{{ post.data.title | urlencode }}" itemscope itemtype="http://schema.org/Article">
+  <article class="h-entry card" aria-labelledby="{{ post.data.title | urlencode }}" itemscope itemtype="http://schema.org/Article">
     {% if hasLinks %}
     <a class="u-url u-uid card__link" href="{{ post.url }}">
       <div class="card__body">
@@ -28,5 +29,8 @@
     {% if hasLinks %}
     </a>
     {% endif %}
-  </section>
+  </article>
 {% endfor %}
+{% else %}
+  {{ "There's nothing here" | i18n }}
+{% endif %}

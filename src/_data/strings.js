@@ -19,6 +19,7 @@ module.exports = {
     "Previous post:": "Предыдущий пост:",
     "Draft, not available yet": "Черновик, пока недоступен",
     "Search the current site": "Искать на сайте",
-    "Search": "Найти"
+    "Search": "Найти",
+    "There's nothing here": "Здесь ничего нет"
   },
 }
