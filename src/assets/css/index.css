@@ -5,7 +5,6 @@
 @import 'typography/headings.css';
 @import 'typography/code.css';
 
-@import 'atoms/grid.css';
 @import 'atoms/links.css';
 @import 'atoms/anchor.css';
 @import 'atoms/table.css';
@@ -23,6 +22,7 @@
 @import 'organisms/document.css';
 @import 'organisms/layout.css';
 @import 'organisms/page.css';
+@import 'organisms/grid.css';
 
 @import 'organisms/header.css';
 @import 'organisms/footer.css';
