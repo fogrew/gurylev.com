@@ -33,7 +33,7 @@ The idea of such pages <a href="https://sive.rs/nowff">was spread</a> by Derek S
     <h2>I write articles</h2>
     <p>I will publish them on this site when I finish.</p>
   </div>
-  {% set postslist = collections.allContent | unpublished %}
+  {% set postslist = collections.allContent | filterPostsByTags(locale) | unpublished %}
   {% include "posts-grid.njk" %}
 </div>
 
