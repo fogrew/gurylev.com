@@ -1,6 +1,7 @@
 .card {
   container: card / inline-size;
   display: grid;
+  margin-top: 10px;
 }
 .card__body {
   padding: 0 1rem;
@@ -23,7 +24,7 @@
 
   @container (min-width: 501px) {
     &:has(.card__preview) {
-      grid-template-columns: 40cqw auto;
+      grid-template-columns: 30cqw auto;
     }
   }
 }
@@ -36,13 +37,15 @@
   display: grid;
 }
 .card__preview :is(img, svg) {
-  aspect-ratio: 2/1;
+  aspect-ratio: 2 / 1;
   margin: auto;
   text-align: center; /* to align alt in broken image url case */
-  object-fit: contain;
+  object-position: top;
+  object-fit: cover;
 
-  @container (max-width: 500px) {
-    object-position: top;
-    object-fit: cover;
+  @container (min-width: 500px) {
+    aspect-ratio: auto;
+    max-height: 20cqw;
+    object-fit: contain;
   }
 }
