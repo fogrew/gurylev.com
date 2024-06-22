@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/fogrew
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://gurylev.com
+  * I am fogrew (https://keybase.io/fogrew) on keybase.
+  * I have a public key ASCDyieS_4VAr_x0UTSDwWixfy16l3HuPeMSIUsU6pe-ogo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012083ca2792ff8540affc74513483c168b17f2d7a9771ee3de312214b14ea97bea20a",
+      "host": "keybase.io",
+      "kid": "012083ca2792ff8540affc74513483c168b17f2d7a9771ee3de312214b14ea97bea20a",
+      "uid": "056668d6e9014a64448b70a4fef89719",
+      "username": "fogrew"
+    },
+    "merkle_root": {
+      "ctime": 1719064751,
+      "hash": "4afae36c9ab6936aa7039902c5e480ed247039531f1e7f193793723510077842f555fc2cdaf7eb21202bf7a41ccf9ce769627f876d997abd0d22f9b6ac916821",
+      "hash_meta": "78a7f0e55d01bf85a0664654fd2abd05a7a47638393504306f30bb2687b1b5d7",
+      "seqno": 25857229
+    },
+    "service": {
+      "entropy": "1/OdZ/b/3b/nn7Js0HKMgVbf",
+      "hostname": "gurylev.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.3.1"
+  },
+  "ctime": 1719064765,
+  "expire_in": 504576000,
+  "prev": "a03f0a1e4f2b1fd7e663dfd82bbe59da52b22d6068d826eeeb29d5dfcd958d0c",
+  "seqno": 85,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgg8onkv+FQK/8dFE0g8FosX8tepdx7j3jEiFLFOqXvqIKp3BheWxvYWTESpcCVcQgoD8KHk8rH9fmY9/YK75Z2lKyLWBo2Cbu6ynV382VjQzEINvLSIm0SUZlkSKrocJQrCcD0hBtL3UbTVIkj7WebcA8AgHCo3NpZ8RAcQ3+wexu14DjvIRDzOQoxSAc2YKV4Vpjhx/SBVdTYRzPe/n2ZOzlaNc+ff1DyEcrDffj1vYZC2jXBeSR0CENBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJzCwYF3vvU2yjU///XCn4/FyiB5/Kg5EPPhRbwABjJ9o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/fogrew
+
+==================================================================
