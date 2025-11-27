@@ -6,12 +6,11 @@
     "node": "^18.0.0"
   },
   "scripts": {
-    "build": "npx eleventy",
-    "watch": "npx eleventy --watch",
-    "serve": "npx eleventy --serve",
-    "debug": "DEBUG=* npx eleventy",
-    "clean": "rm -rf ./dist/*",
-    "v": "vercel dev"
+    "build": "npx @11ty/eleventy",
+    "watch": "npx @11ty/eleventy --watch",
+    "serve": "npx @11ty/eleventy --serve",
+    "debug": "set DEBUG=Eleventy* npx @11ty/eleventy",
+    "clean": "rm -rf ./dist/*"
   },
   "repository": {
     "type": "git",

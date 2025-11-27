@@ -27,8 +27,8 @@ layout: home
 
 * Гит: [github](https://github.com/fogrew/gurylev.com/) + персональный gitlab
 * Задачи: [github issues](https://github.com/fogrew/gurylev.com/issues/)
-* Хостинг: vercel.io
-* CI: vercel.io
+* Хостинг: [Cloudflare](https://www.cloudflare.com/)
+* CI: [Cloudflare](https://www.cloudflare.com/)
 * Генератор статики: [11ty.dev](https://www.11ty.dev/)
 * Админка: forestry.io
 
