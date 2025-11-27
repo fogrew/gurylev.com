@@ -83,6 +83,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addWatchTarget('./src/assets/css/**/*.css');
+  eleventyConfig.addWatchTarget('./src/utils/**/*.js');
 
   /**
    * Override BrowserSync Server options
