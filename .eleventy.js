@@ -39,9 +39,9 @@ module.exports = function(eleventyConfig) {
    * @link https://www.11ty.io/docs/shortcodes/
    */
   Object.keys(shortcodes).forEach((shortcodeName) => {
-    eleventyConfig.addNunjucksAsyncShortcode("image", shortcodes[shortcodeName]);
-    eleventyConfig.addLiquidShortcode("image", shortcodes[shortcodeName]);
-    eleventyConfig.addJavaScriptFunction("image", shortcodes[shortcodeName]);
+    eleventyConfig.addNunjucksAsyncShortcode(shortcodeName, shortcodes[shortcodeName]);
+    eleventyConfig.addLiquidShortcode(shortcodeName, shortcodes[shortcodeName]);
+    eleventyConfig.addJavaScriptFunction(shortcodeName, shortcodes[shortcodeName]);
   })
 
   eleventyConfig.addDataExtension("csv", async (contents) => {
